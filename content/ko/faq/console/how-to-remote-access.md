@@ -10,7 +10,7 @@ Windows 환경과 Linux 환경인지에 따라 원격 접속 방법이 다릅니
 플랫폼을 확인 후 아래 링크를 클릭해 주세요.
 * [Windows](#windows)
 * [Linux (Ubuntu, CentOS, Debian, Fedora 등 포함)](#linux)  
-* [긴급 복구 (VM이 인터넷에 접속되지 않는 경우)](./how-to-use-safemode)
+* [긴급 복구 (VM이 인터넷에 접속되지 않는 경우)](./how-to-use-novnc)
 
 ## Windows
 Stella IT 에서는 기본적으로 Windows VM에 대해 RDP를 통한 원격 접속을 제공합니다.
