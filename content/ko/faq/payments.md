@@ -5,3 +5,5 @@ category: FAQ
 ---
 
 * [결제 수단 등록은 어떻게 하나요?](./payments/how-to-set-billing-card)  
+* [현금영수증/세금계산서 발행은 어떻게 해야되나요?](./payments/how-to-issue-receipt) 
+

@@ -10,4 +10,5 @@ category: FAQ
 * [호스트 이름에는 무엇을 입력해야 하나요?](./console/what-is-hostname)  
 * [원격 접속은 어떻게 하나요?](./console/how-to-remote-access)  
 * [네트워크가 끊기는 작업을 원격으로 해야 하거나 안전모드로 진입하는 작업은 어떻게 해야 하나요?](./console/how-to-use-novnc)  
+* [HTTP Proxy는 무엇이고 어떻게 쓰는건가요?](./console/what-is-http-proxy)  
 * [자동 결제는 어떻게 설정하나요?](./console/how-to-set-billing)  
