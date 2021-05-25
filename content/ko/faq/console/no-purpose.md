@@ -26,3 +26,10 @@ Stella IT에서 현재 서비스 하는 제품군은 DDoS 방어 시스템이 �
 * Minecraft Bedrock Edition (UDP)
 * SCP SL (UDP)
 * FiveM (UDP)
+
+<alert type="warning">
+
+Stella IT 제품군에서 호환되는 프로그램이더라도, [Stella IT 이용약관](https://stella-it.com/policy/terms) 에 위반되는 프로그램의 경우 (예. 저작권 위반의 소지가 있는 서비스), 이용하실 수 없으며, 적발시 직권해지 대상입니다. (Stella IT Cloud 계약조건 위반이므로, 환불은 불가합니다.)
+
+</alert>
+
