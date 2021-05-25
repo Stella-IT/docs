@@ -20,6 +20,12 @@ Stella IT에서 현재 서비스 하는 제품군은 DDoS 방어 시스템이 �
 
 구동하려는 프로그램이 해당 이용할 수 있는 프로그램에 해당 하나, 이용 목적에 명시되어있지 않은 경우, Stella IT에 이용 목적 추가를 요청해 주세요.
 
+## 호환 테스트된 프로그램
+아래 프로그램은 Stella IT의 인프라에 테스트가 진행 된 프로그램입니다.
+* HTTP, HTTPS (with Stella IT HTTP Proxy)
+* Minecraft Java Edition
+* Terraria
+
 ## 호환되지 않는 프로그램
 이용하시려는 프로그램이 해당 리스트에 포함되는 경우 이용시 문제가 발생 하실 수 있습니다.
 * HTTP/3 (QUIC)
