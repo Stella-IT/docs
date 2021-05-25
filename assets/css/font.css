@@ -6,6 +6,6 @@ html {
 
 html[lang=ko] {
     font-family: 'Noto Sans KR', sans-serif;
-    word-wrap: keep-all;
+    word-break: keep-all;
 }
 
