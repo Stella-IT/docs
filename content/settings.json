@@ -6,5 +6,6 @@
     "dark": "/logo-dark.svg"
   },
   "github": "Stella-IT/docs",
-  "twitter": ""
+  "twitter": "",
+  "defaultDir": ""
 }
