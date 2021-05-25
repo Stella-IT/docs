@@ -1,7 +1,7 @@
 ---
 title: 네트워크가 끊기는 작업을 원격으로 해야 하거나 안전모드로 진입하는 작업은 어떻게 해야 하나요?
 description: 안전모드로 진입하는 방법에 대해 알아봅니다.
-position: 3
+
 category: FAQ/Console
 ---
 

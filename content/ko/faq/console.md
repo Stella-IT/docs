@@ -1,7 +1,6 @@
 ---
 title: Stella IT Console
 description: Stella IT 제품군을 이용하시면서 궁금하신 점을 FAQ 로 표시합니다.
-position: 2
 category: FAQ
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: 환영합니다!
 description: Stella IT Docs에 오신걸 환영합니다.
-position: 1
+
 category: ''
 ---
 

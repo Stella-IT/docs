@@ -1,7 +1,7 @@
 ---
 title: 호스트 이름에는 무엇을 입력해야 하나요?
 description: 호스트 이름에 대해 알아봅니다.
-position: 3
+
 category: FAQ/Console
 ---
 

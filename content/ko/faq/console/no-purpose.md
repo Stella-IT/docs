@@ -1,7 +1,7 @@
 ---
 title: 이용하고자 하는 사용 목적이 존재하지 않아요.
 description: 사용 목적이 없을 때 대처 방법을 알아봅니다.
-position: 3
+
 category: FAQ/Console
 ---
 

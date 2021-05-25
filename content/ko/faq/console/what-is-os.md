@@ -1,7 +1,7 @@
 ---
 title: 운영체제 선택은 무엇이고 어떻게 선택해야 하나요?
 description: 운영체제에 대해 알아봅니다.
-position: 2
+
 category: FAQ/Console
 ---
 
