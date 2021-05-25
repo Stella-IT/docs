@@ -1,8 +1,8 @@
 ---
 title: 원격 접속은 어떻게 하나요?
 description: 원격 접속을 하는 방법에 대해 알아봅니다.
-position: 2
-category: Console
+position: 3
+category: FAQ/Console
 ---
 
 Windows 환경과 Linux 환경인지에 따라 원격 접속 방법이 다릅니다.  

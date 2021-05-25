@@ -1,8 +1,8 @@
 ---
 title: 이용하고자 하는 사용 목적이 존재하지 않아요.
 description: 사용 목적이 없을 때 대처 방법을 알아봅니다.
-position: 2
-category: Console
+position: 3
+category: FAQ/Console
 ---
 
 Stella IT에서 현재 서비스 하는 제품군은 DDoS 방어 시스템이 기본적으로 포함 되어 있습니다.  
