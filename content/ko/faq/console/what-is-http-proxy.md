@@ -34,9 +34,9 @@ Apache, NGINX, express (node.js), dynmap (Minecraft) 등 웹을 통해 서비스
 신뢰할 수 있는 인증서로 변경하기 위해서는 아래 절차를 따라주세요.
 
 ### Let's Encrypt 인증서 사용
-Stella IT ACME Wizard를 사용해 인증서를 Let's Encrypt 인증서를 발급받아 HTTP Proxy에 적용할 수 있습니다.  
-
-(설명 추가 예정)
+[Stella IT ACME Wizard](https://github.com/Stella-IT/acme-wizard)를 사용해 인증서를 Let's Encrypt 인증서를 발급받아 HTTP Proxy에 적용할 수 있습니다.  
+  
+[ACME Wizard로 Let's Encrypt 인증서 설정](./setup-letsencrypt-with-acme-wizard)
 
 ### 자체 인증서 사용 (BYOC, Bring your own certificate)
 Stella IT HTTP Proxy SSL 상세 설정에서 HTTPS 인증서를 수동으로 업로드 하실 수 있습니다.  
