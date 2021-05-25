@@ -1,7 +1,7 @@
 ---
 title: plan_is_sold_out 라는 오류 메세지가 떠요.
 description: plan_is_sold_out 오류에 대해 알아봅니다.
-position: 3
+position: 4
 category: FAQ/Console
 ---
 

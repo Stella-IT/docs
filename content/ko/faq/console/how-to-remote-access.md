@@ -1,7 +1,7 @@
 ---
 title: 원격 접속은 어떻게 하나요?
 description: 원격 접속을 하는 방법에 대해 알아봅니다.
-position: 3
+position: 5
 category: FAQ/Console
 ---
 
