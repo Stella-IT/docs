@@ -10,6 +10,9 @@ Stella IT Access는 HTTP Proxy에 설정 할 수 있는 기능으로, 로그인�
 ![image](https://user-images.githubusercontent.com/27724108/119512718-89df3d00-bdae-11eb-90dd-2a71f3d1a409.png)
 
 
+## 설정상 유의 사항
+보안 설정을 위해 Stella IT HTTP Proxy가 사용하는 192.168.1.10 외에는 연결을 차단 하는 것을 권장합니다.
+
 ## Stella IT Access 내부용 URL
 
 ### 로그인: `/_s4ait.access/login`
