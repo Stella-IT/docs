@@ -9,7 +9,7 @@ Stella IT에서는 Stella IT Payments를 통해 간편 결제 수단인 `카카�
 만약 과정 속에서 문제가 발생할 경우 상담센터에 연락해주세요!
 
 ## Stella IT Payments에 결제수단 등록하기
-Stella IT Payments에서 자동 결제를 활성화 하기 위해서는, Stella IT Payments에 우선 카드를 등록하셔야 합니다.
+Stella IT Console에서 자동 결제를 활성화 하기 위해서는, Stella IT Payments에 우선 카드를 등록하셔야 합니다.
 
 해당 방법은 [결제 수단 등록은 어떻게 하나요?](/faq/payments/how-to-set-billing-card) 를 참고해 주세요.
 
@@ -17,7 +17,7 @@ Stella IT Payments에서 자동 결제를 활성화 하기 위해서는, Stella 
 1. Stella IT Console에서 가상머신 상세페이지에 진입합니다.
 2. 우측 상단의 [자동결제 설정] 버튼을 누릅니다.
 3. "자동결제가 설정되었습니다" 라는 메시지가 나왔다면, 성공적으로 완료가 되었습니다.
-## 가상머신 가장 결제 비활성화하기
+## 가상머신 자동 결제 비활성화하기
 1. Stella IT Console에서 가상머신 상세페이지에 진입합니다.
 2. 우측 상단의 [자동결제 해제] 버튼을 누릅니다.
 3. "자동결제가 해제되었습니다" 라는 메시지가 나왔다면, 성공적으로 완료가 되었습니다.
