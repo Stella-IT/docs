@@ -32,7 +32,7 @@ Stella IT에서 현재 서비스 하는 제품군은 DDoS 방어 시스템이 �
 * Minecraft Bedrock Edition (UDP)
 * SCP SL (UDP)
 * FiveM (UDP)
-* KKuTu (특정 포트사용이 웹 인터페이스에 하드코딩 되어있음, 그 외의 스펙은 공식 지원하므로, SNI 지원 패치시 사용 가능) (추후 소스코드 수정 문서 
+* KKuTu (특정 포트사용이 웹 인터페이스에 하드코딩 되어있음, 그 외의 스펙은 공식 지원하므로, SNI 지원 패치시 사용 가능) (추후 소스코드 수정 문서 추가 예정)
 
 <alert type="warning">
 
