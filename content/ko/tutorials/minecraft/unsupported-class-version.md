@@ -1,6 +1,6 @@
 ---
 title: UnsupportedClassVersion 에러가 떠요!
-description: 도메인을 연결 하는 방법에 대해 알아봅니다.
+description: UnsupportedClassVersion 에러를 해결하기 위해 Java 16으로 업그레이드 하는 방법을 알아봅니다.
 
 category: Tutorials/minecraft
 ---
