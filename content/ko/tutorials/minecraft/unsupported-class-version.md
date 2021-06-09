@@ -24,9 +24,8 @@ Java Runtime은 기본적으로 [Forward Compatibility (상위 호환성)](https
 
 ### Windows
 <alert type="warning">
-    현재 Stella IT의 기본 템플릿에 포함된 버전은 **AdoptOpenJDK Java 8** 그리고 **AdoptOpenJDK Java 11** 버전이며, **AdoptOpenJDK Java 16** 은 아직 기본 탑재가 되어있지 않습니다.  
-
-    빠른 시일 내에 기본 탑재 할 수 있도록 하겠습니다.
+    현재 Stella IT의 기본 템플릿에 포함된 버전은 <b>AdoptOpenJDK Java 8</b> 그리고 <b>AdoptOpenJDK Java 11</b> 버전이며, <b>AdoptOpenJDK Java 16</b> 은 아직 기본 탑재가 되어있지 않습니다.<br><br>
+    <b>빠른 시일 내에 기본 탑재 할 수 있도록 하겠습니다.</b>
 </alert>
 
 1. [AdoptOpenJDK 다운로드 페이지](https://adoptopenjdk.net/?variant=openjdk16&jvmVariant=hotspot)로 이동합니다.
