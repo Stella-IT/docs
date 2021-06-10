@@ -31,8 +31,7 @@ Java Runtime은 기본적으로 [Forward Compatibility (상위 호환성)](https
 1. [AdoptOpenJDK 다운로드 페이지](https://adoptopenjdk.net/?variant=openjdk16&jvmVariant=hotspot)로 이동합니다.
 2. **1. Choose a Version** 에서 `OpenJDK 16 (Latest)` 를 선택합니다.
 3. (선택) **2. Choose a JVM** 에서 원하는 JVM 종류를 선택합니다.
-   * [**Hotspot**](https://openjdk.java.net/groups/hotspot/): Oracle Java에서 사용하는 것과 같은 런타임. 호환성이 제일 높음
-   * [**Eclipse OpenJ9**](https://www.eclipse.org/openj9/): IBM Java에서 사용하는 것과 같은 런타임. 속도가 빠르고, 메모리를 적게 사용함.
+   JVM 종류에 대한 설명은 [이 링크](/tutorials/minecraft/tweaking-jvm#JVM의-종류) 를 참고하세요
 4. **Latest Release** 버튼을 눌러 다운로드를 시작합니다.
 
 
