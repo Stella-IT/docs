@@ -2,7 +2,7 @@
 title: HTTP Proxy용으로 끄투 서버 시작/설정하기
 description: 끄투 서버를 Stella IT에서 열기 위해 필요한 정보들을 담았습니다.
 
-category: false
+category: 'Tutorials/KKuTu'
 ---
 
 [KKuTu](https://github.com/JJoriping/KKuTu#linux-%ED%99%98%EA%B2%BD) 는 레거시 기술을 많이 사용하며, Stella IT에서 제공하는 SNI 기반의 Reverse Proxy를 바로 지원하지 않기에, 다음과 같은 추가 설정이 필요합니다.
