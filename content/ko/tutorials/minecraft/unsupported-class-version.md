@@ -35,5 +35,62 @@ Java Runtime은 기본적으로 [Forward Compatibility (상위 호환성)](https
    * [**Eclipse OpenJ9**](https://www.eclipse.org/openj9/): IBM Java에서 사용하는 것과 같은 런타임. 속도가 빠르고, 메모리를 적게 사용함.
 4. **Latest Release** 버튼을 눌러 다운로드를 시작합니다.
 
-### Linux
-작성 중
+
+### Ubuntu
+1. AdoptOpenJDK의 Release 전자서명용 GPG Key를 다운로드 합니다.
+   ```bash
+   wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | sudo apt-key add -
+   ```
+2. (선택) `software-properties-common` 을 설치합니다.
+   ```bash
+   sudo apt install software-properties-common
+   ```
+3. apt repository를 추가합니다.
+   ```bash
+   sudo add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
+   ```
+4. (선택) APT 패키지 정보를 최신 버전으로 갱신합니다.
+   ```bash
+   sudo apt update
+   ```
+4. adoptopenjdk의 16 버전을 설치합니다.
+   * [**Hotspot**](https://openjdk.java.net/groups/hotspot/): Oracle Java에서 사용하는 것과 같은 런타임. 호환성이 제일 높음.
+      ```bash
+      sudo apt install adoptopenjdk-16-hotspot
+      ```
+   * [**Eclipse OpenJ9**](https://www.eclipse.org/openj9/): IBM Java에서 사용하는 것과 같은 런타임. 속도가 빠르고, 메모리를 적게 사용함.
+      ```nash
+      sudo apt install adoptopenjdk-16-openj9
+      ```
+
+### CentOS, Fedora, Rocky Linux
+1. yum repo에 adoptopenjdk 를 추가합니다.
+    ```bash
+    cat <<EOF > /etc/yum.repos.d/adoptopenjdk.repo
+    [AdoptOpenJDK]
+    name=AdoptOpenJDK
+    baseurl=https://adoptopenjdk.jfrog.io/adoptopenjdk/rpm/centos/7/$(uname -m)
+    enabled=1
+    gpgcheck=1
+    gpgkey=https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public
+    EOF
+    ```
+
+2. yum의 패키지 정보를 최신으로 갱신합니다.
+    ```bash
+    yum update
+    ```
+3. adoptopenjdk의 16 버전을 설치합니다.
+   * [**Hotspot**](https://openjdk.java.net/groups/hotspot/): Oracle Java에서 사용하는 것과 같은 런타임. 호환성이 제일 높음.
+      ```bash
+      yum install adoptopenjdk-16-hotspot
+      ```
+   * [**Eclipse OpenJ9**](https://www.eclipse.org/openj9/): IBM Java에서 사용하는 것과 같은 런타임. 속도가 빠르고, 메모리를 적게 사용함.
+      ```nash
+      yum install adoptopenjdk-16-openj9
+      ```
+
+### Other Linux Distributions
+DEB/RPM을 통해 설치가 가능한 배포판의 경우, [이 링크 (영어)](https://blog.adoptopenjdk.net/2019/05/adoptopenjdk-rpm-and-deb-files/) 를 참고하세요.
+
+해당 플랫폼이 아니거나, Busybox 등을 이용한 Lite 한 Linux 배포판의 경우, [AdoptOpenJDK 설치 페이지](https://adoptopenjdk.net/installation.html) 에서 환경에 맞는 버전을 다운로드 받으세요.  
