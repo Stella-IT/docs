@@ -19,7 +19,6 @@ Java는 초기부터 [JVM](https://ko.wikipedia.org/wiki/%EC%9E%90%EB%B0%94_%EA%
 
 ## 해결 방안
 
-### Windows
 <alert type="warning">
     현재 Stella IT의 기본 템플릿에 포함된 버전은 <b>AdoptOpenJDK Java 8</b> 그리고 <b>AdoptOpenJDK Java 11</b> 버전이며, <b>AdoptOpenJDK Java 16</b> 은 아직 기본 탑재가 되어있지 않습니다.<br><br>
     <b>빠른 시일 내에 기본 탑재 할 수 있도록 하겠습니다.</b>
