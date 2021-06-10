@@ -11,7 +11,7 @@ category: Tutorials/minecraft
 09.06 17:14:21 [Server] INFO Exception in thread "main" java.lang.UnsupportedClassVersionError: net/minecraft/server/Main has been compiled by a more recent version of the Java Runtime (class file version 60.0), this version of the Java Runtime only recognizes class file versions up to 52.0
 ```
 
-## Minecraft Java Edition 1.17과, Java 16.
+## Minecraft 1.17의 타겟 Java 버전 변경
 Minecraft Java Edition는 1.16까지 Java 8 버전을 기반으로 제공되고 있었으나, [21w19a Snapshot](https://www.minecraft.net/en-us/article/minecraft-snapshot-21w19a) 이후로 Minecraft Java Edition의 기반 코드가 Java 16를 대상으로 작동되도록 변경되었습니다.
 
 ### 저는 Java 8보다 높은 버전을 사용해도 작동했었는데요?
