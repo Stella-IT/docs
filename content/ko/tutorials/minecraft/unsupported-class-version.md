@@ -59,7 +59,7 @@ Java Runtime은 기본적으로 [Forward Compatibility (상위 호환성)](https
       sudo apt install adoptopenjdk-16-hotspot
       ```
    * [**Eclipse OpenJ9**](https://www.eclipse.org/openj9/): IBM Java에서 사용하는 것과 같은 런타임. 속도가 빠르고, 메모리를 적게 사용함.
-      ```nash
+      ```bash
       sudo apt install adoptopenjdk-16-openj9
       ```
 
@@ -86,7 +86,7 @@ Java Runtime은 기본적으로 [Forward Compatibility (상위 호환성)](https
       yum install adoptopenjdk-16-hotspot
       ```
    * [**Eclipse OpenJ9**](https://www.eclipse.org/openj9/): IBM Java에서 사용하는 것과 같은 런타임. 속도가 빠르고, 메모리를 적게 사용함.
-      ```nash
+      ```bash
       yum install adoptopenjdk-16-openj9
       ```
 
