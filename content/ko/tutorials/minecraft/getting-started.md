@@ -8,8 +8,8 @@ category: Tutorials/minecraft
 마인크래프트 서버를 열기 위해 필요한 정보들을 소개 합니다.
 
 ## 개념 이해
-* [마인크래프트 서버란?] // 렐름 사설서버 비교, Online Offline 비교, ELUA 내용, 기타 커뮤니티, 추천 사이트.  // 내용추가. 서버는 어떻게 열여야하나요, 도메인 연동, 번지코드 관련내용 추가.
-* [상위버전 UUID는 무얼 의미하는걸까요?] // 과거 Player 닉네임 위주였다면 상위는 UUID 기준으로 인한 BAN등.
+* [마인크래프트 서버란?](/tutorials/minecraft/What-is-minecraft-server)
+* [UUID는 무엇을 의미하는걸까요?](/tutorials/minecraft/What-does-UUID-mean)
 
 ## 서버 구동
 * [서버는 어떻게 열어야 하나요?](/tutorials/minecraft/how-to-open-server)
