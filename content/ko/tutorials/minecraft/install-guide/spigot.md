@@ -12,24 +12,26 @@ category: 'Tutorials/Minecraft/Install'
 
 
 *WINDOWS*
+
 ## 서버 환경
 OpenJDK 16.0.1 64Bit
 
 ## 사전 준비
 드롭박스나, 윈드라이브 위치에 있으면 에러를 제공합니다. 로컬디스크 내 별도의 폴더를 생성해서 작업하시는걸 추천드립니다.  
-buildtools.jar [다운]https://www.spigotmc.org/wiki/buildtools/ 
+<a href="https://www.spigotmc.org/wiki/buildtools/ ">[다운로드]</a> buildtools.jar 
 
 ## 내용
 1. buildtools.jar 과 실행 배치파일(.bat)을 만듭니다.
 `@echo off
 java -jar BuildTools.jar --rev 버전명 (ex 1.16.5)
 pause`
-2. 상단의 내용을 작성하여 배치파일을 저장하고 배치파일(.bat)을 시작해주세요.
+2. 배치파일(.bat)을 실행해주세요.
 3. 스피갓의 해당버전을 빌드 중입니다. 대략 10분 내로 빌드가 완료됩니다.
-4. 대기 후 생성하셨던 폴더안에 spigot-버전명.jar 이 생성됩니다.
-5. 그 파일을 복사하여 새로운 폴더와 배치파일(.bat) 생성해 줍니다. `(예시. 1.16.5 Version)`
+4. 대기 후 생성하셨던 폴더안에 `spigot-버전명.jar` 이 생성됩니다.
+5. 파일`(spigot-버전명.jar)`을 복사하여 새로운 폴더와 배치파일(.bat) 생성해 줍니다. `(예시. 1.16.5 Version)`
 '@echo off
 java -Xmx1G -jar spigot-버전명.jar
 pause'
-6. Eula.txt 파일을 연후 `Eula=false` 부분을 `Eula=true`로 변경해주세요
-7. 배치파일을 다시 재시작 하면 서버가 열립니다.
+6. 배치파일(.bat)을 실행해주세요.
+7. Eula.txt 파일을 연후 `Eula=false` 부분을 `Eula=true`로 변경해주세요
+8. 배치파일을 다시 재실행 하면 서버가 열립니다.
