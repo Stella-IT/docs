@@ -8,8 +8,8 @@ category: Tutorials/minecraft
 마인크래프트 서버를 열기 위해 필요한 정보들을 소개 합니다.
 
 ## 개념 이해
-* [마인크래프트 서버란?](/tutorials/minecraft/What-is-minecraft-server)
-* [UUID는 무엇을 의미하는걸까요?](/tutorials/minecraft/What-does-UUID-mean)
+* [마인크래프트 서버란?](/tutorials/minecraft/what-is-minecraft-server)
+* [UUID는 무엇을 의미하는걸까요?](/tutorials/minecraft/what-does-uuid-mean)
 
 ## 서버 구동
 * [서버는 어떻게 열어야 하나요?](/tutorials/minecraft/how-to-open-server)
