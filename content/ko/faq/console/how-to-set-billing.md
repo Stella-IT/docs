@@ -5,8 +5,7 @@ description: VM에서 자동 결제를 설정하는 법에 대해 알아봅니�
 category: FAQ/Console
 ---
 
-Stella IT에서는 Stella IT Payments를 통해 간편 결제 수단인 `카카오페이`와 `토스`, 그리고 자주 사용하는 카드 정보를 등록하여, 정기 결제를 설정을 진행할 수 있습니다.
-만약 과정 속에서 문제가 발생할 경우 상담센터에 연락해주세요!
+자동 결제 기능은 Stella IT에서 생성한 가상 머신이 만료되기 5일전 미리 등록해둔 카드 또는 간편 결제 수단으로 자동으로 연장할 수 있는 편리한 기능입니다.
 
 ## Stella IT Payments에 결제수단 등록하기
 Stella IT Console에서 자동 결제를 활성화 하기 위해서는, Stella IT Payments에 우선 카드를 등록하셔야 합니다.
