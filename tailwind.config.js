@@ -28,6 +28,9 @@ module.exports = {
                                 borderBottomWidth: '1px',
                                 borderBottomColor: theme('colors.gray.200')
                             },
+                            h5: {
+                                fontWeight: '600'
+                            },
                             blockquote: {
                                 fontWeight: '400',
                                 color: theme('colors.gray.600'),
