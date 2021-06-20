@@ -14,7 +14,9 @@ export default {
         const pathSlug = params.pathMatch
         var result = {
             page: null,
-            pageSlug: null
+            pageSlug: null,
+            title: "Stella IT Docs",
+            description: "Stella IT Docs에서 다양한 정보들을 확인해보세요."
         }
 
         if(!pathSlug || pathSlug == "") {
@@ -28,11 +30,27 @@ export default {
             if (document) {
                 result.page = "document"
                 result.pageSlug = document
+                result.title = document.title
+                result.description = document.description
             }
         }
 
         return result
-    }
+    },
+    head () {
+        return {
+            title: this.title,
+            meta: [
+                { hid: 'description', name: 'description', content: this.description },
+                // Open Graph
+                { hid: 'og:title', property: 'og:title', content: this.title },
+                { hid: 'og:description', property: 'og:description', content: this.description },
+                // Twitter Card
+                { hid: 'twitter:title', name: 'twitter:title', content: this.title },
+                { hid: 'twitter:description', name: 'twitter:description', content: this.description }
+            ]
+        }
+    },
 }
 </script>
 
