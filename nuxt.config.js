@@ -54,6 +54,11 @@ export default {
     '@nuxtjs/dayjs',
     '@nuxt/content'
   ],
+  
+  generate: {
+    fallback: '404.html',
+    routes: ['/']
+  },
 
   hooks: {
     'content:file:beforeInsert': (document) => {
