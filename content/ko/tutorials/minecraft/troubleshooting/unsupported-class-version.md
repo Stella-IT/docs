@@ -24,4 +24,4 @@ Java는 초기부터 [JVM](https://ko.wikipedia.org/wiki/%EC%9E%90%EB%B0%94_%EA%
     <b>빠른 시일 내에 기본 탑재 할 수 있도록 하겠습니다.</b>
 </alert>
 
-[Java 설치 방법](/tutorials/minecraft/install-guide/java.md)의 가이드를 따라 작성합니다. **(Java 16 버전으로 설치하여야 합니다.)**
+[Java 설치 방법](/tutorials/minecraft/install-guide/java)의 가이드를 따라 작성합니다. **(Java 16 버전으로 설치하여야 합니다.)**
