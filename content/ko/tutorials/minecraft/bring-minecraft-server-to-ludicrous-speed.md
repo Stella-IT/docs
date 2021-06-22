@@ -58,7 +58,7 @@ java -Xms10G -Xmx10G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMill
 
 OpenJ9을 사용하는 경우, Minecraft에 적합하도록 Garbage Collector를 수정 하는 것 외에, 환경에 따라 사용할 수 있는 JVM 설정 플래그가 추가로 제공됩니다.  
 
-OpenJ9에서 할 수 있는 최적화의 경우, 이 [문서](/faq/tutorials/further-optimizing-openj9-jvm-for-minecraft)를 참고하세요.
+OpenJ9에서 할 수 있는 최적화의 경우, 이 [문서](/tutorials/minecraft/further-optimizing-openj9-jvm-for-minecraft)를 참고하세요.
 
 ## Windows VM을 사용 중인 경우, Linux으로 운영체제 교체
 서버용 `Linux`의 경우 기본적으로 CLI 환경만 제공을 하고 있기에, 기본적으로 운영체제를 구동하기 위한 오버헤드가 Windows 보다 낮습니다.  
