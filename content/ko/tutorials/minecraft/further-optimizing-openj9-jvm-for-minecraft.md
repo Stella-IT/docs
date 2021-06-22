@@ -25,7 +25,7 @@ gencon은 기본으로 사용되지만, 강제하려면, flag를 다음과 같�
 1.13 이후로 서버의 부하가 커지면서, Garbage Collector가 해야 하는 일도 많아졌습니다.  
 이 경우, `balanced` 정책을 사용하는 것을 권장합니다.
 
-gencon은 기본으로 사용되지만, 강제하려면, flag를 다음과 같이 입력해 주세요: `-Xgcpolicy:balanced`
+적용하려면, flag를 다음과 같이 입력해 주세요: `-Xgcpolicy:balanced`
 
 ## Garbage Collector 강제 호출 비활성화 하기 (선택)
 Java에서는 비권장되는 기능이지만, `System.GC` 를 호출해서 Garbage Collector를 강제 호출할 수 있습니다. 하지만, Garbage Collector를 호출하면 서버가 일시적으로 멈추기 때문에, 서버가 멈추는 현상이 발생하고 TPS가 뚝 떨어지게 되죠. 몇몇 플러그인들이 이걸 사용하는 경우가 있는 데, 이게 렉 원인입니다. 플러그인이 메모리를 왕창 써 `Out of Memory` 가 발생하는 것이 아니라면 비활성화 하는 것을 권장합니다.
