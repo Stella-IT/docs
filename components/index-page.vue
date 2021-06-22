@@ -57,7 +57,7 @@
                         .tag.inline.bg-gray-200.p-1.rounded-lg.text-gray-500 Node.js
                         .tag.inline.bg-gray-200.p-1.rounded-lg.text-gray-500 HTTP Proxy
                     p.my-3
-                        nuxt-link(to="/category/tutorials/minecraft")
+                        nuxt-link(to="/category/tutorials/web")
                             button.w-full.flex-none.bg-gray-900.text-white.leading-6.py-2.px-3.border.border-transparent.rounded-xl.transition.duration-200(class="sm:w-auto hover:bg-gray-700 focus:ring-offset-2 focus:ring-offset-white focus:ring-gray-900 focus:outline-none focus:ring-2")
                                 | 탐색하기
                                 i.fal.fa-arrow-right.ml-2

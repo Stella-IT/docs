@@ -10,7 +10,8 @@
                     //-     i.far.fa-search.absolute.left-3.transform.text-gray-400(class="top-1/2 -translate-y-1/2")
                     //-     input.w-full.text-sm.text-black.placeholder-gray-500.border.border-gray-200.rounded-md.py-2.pl-10(class="focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none" placeholder="Stella IT 문서 검색")
                 .iconArea
-                    i.fab.fa-github
+                    a(href="https://github.com/Stella-IT/docs")
+                        i.fab.fa-github
         
         .h-16
         

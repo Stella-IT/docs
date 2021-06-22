@@ -19,6 +19,20 @@ category: 'Tutorials/Minecraft/Install'
     자세한 내용은 <a href="/tutorials/minecraft/bring-minecraft-server-to-ludicrous-speed#jvm-flag-설정">JVM Tweaking을 통해 성능 올리기 섹션</a> 을 확인하세요. 
 </alert>
 
+### Hotspot JVM을 사용하는 경우는 어떤 경우가 있나요?
+
+대표적으로 높은 호환성을 이야기할 수 있습니다.
+성능과 달리, 호환성이 중요하다면, HotSpot(JVM)을 사용하시는 것이 좋습니다.  
+
+특히 구 버전의 Minecraft 서버를 운영한다면, 사용하고 있는 플러그인이 OpenJ9 JVM과 호환이 되지 않는 경우가 있어요. 이런 경우 Hotspot JVM을 사용하는 것을 추천합니다.
+
+### 왜 OpenJ9(JVM)을 사용하나요?
+
+HotSpot에 비해, 속도가 빠르며 메모리를 적게 사용하며, 그외 다른 장점도 존재합니다.
+
+* 서버가 쉬고 있을때 GC가 돌아갑니다. 서버에 사람들이 몰렸을 때, GC가 돌아가면서 발생하는 렉을 줄일 수 있습니다.
+* 공유 클래스에 대해 사전 컴파일이 진행되어서 더욱 빠른 플러그인 성능을 기대할 수 있습니다.
+
 ## Java 버전 선택하기
 Java는 버전이 업데이트될수록, 성능이 지속적으로 개량 개선됩니다.  
 **이용중인 플러그인 또는 구동기 호환성의 문제가 없는 경우, LTS 버전 중 최신 버전을 사용하는 것을 적극 권장합니다.**  

@@ -6,7 +6,8 @@ category: FAQ/Console
 ---
 
 <alert type="warning">
-이 내용은 Stella IT Highend, 그리고 Save 요금제에 한합니다.
+이 내용은 Stella IT Highend, 그리고 Save 요금제에 한합니다.<br>
+공인 IP가 제공되는 Dedicated, HFQ 요금제의 경우, 포트를 개방하는 경우 자동으로 할당된 공인 IP로 개방되게 됩니다.
 </alert>
 
 가용포트는 Stella IT의 Highend/Save 요금제에서 개인이 사용 할 수 있는 외부로 개방된 포트입니다.  
