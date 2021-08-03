@@ -19,7 +19,7 @@ Stella IT Access는 HTTP Proxy에 설정 할 수 있는 기능으로, 로그인�
 ### Linux
 
 #### `ufw`
-`ufw allow from 192.168.0.10 to any port {port number}`
+`ufw allow from 192.168.1.10 to any port {port number}`
 
 #### `firewalld`
 (작성 예정)
