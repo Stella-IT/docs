@@ -36,19 +36,19 @@ category: FAQ/Console
 
 [https://console.stella-it.com/](https://console.stella-it.com/) 사이트 접속 → **[가상 머신]** 탭 클릭 → 원격 접속하고자 하는 가상 머신 선택
 
-![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/e44a4eb7-7b1c-478b-bef2-33eafa08eb08/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210815%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210815T091416Z&X-Amz-Expires=86400&X-Amz-Signature=0f33d9f5db3e20e572b8e7f8508656fdbd0c4725ad9ca8e0e5b88aa54fcda14e&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
+![Remote](https://user-images.githubusercontent.com/36693200/129474342-c4463026-28c5-439f-a347-3703b2e9c740.png)
 
 → **[원격 접속]** 클릭할 경우, 만약 설치한 운영체제가 윈도우 서버일 경우, 아래와 같이 나옵니다.
 
-![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/a43b4b46-4a2f-4a4a-a44d-3d0861ad91e2/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210815%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210815T091428Z&X-Amz-Expires=86400&X-Amz-Signature=acbf1b2fbf3c6963d1da4b875133b49078e30db2aaf3b4d5689a5660db6f1a53&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
+![Remote1](https://user-images.githubusercontent.com/36693200/129474346-0036de68-c553-43b1-b8ad-ed67c71a6f9e.png)
 
-설치한 운영체제: 윈도우일 경우, 사진입니다.
+> 설치한 운영체제: 윈도우일 경우, 사진입니다.
 
 → **[원격 접속]** 클릭할 경우, 만약 설치한 운영체제가 리눅스 서버일 경우, 아래와 같이 나옵니다. 
 
-![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/29240a6b-d778-4d61-a2ca-82cb5bd79bc9/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210815%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210815T091436Z&X-Amz-Expires=86400&X-Amz-Signature=d9f81f8871d51232542aef2fec40d38bc7f77d8517d59c90386ffc359acb357b&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
+![Remote2](https://user-images.githubusercontent.com/36693200/129474352-4ff17bb2-ddd0-4466-a549-a2fb7124616c.png)
 
-설치한 운영체제: 리눅스일 경우, 사진입니다.
+> 설치한 운영체제: 리눅스일 경우, 사진입니다.
 
 ### 5. 원격 접속해서 Internet Explorer로 인터넷을 하려고 했는데, "보안 강화 구성" 때문에 인터넷이 안돼요!
 
