@@ -42,23 +42,22 @@ category: FAQ/Console
 
 ![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/a43b4b46-4a2f-4a4a-a44d-3d0861ad91e2/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210815%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210815T091428Z&X-Amz-Expires=86400&X-Amz-Signature=acbf1b2fbf3c6963d1da4b875133b49078e30db2aaf3b4d5689a5660db6f1a53&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
 
-설치한 운영체제: 윈도우일 경우, 사진입니다.
+> 설치한 운영체제: 윈도우일 경우, 사진입니다.
 
 → **[원격 접속]** 클릭할 경우, 만약 설치한 운영체제가 리눅스 서버일 경우, 아래와 같이 나옵니다. 
 
 ![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/29240a6b-d778-4d61-a2ca-82cb5bd79bc9/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210815%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210815T091436Z&X-Amz-Expires=86400&X-Amz-Signature=d9f81f8871d51232542aef2fec40d38bc7f77d8517d59c90386ffc359acb357b&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
 
-설치한 운영체제: 리눅스일 경우, 사진입니다.
+> 설치한 운영체제: 리눅스일 경우, 사진입니다.
 
 ### 5. 원격 접속해서 Internet Explorer로 인터넷을 하려고 했는데, "보안 강화 구성" 때문에 인터넷이 안돼요!
 
 보안상의 이유로, 인터넷 익스플로러(**Internet Explorer)**는 **보안 강화 구성**이 켜져 있습니다.
 
-그렇기 때문에 바탕화면에 보실 경우, **"Essentials Utility"** 이름을 갖고 있는 폴더가 존재합니다.
+1. 바탕화면에 있는 [**"Essentials Utility"** 폴더] 클릭
+2. "Internet Browser" 폴더 클릭 → 브라우저 ex) Firefox, Chromium 중 선택 후 설치 진행해 주시면 됩니다.
 
-"Internet Browser" 폴더 클릭 → 브라우저 ex) Firefox, Chromium 중 선택 후 설치 진행해 주시면 됩니다.
-
-*** 보안 강화 구성:** 보안의 위험성이 있는 웹 사이트에 사용자 서버가 노출되는 것을 줄이기 위해 존재합니다.
+** 보안 강화 구성:** 보안의 위험성이 있는 웹 사이트에 사용자 서버가 노출되는 것을 줄이기 위해 존재합니다.
 
 ### 6. 자바 설치는 어떻게 해야되나요?
 
