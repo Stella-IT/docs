@@ -11,7 +11,7 @@
 <script>
 export default {
     async asyncData ({ $content, store, app, params, error }) {
-        const pathSlug = params.pathMatch
+        var pathSlug = params.pathMatch
         var result = {
             page: null,
             pageSlug: null,
@@ -25,6 +25,7 @@ export default {
             result.page = "category"
             result.pageSlug = pathSlug.replace("category/", "")
         } else {
+            if(pathSlug.endsWith("/") pathSlug = pathSlug.substring(0, pathSlug.length-1)
             const path = `/ko/${pathSlug}`
             const [document] = await $content({ deep: true }).where({ path }).fetch()
             if (document) {
