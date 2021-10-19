@@ -25,10 +25,10 @@ Stella IT에서 현재 서비스 하는 제품군은 DDoS 방어 시스템이 �
 * HTTP, HTTPS (with Stella IT HTTP Proxy)
 * Minecraft Java Edition
 * Terraria
+* Cloudflare Argo Tunnel
 
 ## 호환되지 않는 프로그램
 이용하시려는 프로그램이 해당 리스트에 포함되는 경우 이용시 문제가 발생 하실 수 있습니다.
-* HTTP/3 (QUIC)
 * Minecraft Bedrock Edition (UDP)
 * SCP SL (UDP)
 * FiveM (UDP)
