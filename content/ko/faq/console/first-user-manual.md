@@ -71,9 +71,34 @@ category: FAQ/Console
 기존에 운영하셨던 서버 파일은 압축하여 **네이버 메일**로 옮기시는 것을 권장드리고 있습니다.
 하지만, 처음 서버 운영하기 때문에 서버를 여는 방법에 대해 모르신다면, [마인크래프트 서버 시작하기](https://docs.stella-it.com/tutorials/minecraft/getting-started) 문서를 참고 부탁드리겠습니다.
 
-### 8. 호스팅 사용 기간  연장
+### 8. Minecraft 서버 접속할 주소가 필요로 합니다.
 
-#### 8.1. 호스팅 사용 기간 연장 하려고 하는데. 어떻게 해야하나요?
+그렇다면, 기본으로 제공하는 주소를 확인하는 방법을 알려드릴게요!
+
+1. Stella IT Console을 접속합니다.
+2. [가상머신](https://console.stella-it.com/vm) 탭을 클릭합니다.
+3. 호스팅 연장하고자 하는 **가상머신**을 클릭합니다.
+4. **[포트 목록]** 클릭합니다.
+
+Minecraft 서버 접속 주소 하단에 있는 주소를 통해 접속하실 수 있습니다.
+만약, 짧은 도메인이 필요하다면 상담 센터를 통해 지원 코드와 ex) abc.mcsv.kr 보내주시면 연결해드리고 있습니다.
+
+### 9. 마인리스트 서버 등록과 추천 관련 설정에 대해 궁금합니다.
+
+[마인리스트에 서버 등록하는 방법이 궁금해요!](https://docs.stella-it.com/tutorials/minecraft/minelist/how-to-register-my-server)
+
+아니면, 추천 보상(Votifier) 플러그인 설정을 방법에 대해서 궁금하신가요?
+
+설치부터 설정 방법까지 하단 링크를 통해 확인하실 수 있습니다.
+
+1. [Votifier(NuVotifier) 설치는 어떻게 하나요?](https://docs.stella-it.com/tutorials/minecraft/minelist/how-to-install-votifier)
+
+2. [마인리스트 Votifier(NuVotifier) 설정은 어떻게 해야 되나요?](https://docs.stella-it.com/tutorials/minecraft/minelist/how-to-integrate-votifier)
+
+
+### 10. 호스팅 사용 기간 연장
+
+#### 10.1. 호스팅 사용 기간 연장 하려고 하는데. 어떻게 해야하나요?
 
 1. Stella IT Console을 접속합니다.
 2. [가상머신](https://console.stella-it.com/vm) 탭을 클릭합니다.
@@ -82,7 +107,7 @@ category: FAQ/Console
     1. 만약 휴대폰일 경우, **톱니바퀴 모양 버튼**을 누른 다음 [**사용기간 연장]** 버튼을 누릅니다.
 5. 결제까지 완료한다면, 성공적으로 **호스팅 연장**이 되었어요!
 
-#### 8.2. 더 이상 호스팅을 이용하지 않고자 합니다. 어떻게 해야하나요?
+#### 10.2. 더 이상 호스팅을 이용하지 않고자 합니다. 어떻게 해야하나요?
 
 더 이상 호스팅을 이용하지 않을 계획이신가보군요! 그렇다면, 호스팅 자동 결제가 켜져있는지 확인해주세요. 
 
@@ -94,7 +119,7 @@ category: FAQ/Console
 
 그 다음, 만료일까지 자유롭게 사용 후 호스팅 연장을 하지 않으시면 됩니다. 
 
-#### 8.3. 호스팅 연장을 자동 연장(결제) 하고자 합니다. 어떻게 해야하나요?
+#### 10.3. 호스팅 연장을 자동 연장(결제) 하고자 합니다. 어떻게 해야하나요?
 
 Stella IT에서 생성한 가상 머신이 5일 전, **미리 등록해둔 카드** 또는 **간편 결제 수단**으로 자동으로 연장할 수 있는 기능이 있어요!
 
