@@ -49,7 +49,7 @@ Mojang 에서 공식적으로 배포하는 Minecraft 서버 구동용 프로그�
 [설정 방법](/tutorials/minecraft/install-guide/vanilla)
 
 ### CraftBukkit
-가장 많이 쓰였*었*던 커스터마이징 가능한 Minecraft 서버 구동용 프로그램입니다.  
+가장 많이 쓰였었던 커스터마이징 가능한 Minecraft 서버 구동용 프로그램입니다.  
 [공식 홈페이지](https://bukkit.org)  
 
 **장점**
