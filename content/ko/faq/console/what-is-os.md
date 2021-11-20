@@ -9,7 +9,14 @@ Stella IT Cloud 제품군은 운영시 용이를 위해 운영체제의 선택�
   
 원하시는 운영체제가 있는 경우, Stella IT Cloud 설정 환경에서 설정하실 수 있습니다. (기본적으로, Windows와 Linux의 주요 배포판을 제공합니다.)  
   
-만약 모르겠다면, Windows Server 2019를 선택하세요.  
+만약 모르겠다면, Windows Server 2019를 선택하세요. (마인크래프트 서버 운영은 Windows Server 2012 R2를 선택하세요.)
+
+<alert type="warning">
+``Window OS 종류별 기본 사용 램``
+Windows Server 2012 R2: 0.5~0.7GB
+Windows Server 2016: 1.0~1.2GB
+Windows Server 2019: 1.2~1.4GB
+</alert>
   
 *Windows 기반 운영체제를 선택시, Stella IT에서 Windows 라이선스 비용을 지불합니다.*
 
