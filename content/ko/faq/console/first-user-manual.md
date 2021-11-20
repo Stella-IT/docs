@@ -70,11 +70,11 @@ category: FAQ/Console
 3. 열고자 하는 서버 버전에 맞게 자바 버전을 선택 후 폴더를 클릭합니다. ex) 1.12.2일 경우, Java 8 (OpenJDK 8 Hotspot) 선택합니다. 
 4. 폴더 안에 있는 설치 파일을 통해 자바를 설치합니다.
 
+[참고](https://docs.stella-it.com/tutorials/minecraft/install-guide/java)
+
 ### 7. 서버 파일은 어떻게 이동해야 되나요?
 기존에 운영하셨던 서버 파일은 압축하여 **네이버 메일**로 옮기시는 것을 권장드리고 있습니다.
 하지만, 처음 서버 운영하기 때문에 서버를 여는 방법에 대해 모르신다면, [마인크래프트 서버 시작하기](https://docs.stella-it.com/tutorials/minecraft/getting-started) 문서를 참고 부탁드리겠습니다.
-
-[참고](https://docs.stella-it.com/tutorials/minecraft/install-guide/java)
 
 ### 8. Minecraft 서버 접속할 주소가 필요로 합니다.
 
