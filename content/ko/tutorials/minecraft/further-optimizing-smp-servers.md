@@ -21,6 +21,10 @@ category: Tutorials/minecraft
 ## `view-distance` 값 변경하기
 `server.properties`의 `view-distance` 를 제한하면, 플레이어가 볼수 있는 시야가 제한 되지만, 서버에서 보내줘야 하는 청크의 양이 감소하므로, 성능개선을 체감할 수 있습니다.
 
+<alert type="warning">
+`view-distance`값을 변경할 때는 서버 컨텐츠에 따라 적절히 조절하여 컨텐츠 진행에 불편함을 발생시키지 않도록 유의하여 변경해 주시기 바랍니다.
+</alert>
+
 ## 몬스터 스폰 제한하기
 `bukkit.yml`에 있는 `spawn-limits` 값을 조정 해 몬스터의 스폰량을 제한하여 서버의 성능을 향상할 수 있습니다.  
 
