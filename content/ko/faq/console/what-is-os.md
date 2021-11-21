@@ -12,10 +12,7 @@ Stella IT Cloud 제품군은 운영시 용이를 위해 운영체제의 선택�
 만약 모르겠다면, Windows Server 2019를 선택하세요. (마인크래프트 서버 운영은 Windows Server 2012 R2를 선택하세요.)
 
 <alert type="warning">
-``Window OS 종류별 기본 사용 램``
-Windows Server 2012 R2: 0.5~0.7GB
-Windows Server 2016: 1.0~1.2GB
-Windows Server 2019: 1.2~1.4GB
+Window OS 종류별 기본 사용 램 - Windows Server 2012 R2: 0.5~0.7GB | Windows Server 2016: 1.0~1.2GB | Windows Server 2019: 1.2~1.4GB
 </alert>
   
 *Windows 기반 운영체제를 선택시, Stella IT에서 Windows 라이선스 비용을 지불합니다.*
