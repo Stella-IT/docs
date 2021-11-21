@@ -20,3 +20,6 @@ category: FAQ/Console
 10. `호스트 이름`을 정해주세요. [참고](https://docs.stella-it.com/faq/console/what-is-hostname)
 11. `계속`을 누른 후 결제 수단을 정해주세요. [참고](https://docs.stella-it.com/faq/payments/how-to-set-billing-card)
 12. `다음 단계로 이동`을 누른 후 결제를 해주세요.
+
+
+* [어떻게 결제를 하나요?](/faq/payments/how-to-make-a-purchase)
