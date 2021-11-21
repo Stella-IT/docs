@@ -9,7 +9,7 @@ Stella IT Cloud 제품군은 운영시 용이를 위해 운영체제의 선택�
   
 원하시는 운영체제가 있는 경우, Stella IT Cloud 설정 환경에서 설정하실 수 있습니다. (기본적으로, Windows와 Linux의 주요 배포판을 제공합니다.)  
   
-만약 모르겠다면, Windows Server 2019를 선택하세요. (마인크래프트 서버 운영은 Windows Server 2012 R2를 선택하세요.)
+일반적으로 Windows 기반 OS는 최신 버전을 사용하시기를 권장합니다. 다만, 사용자 서버의 RAM 사용량 및 호환성 등을 고려하여 하위 버전을 선택하셔도 괜찮습니다.
 
 <alert type="warning">
 Windows OS 종류별 기본 사용 RAM은 일반적으로 다음과 같습니다.
