@@ -5,7 +5,7 @@ description: Console에서 새로운 가상 머신을 만드는 방법을 알아
 category: FAQ/Console
 ---
 
-가상 머신은 서버 컴퓨터에서 일정 부분을 이용하여 가상화를 통해 분리된 공간에 설치된 컴퓨터입니다.[참고](https://docs.stella-it.com/faq/console/first-user-manual)
+가상 머신은 서버 컴퓨터에서 일정 부분을 이용하여 가상화를 통해 분리된 공간에 설치된 컴퓨터입니다. [참고](https://docs.stella-it.com/faq/console/first-user-manual)
 
 ## 신규 가상머신 생성하기(SAVE, HIGHEND)
 1. [Stella IT Console](https://console.stella-it.com)을 접속합니다.
