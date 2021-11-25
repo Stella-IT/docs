@@ -10,3 +10,5 @@ category: FAQ/Docs
 * [GitHub 계정](https://github.com)
 * [Stella IT Code of Conduct 동의](https://opensource.stella-it.com/code_of_conduct)
 
+## 보상
+![award](https://user-images.githubusercontent.com/70272129/142958975-16a993e7-aa6d-4cb6-8f3a-ad0ce81e5be8.png)
