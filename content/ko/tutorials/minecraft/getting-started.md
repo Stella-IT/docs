@@ -17,10 +17,10 @@ category: Tutorials/minecraft
 * [번지코드는 어떻게 연결해야 하나요?]
 
 ## 서버 기초 설정
-* [OP 플레이어는 무엇을 의미하나요?] OP DEOP 
+* [OP 플레이어는 무엇을 의미하나요?](/tutorials/minecraft/what-is-op-meaning)
 * [플러그인은 어떻게 넣을 수 있나요?] 미지원
-* [화이트 리스트는 어떻게 설정하나요?] 온 오프 추가 제거
-* [서버 인원에 관한 설정은 어떻게 하나요?] 
+* [화이트 리스트는 어떻게 설정하나요?](/tutorials/minecraft/how-to-set-whitelist)
+* [서버 인원에 관한 설정은 어떻게 하나요?](/tutorials/minecraft/how-to-limit-a-number-of-users)
 * [서버 아이콘변경을 하고싶어요!]
 * [MOTD 설정하는 방법을 모르겠어요.]
 * [별다른 생각이 나지않아요]
