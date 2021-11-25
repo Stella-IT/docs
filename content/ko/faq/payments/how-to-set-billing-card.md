@@ -15,7 +15,7 @@ Stella IT에서는 간편 결제 수단인 `카카오페이`와 `토스`, 그리
 1. Stella IT Console에서 프로필 옆 [▼] 방향인 아이콘을 클릭해주세요!
 2. [내 계정] 클릭해주세요!
 3. [결제 관리] 클릭해주세요!
-4. [Stella IT Paymetns 이동](https://pay.stella-it.com/billing/manage) 버튼 눌러주세요!
+4. [Stella IT Paymens 이동](https://pay.stella-it.com/billing/manage) 버튼 눌러주세요!
 5. [새 카드 등록하기] 클릭해주세요!
 
 #### 카카오페이 연결
