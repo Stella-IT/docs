@@ -8,7 +8,7 @@ category: Tutorials/minecraft
 화이트 리스트는 마인크래프트 서버 내에서 특정 사용자만을 접속할 수 있도록 하는 명령어입니다.
 Minecraft: Java Edition 에서는 OP와 허가된 사용자는 해당 기능이 활성화 여부에 무관하고 접속할 수 있습니다.
 
-## 화이트 리스트 기능 활성화하기f
+## 화이트 리스트 기능 활성화하기
 1. 서버에서 [OP](tutorials/minecraft/what-is-op-meaning)를 지급 받습니다.
 2. 서버에서 화이트 리스트를 활성화 시키기 위해 `/whitelist on` 을 칩니다.
 
