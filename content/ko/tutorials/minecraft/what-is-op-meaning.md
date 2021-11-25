@@ -23,5 +23,5 @@ op-permission-level=4 - /stop 명령어 가능<br>
 op-permission-level=3 이 적절하며, /stop 명령어는 console 을 통하여 작동시킬 수 있습니다.
 </alert>
 
-## OP 뺏는 법
-서버 내에서 OP를 뺏는 법에는 또다는 OP 또는 서버 버킷의 Console에서 사용자에게 `/deop <target>`을 통하여 OP를 뺏을 수 있습니다.
+## OP 뺐는 법
+서버 내에서 OP를 뺐는 법에는 또다는 OP 또는 서버 버킷의 Console에서 사용자에게 `/deop <target>`을 통하여 OP를 뺏을 수 있습니다.
