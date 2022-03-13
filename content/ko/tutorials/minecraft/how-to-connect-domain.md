@@ -8,10 +8,31 @@ category: Tutorials/minecraft
 ## Stella IT가 보유하고 있는 도메인으로 등록
 Stella IT에서는 기본적으로 `*.mcsv.kr` 형태의 도메인을 이용 중이신 고객님께 무료로 제공해 드리고 있습니다.  
 
-현재 자동화 시스템 (MCSV.KR Platform)이 준비중인 관계로, [상담 센터로 연락해](https://console.stella-it.com/support) 주시면 연결 도와드리겠습니다.
-
 ## [MCSV.KR](https://mcsv.kr) Platform 사용
-현재 준비 중인 기능입니다.
+### Minehub (SAVE, HIGHEND)
+
+- 준비물: Stella-IT 계정, Stella-IT VPS(SAVE/HIGHEND)
+1. [Minehub](https://dash.minehub.kr/)에 로그인합니다.
+2. 좌측 메뉴에서 [도메인 관리](https://dash.minehub.kr/dns)를 클릭합니다.
+3. `새 도메인 등록하기`를 누릅니다.
+4. `이용하고자 하는 도메인 이름`의 입력칸에 자신이 원하는 `mcsv.kr` 앞에 붙을 서브도메인을 입력하고 `등록`을 누릅니다.
+5. `도메인 관리`에서 자신이 등록한 도메인을 클릭합니다.
+6. 우측 상단의 `마인크래프트 서버 연동`을 클릭합니다.
+7. `연동할 서버 주소 선택`을 클릭하고 `Stella IT Cloud 서버를 등록하고 싶어요`를 클릭하고 `VM 정보 가져오기`를 클릭합니다.
+8. `연동할 VM 선택`을 클릭하고 자신이 연결하기를 원하는 `Stella-IT Cloud`를 선택한 후, `계속`을 클릭합니다.
+
+### Minehub (Minehub)
+
+- 준비물: Stella-IT 계정, Stella-IT VPS(SAVE/HIGHEND)
+1. [Minehub](https://dash.minehub.kr/)에 로그인합니다.
+2. 좌측 메뉴에서 [도메인 관리](https://dash.minehub.kr/dns)를 클릭합니다.
+3. `새 도메인 등록하기`를 누릅니다.
+4. `이용하고자 하는 도메인 이름`의 입력칸에 자신이 원하는 `mcsv.kr` 앞에 붙을 서브도메인을 입력하고 `등록`을 누릅니다.
+5. `도메인 관리`에서 자신이 등록한 도메인을 클릭합니다.
+6. 우측 상단의 `마인크래프트 서버 연동`을 클릭합니다.
+7. `연동할 서버 주소 선택`을 클릭하고 `Minehub Cloud 서버를 등록하고 싶어요`를 클릭하고 `VM 정보 가져오기`를 클릭합니다.
+8. `연동할 VM 선택`을 클릭하고 자신이 연결하기를 원하는 `Minehub Cloud`를 선택한 후, `계속`을 클릭합니다.
+
 
 ## 자신이 소유한 도메인 등록
 ### CLOUDFLARE (SAVE, HIGHEND)
