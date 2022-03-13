@@ -8,7 +8,7 @@ category: Tutorials/minecraft
 ## Stella IT가 보유하고 있는 도메인으로 등록
 Stella IT에서는 기본적으로 `*.mcsv.kr` 형태의 도메인을 이용 중이신 고객님께 무료로 제공해 드리고 있습니다.  
 
-## [MCSV.KR](https://mcsv.kr) Platform 사용
+## [MINEHUB.KR](https://minehub.kr) Platform 사용
 ### Minehub (SAVE, HIGHEND)
 
 - 준비물: Stella-IT 계정, Stella-IT VPS(SAVE/HIGHEND)
