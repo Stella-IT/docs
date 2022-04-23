@@ -33,7 +33,7 @@ Stella IT Cloud의 인프라의 경우, <b>Minecraft: Bedrock Edition</b>과 현
 더욱 자세한 설명은 [What is Spigot? CraftBukkit? Bukkit? Vanilla? Forg (영어)](https://www.spigotmc.org/wiki/what-is-spigot-craftbukkit-bukkit-vanilla-forg/) 을 확인하세요.
 
 해당 서버 구동 프로그램을 설치하려면, 해당 종류의 [설치 방법](#) 페이지를 확인하세요.
-서버 구동 프로그램의 종류를 확인하실려면, [버킷 종류](/tutorial/minecraft/what-kinds-of-bukkits) 페이지를 확인하세요.
+서버 구동 프로그램의 종류를 확인하실려면, [버킷 종류](/tutorials/minecraft/what-kinds-of-bukkits) 페이지를 확인하세요.
 
 
 
