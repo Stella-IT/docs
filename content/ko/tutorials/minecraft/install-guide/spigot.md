@@ -51,7 +51,7 @@ OpenJDK 16.0.1 64Bit
 10. `spigot-버전명.jar` 를 붙여넣은 폴더에 파일 종류로 `모든 파일 (*.*)` 를 선택하고, `start.bat` 으로 저장합니다.
 11. `start.bat`을 실행해주세요.
 
-### UNIX
+### *NIX
 1. `git` 을 설치합니다.
     * Ubuntu, Debian: `sudo apt install git`
     * CentOS, Fedora, Rocky Linux: `yum install git`
@@ -73,7 +73,7 @@ OpenJDK 16.0.1 64Bit
 6. 프로그램을 실행합니다.
 
 <alert type="info">
-UNIX 터미널 환경에서 특정한 프로그램을 백그라운드로 계속 실행하는 쉬운 방법으로 GNU/Screen 을 사용하는 방법이 있습니다.<br>
+*NIX 터미널 환경에서 특정한 프로그램을 백그라운드로 계속 실행하는 쉬운 방법으로 GNU/Screen 을 사용하는 방법이 있습니다.<br>
 </alert>
 
 ## 후설정
