@@ -7,8 +7,9 @@
         hr.mb-5
 
         div(v-if="isLoading")
-            .text-center
-                p.text-xl.font-bold 콘텐츠 불러오는 중
+            .flex.justify-center.gap-2.items-center
+                loading
+                .text-xl.font-semibold 콘텐츠를 불러오는 중
         div(v-else)
             div(v-for="article in articles")
                 nuxt-link(:to="article.to")

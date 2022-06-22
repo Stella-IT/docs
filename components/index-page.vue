@@ -6,7 +6,7 @@
 
         hr
 
-        .firstViewContent.my-10.flex
+        .firstViewContent.my-10.flex.flex-col-reverse.px-6(class="lg:flex-row")
             .flex-grow
                 h1.text-2xl.font-bold 자주 찾는 질문
                 h2.text-lg.font-gray-800.my-3 Stella IT 이용 중 많은 고객분들이 자주 질문해주셨던 질문들을 모았습니다.
@@ -20,16 +20,13 @@
                         button.w-full.flex-none.bg-gray-900.text-white.leading-6.py-2.px-3.border.border-transparent.rounded-xl.transition.duration-200(class="sm:w-auto hover:bg-gray-700 focus:ring-offset-2 focus:ring-offset-white focus:ring-gray-900 focus:outline-none focus:ring-2")
                             | 탐색하기
                             i.fal.fa-arrow-right.ml-2
-            div(style="max-width: 500px; min-width: 500px; width: 500px;")
-                img(src="~/assets/img/index/faq_left.jpeg")
+            img.w-full.h-auto.overflow-hidden.rounded-md(src="~/assets/img/index/faq_left.jpeg")
         
         hr
 
-        .secondGrid.my-10.grid.grid-cols-2
-            .gridContainer
-                .flex.justify-center
-                    div(style="max-width: 350px; min-width: 350px; width: 350px;")
-                        img(src="~/assets/img/index/minecraft_top.jpeg")
+        .secondGrid.my-10.grid.grid-cols-1(class="lg:grid-cols-2")
+            .px-5
+                img.w-full.h-auto.overflow-hidden.rounded-md(src="~/assets/img/index/minecraft_top.jpeg")
                 div
                     h1.text-2xl.font-bold 마인크래프트 서버 운영 가이드
                     h2.text-lg.font-gray-800.my-3 Stella IT에서 마인크래프트 서버 운영을 위한 꿀팁을 준비했습니다.
@@ -43,10 +40,8 @@
                             button.w-full.flex-none.bg-gray-900.text-white.leading-6.py-2.px-3.border.border-transparent.rounded-xl.transition.duration-200(class="sm:w-auto hover:bg-gray-700 focus:ring-offset-2 focus:ring-offset-white focus:ring-gray-900 focus:outline-none focus:ring-2")
                                 | 탐색하기
                                 i.fal.fa-arrow-right.ml-2
-            .gridContainer
-                .flex.justify-center
-                    div(style="max-width: 350px; min-width: 350px; width: 350px;")
-                        img(src="~/assets/img/index/http_top.jpeg")
+            .px-5
+                img.w-full.h-auto.overflow-hidden.rounded-md(src="~/assets/img/index/http_top.jpeg")
                 div
                     h1.text-2xl.font-bold HTTP 서버 구동하기
                     h2.text-lg.font-gray-800.my-3 Stella IT의 강력한 네트워크를 통해 웹 서버를 운영하는 방법을 알아보세요.
@@ -74,12 +69,5 @@ export default {
 <style lang="postcss" scoped>
 .tag + .tag {
     margin-left: 6px;
-}
-
-.gridContainer {
-    @apply px-5;
-}
-.gridContainer + .gridContainer {
-    @apply border-l;
 }
 </style>
