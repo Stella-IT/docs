@@ -1,27 +1,27 @@
-const path = require('path')
-const fs = require('graceful-fs')
+import { defineNuxtConfig } from 'nuxt/config'
 
-export default {
+export default defineNuxtConfig({
   telemetry: false,
 
   // ssr: false,
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
-  head: {
-    titleTemplate: '%s - Stella IT Docs',
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' },
-      { hid: 'description', name: 'description', content: 'Stella IT의 공식 문서입니다.' }
-    ],
-    link: [
-      { rel: 'stylesheet', href: 'https://pretendard.appie.dev/web/static/pretendard.css' },
-      { rel: 'stylesheet', href: 'https://fontawesome.appie.dev/css/all.min.css' },
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ],
-    script: [
-      { src: "https://polyfill.appie.dev/polyfill.min.js?features=default%2CJSON%2CNumber.parseInt%2CNumber.parseFloat%2CNumber.isNaN%2CNumber.isInteger%2Ces2019%2Ces2018%2Ces2017%2Ces2016%2Ces2015%2Ces7%2Ces6%2Ces5%2CArray.isArray%2CArray.prototype.forEach%2CArray.prototype.indexOf%2CArray.prototype.sort%2CArray.prototype.map" }
-    ]
+  app: {
+    head: {
+      titleTemplate: '%s - Stella IT Docs',
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' },
+        { hid: 'description', name: 'description', content: 'Stella IT의 공식 문서입니다.' }
+      ],
+      link: [
+        { rel: 'stylesheet', href: 'https://fontawesome.appie.dev/css/all.min.css' },
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      ],
+      script: [
+        { src: "https://polyfill.appie.dev/polyfill.min.js?features=default%2CJSON%2CNumber.parseInt%2CNumber.parseFloat%2CNumber.isNaN%2CNumber.isInteger%2Ces2019%2Ces2018%2Ces2017%2Ces2016%2Ces2015%2Ces7%2Ces6%2Ces5%2CArray.isArray%2CArray.prototype.forEach%2CArray.prototype.indexOf%2CArray.prototype.sort%2CArray.prototype.map" }
+      ]
+    },
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
@@ -39,8 +39,7 @@ export default {
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
-    // https://go.nuxtjs.dev/tailwindcss
-    '@nuxtjs/tailwindcss',
+
   ],
 
   tailwindcss: {
@@ -49,31 +48,35 @@ export default {
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
-    // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios',
+    // https://go.nuxtjs.dev/tailwindcss
+    '@nuxtjs/tailwindcss',
     // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa',
-    '@nuxtjs/dayjs',
+    // '@nuxtjs/pwa',
+    // '@nuxtjs/dayjs',
     '@nuxt/content'
   ],
+
+  content: {
+    
+  },
   
   generate: {
     fallback: '404.html',
     routes: ['/']
   },
 
-  hooks: {
-    'content:file:beforeInsert': (document) => {
-      const regexp = new RegExp(`^/(ko)`, 'gi')
-      const { dir, slug, category } = document
-      const _dir = dir.replace(regexp, '')
-      const _slug = slug.replace(/^index/, '')
-      const _category = category && typeof category === 'string' ? category : ''
+  // hooks: {
+  //   'content:file:beforeInsert': (document) => {
+  //     const regexp = new RegExp(`^/(ko)`, 'gi')
+  //     const { dir, slug, category } = document
+  //     const _dir = dir.replace(regexp, '')
+  //     const _slug = slug.replace(/^index/, '')
+  //     const _category = category && typeof category === 'string' ? category : ''
 
-      document.to = `${_dir}/${_slug}`
-      document.category = _category
-    }
-  },
+  //     document.to = `${_dir}/${_slug}`
+  //     document.category = _category
+  //   }
+  // },
 
   dayjs: {
     locales: ['en', 'ko'],
@@ -110,6 +113,6 @@ export default {
       useWebmanifestExtension: false
     }
   }
-}
+})
 
 
