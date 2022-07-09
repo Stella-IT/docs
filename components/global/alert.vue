@@ -1,18 +1,18 @@
 <template lang="pug">
-  .alert.border-l-4.p-4.mb-4.mt-4(:class='`alert-${type}`')
-    .flex.items-start
-      .flex-shrink-0
-        template(v-if="icon == 'IconInformationCircle'")
-          i.fas.fa-info-circle.alert-icon.mt-px.w-6.h-6
-        template(v-if="icon == 'IconCheckCircle'")
-          i.fas.fa-check-circle.alert-icon.mt-px.w-6.h-6
-        template(v-if="icon == 'IconExclamationCircle'")
-          i.fas.fa-exclamation-circle.alert-icon.mt-px.w-6.h-6
-        template(v-if="icon == 'IconXCircle'")
-          i.fas.fa-times-circle.alert-icon.mt-px.w-6.h-6
-        //- component.alert-icon.mt-px.w-6.h-6(:is='icon')
-      .flex-grow.ml-2.overflow-auto.alert-content
-        slot
+.alert.border-l-4.p-4.mb-4.mt-4(:class='`alert-${type}`')
+  .flex.items-start
+    .flex-shrink-0
+      template(v-if="icon == 'IconInformationCircle'")
+        i.fas.fa-info-circle.alert-icon.mt-px.w-6.h-6
+      template(v-if="icon == 'IconCheckCircle'")
+        i.fas.fa-check-circle.alert-icon.mt-px.w-6.h-6
+      template(v-if="icon == 'IconExclamationCircle'")
+        i.fas.fa-exclamation-circle.alert-icon.mt-px.w-6.h-6
+      template(v-if="icon == 'IconXCircle'")
+        i.fas.fa-times-circle.alert-icon.mt-px.w-6.h-6
+      //- component.alert-icon.mt-px.w-6.h-6(:is='icon')
+    .flex-grow.ml-2.overflow-auto.alert-content
+      slot
 </template>
 
 <script>
