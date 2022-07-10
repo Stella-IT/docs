@@ -11,13 +11,13 @@ Stella IT Cloud 제품군은 운영시 용이를 위해 운영체제의 선택�
   
 일반적으로 Windows 기반 OS는 최신 버전을 사용하시기를 권장합니다. 다만, 사용자 서버의 RAM 사용량 및 호환성 등을 고려하여 하위 버전을 선택하셔도 괜찮습니다.
 
-<alert type="warning">
+::alert{type="warning"}
 Windows OS 종류별 기본 사용 RAM은 일반적으로 다음과 같습니다.
 
 * Windows Server 2012 R2: 0.5~0.7GB
 * Windows Server 2016: 1.0~1.2GB
 * Windows Server 2019: 1.2~1.4GB
-</alert>
+::
 
 *해당 비교는 설치된 응용 프로그램 및 RAM 용량 등에 따라 달라질 수 있으며, Windows 기반 운영체제를 선택시, Stella IT에서 Windows 라이선스 비용을 지불합니다.*
 
