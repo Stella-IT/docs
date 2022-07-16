@@ -63,5 +63,5 @@ OpenJ9에서 할 수 있는 최적화의 경우, 이 [문서](/tutorials/minecra
 ## Windows VM을 사용 중인 경우, Linux으로 운영체제 교체
 서버용 `Linux`의 경우 기본적으로 CLI 환경만 제공을 하고 있기에, 기본적으로 운영체제를 구동하기 위한 오버헤드가 Windows 보다 낮습니다.  
 
-더욱 빠른 성능을 원한다면, Linux로 변경하여, 운영체제에서 사용 하고 있는 자원을 최소화 하는 방법이 있습니다.
-
+더욱 빠른 성능을 원한다면, Linux로 변경하여, 운영체제에서 사용 하고 있는 자원을 최소화 하는 방법이 있습니다.  
+**Stella IT의 VM의 경우 Linux로 사용시 Full Virtualization (전 가상화) 이 아닌 ParaVirtualization (반 가상화) 모드로 구동 되므로 성능 향상을 기대할 수 있습니다**  
