@@ -1,6 +1,6 @@
 <template lang="pug">
     div
-        nav.fixed.w-full.top-0.h-14.border-b.w-full.bg-gray-100(style="z-index: 9999;")
+        nav.fixed.w-full.top-0.h-14.border-b.w-full.backdrop-blur-md(style="background-color: rgba(241,245,249, .6); z-index: 9999;")
             .w-full.max-w-7xl.mx-auto.flex-none.flex.items-center.justify-between.h-full.px-3(class="md:px-6 lg:px-10 xl:px-16")
                 nuxt-link.logoArea(to="/")
                     img.h-8(src="/logo-light.svg")
