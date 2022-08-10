@@ -20,6 +20,7 @@
     "pug": "^3.0.2",
     "pug-plain-loader": "^1.1.0",
     "sass": "^1.52.3",
-    "theme-colors": "^0.0.5"
+    "theme-colors": "^0.0.5",
+    "vite-plugin-vue-pug-indent-fix": "^1.0.4"
   }
 }
