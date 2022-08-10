@@ -6526,6 +6526,11 @@ vite-plugin-checker@^0.4.6:
     vscode-languageserver-textdocument "^1.0.1"
     vscode-uri "^3.0.2"
 
+vite-plugin-vue-pug-indent-fix@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/vite-plugin-vue-pug-indent-fix/-/vite-plugin-vue-pug-indent-fix-1.0.4.tgz#b73e433b8b2c8376604734668bbb1d3da534daf8"
+  integrity sha512-l7TYxP5wPnfUwf18VvjuYN95kDRLXUvXdNXoJfzlTvbaehxiGvcMot5n52DZ/2T8aKFwrJt0vCPd+9X44R9emw==
+
 vite@^2.9.12, vite@^2.9.9:
   version "2.9.14"
   resolved "https://registry.yarnpkg.com/vite/-/vite-2.9.14.tgz#c438324c6594afd1050df3777da981dee988bb1b"

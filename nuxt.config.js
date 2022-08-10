@@ -1,4 +1,5 @@
 import { defineNuxtConfig } from "nuxt"
+import vitePluginVuePugIndentFix from "vite-plugin-vue-pug-indent-fix"
 
 export default defineNuxtConfig({
   telemetry: false,
@@ -111,6 +112,10 @@ export default defineNuxtConfig({
       lang: 'ko',
       useWebmanifestExtension: false
     }
+  },
+
+  vite: {
+    plugins: [vitePluginVuePugIndentFix()]
   }
 })
 
