@@ -64,13 +64,13 @@
                     i.fas.fa-user-headset.text-white.text-lg
                 .flex.flex-col
                     h2.font-bold.text-2xl 고객센터
-                    h3.text-gray-600 Stella IT 고객센터에서 궁금한 것을 물어보세요.
+                    h3.text-gray-600 문서가 이해되지 않았다면, Stella IT 고객센터에서 궁금한 것을 물어보세요.
             a.flex.items-center.text-sm(href="https://stella-it.com/discord" target="_blank")
                 .community-icon.rounded-lg.bg-black.flex.items-center.justify-center.mr-3
                     i.fas.fa-terminal.text-white.text-lg
                 .flex.flex-col
                     h2.font-bold.text-2xl Console
-                    h3.text-gray-600 Stella IT Console에서 모든 Stella IT 제품을 관리하세요.
+                    h3.text-gray-600 Stella IT Console에서 이용중인 모든 Stella IT 제품을 관리하세요.
 
         //- .secondGrid.my-10.grid.grid-cols-1(class="lg:grid-cols-2")
         //-     .px-5
@@ -114,7 +114,7 @@ export default {
 }
 </script>
 
-<style lang="postcss" scoped>
+<style lang="postcss">
 .community-icon {
     width: 50px;
     height: 50px;
