@@ -15,6 +15,7 @@ export default {
       { hid: 'description', name: 'description', content: 'Stella IT의 공식 문서입니다.' }
     ],
     link: [
+      { rel: 'stylesheet', href: 'https://pretendard.appie.dev/web/static/pretendard.css' },
       { rel: 'stylesheet', href: 'https://fontawesome.appie.dev/css/all.min.css' },
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ],
@@ -25,6 +26,7 @@ export default {
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
+    "~/assets/css/main.css" 
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
