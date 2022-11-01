@@ -29,9 +29,10 @@ Stella IT 계정을 가입할 때, 카카오계정으로 간편가입을 사용�
 Stella IT 계정을 만들 때, 본인명의의 휴대폰 본인인증을 거치지 않고도 Stella IT 계정을 만들 수 있습니다.
 단, 이 경우에는 Stella IT Cloud 서비스 결제 등 대부분의 기능을 사용할 수 없게 됩니다. Stella IT 계정을 본인인증 없이 만드려면 아래 단계를 따르세요.
 
-1. [Stella IT 비인증 회원가입](https://accounts.stella-it.com/register) 페이지로 접속합니다.
+1. [Stella IT 비인증 회원가입](https://accounts.stella-it.com/register?myAccount=true) 페이지로 접속합니다.
+![image](https://user-images.githubusercontent.com/15670271/199189439-fcd71aac-ff13-4584-82b5-c4f267b00dc8.png)
 2. 필요한 정보를 입력합니다.
-3. [회원가입] 버튼을 클릭합니다.
+3. [계정 만들기] 버튼을 클릭합니다.
 
 본인인증 없이 계정을 만든 뒤에는 Stella IT Console을 통해서 본인인증을 완료할 수 있습니다. 본인인증을 완료하면, Stella IT Console에서 대부분의 기능을 사용할 수 있게 됩니다.
 
