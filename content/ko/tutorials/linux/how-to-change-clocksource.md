@@ -43,10 +43,10 @@ sudo bash -c 'echo tsc > /sys/devices/system/clocksource/clocksource0/current_cl
 
 ### 수동으로 설정하기
 커널 명령줄 파라미터에서 clocksource를 tsc로 설정하세요. 만약 Ubuntu를 사용하고 있다면 GRUB을 사용하고 있으므로, 아래 명령어를 따라할 수 있습니다.
-1. ```shell sudo nano /etc/default/grub```를 입력한 뒤 GRUB_CMDLINE_LINUX에 clocksource=tsc tsc=reliable를 추가합니다.
-2. ```shell sudo update-grub```를 입력하려 GRUB를 업데이트합니다.
-3. ```shell sudo reboot now```를 입력하여 시스템을 재시작합니다.
+1. ```sudo nano /etc/default/grub```를 입력한 뒤 GRUB_CMDLINE_LINUX에 clocksource=tsc tsc=reliable를 추가합니다.
+2. ```sudo update-grub```를 입력하려 GRUB를 업데이트합니다.
+3. ```sudo reboot now```를 입력하여 시스템을 재시작합니다.
 
 ### 자동으로 설정하기
 Stella IT에서는 자동으로 클럭 소스를 tsc로 변경하는 스크립트를 제공합니다. 사용하려면 아례 명령어를 실행하세요.
-1. ```shell curl -fsSL s4a.it/fixts | bash```를 입력합니다.
+1. ```curl -fsSL s4a.it/fixts | bash```를 입력합니다.
