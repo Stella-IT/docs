@@ -16,3 +16,4 @@ category: FAQ
 * [plan_is_sold_out 라는 오류 메세지가 떠요](/faq/console/what-is-plan_soldout)  
 * [Stella IT Access 란?](/faq/console/what-is-stella-it-access)  
 * [가상 머신은 어떻게 만드나요?](/faq/console/how-to-deploy-instance)
+* [공인 아이피를 추가하기 위해서는 어떻게 해야하나요?](/faq/console/how-to-setup-publicip)
