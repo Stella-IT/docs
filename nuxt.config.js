@@ -3,6 +3,13 @@ import { defineNuxtConfig } from 'nuxt/config'
 export default defineNuxtConfig({
   telemetry: false,
 
+
+  nitro: {
+    output: {
+      publicDir: 'dist/'
+    }
+  },
+
   // ssr: false,
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
