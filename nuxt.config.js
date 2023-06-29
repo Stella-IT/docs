@@ -113,10 +113,6 @@ export default defineNuxtConfig({
       useWebmanifestExtension: false
     }
   },
-
-  vite: {
-    plugins: [vitePluginVuePugIndentFix()]
-  }
 })
 
 
