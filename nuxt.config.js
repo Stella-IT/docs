@@ -1,4 +1,5 @@
 import { defineNuxtConfig } from 'nuxt/config'
+import path from "path"
 
 export default defineNuxtConfig({
   telemetry: false,
@@ -6,7 +7,7 @@ export default defineNuxtConfig({
 
   nitro: {
     output: {
-      publicDir: 'dist/'
+      publicDir: path.join(__dirname, 'dist')
     }
   },
 
