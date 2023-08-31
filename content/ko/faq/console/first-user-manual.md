@@ -34,7 +34,7 @@ category: FAQ/Console
 
 그렇다면, 원격 접속 정보 확인하는 방법에 대해서 알려드리도록 할게요! 아래와 같이 따라 해주세요!
 
-[https://console.stella-it.com/](https://console.stella-it.com/) 사이트 접속 → **[인스턴스](https://console.stella-it.com/instances)** 탭 클릭 → 원격 접속하고자 하는 가상 머신 선택
+[https://console.stella-it.cloud/](https://console.stella-it.cloud/) 사이트 접속 → **[인스턴스](https://console.stella-it.cloud/instances)** 탭 클릭 → 원격 접속하고자 하는 가상 머신 선택
 
 ![Remote](https://github.com/Stella-IT/docs/assets/70272129/25422077-443e-4f7a-b87b-6ea3312334b9)
 
@@ -109,7 +109,7 @@ Minecraft 서버 접속 주소 하단에 있는 주소를 통해 접속하실 �
 #### 10.1. 호스팅 사용 기간 연장 하려고 하는데. 어떻게 해야하나요?
 
 1. Stella IT Console을 접속합니다.
-2. [가상머신](https://console.stella-it.com/vm) 탭을 클릭합니다.
+2. [가상머신](https://console.stella-it.cloud/instances) 탭을 클릭합니다.
 3. 호스팅 연장하고자 하는 **가상머신**을 클릭합니다.
 4. 우측 상단의 **[사용기간 연장]** 버튼을 누릅니다.
     1. 만약 휴대폰일 경우, **톱니바퀴 모양 버튼**을 누른 다음 [**사용기간 연장]** 버튼을 누릅니다.
@@ -120,7 +120,7 @@ Minecraft 서버 접속 주소 하단에 있는 주소를 통해 접속하실 �
 더 이상 호스팅을 이용하지 않을 계획이신가보군요! 그렇다면, 호스팅 자동 결제가 켜져있는지 확인해주세요. 
 
 1. Stella IT Console을 접속합니다.
-2. [가상머신](https://console.stella-it.com/vm) 탭을 클릭합니다.
+2. [가상머신](https://console.stella-it.cloud/instances) 탭을 클릭합니다.
 3. 자동 결제 비활성화하고자 하는 가상머신을 클릭합니다.
 4. 우측 상단의 **[자동 결제 해제]** 버튼을 누릅니다.
 5. **`자동 결제가 해제되었습니다`** 라는 메시지가 나왔다면, 성공적으로 완료가 되었습니다.
