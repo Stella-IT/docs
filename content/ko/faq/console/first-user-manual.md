@@ -40,7 +40,7 @@ category: FAQ/Console
 
 → **[원격 접속]** 클릭할 경우, 만약 설치한 운영체제가 윈도우 서버일 경우, 아래와 같이 나옵니다.
 
-![Remote1](https://github.com/Stella-IT/docs/assets/70272129/5ed399d2-8829-4256-9332-702ac41df30b)
+![Remote1](https://github.com/Stella-IT/docs/assets/70272129/d5d1468f-5195-496b-aa62-5f02f8442d3d)
 
 > 설치한 운영체제: 윈도우일 경우, 위 사진과 같습니다.
 
