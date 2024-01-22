@@ -9,9 +9,9 @@ category: Tutorials/minecraft
 Stella IT에서는 기본적으로 `*.mcsv.kr` 형태의 도메인을 이용 중이신 고객님께 무료로 제공해 드리고 있습니다.  
 
 ## [MINEHUB.KR](https://minehub.kr) Platform 사용
-### Minehub (SAVE, HIGHEND)
+### Minehub (COMPACT, STANDARD)
 
-- 준비물: Stella-IT 계정, Stella-IT VPS(SAVE/HIGHEND)
+- 준비물: Stella-IT 계정, Stella-IT VPS(COMPACT/STANDARD)
 1. [Minehub](https://dash.minehub.kr/)에 로그인합니다.
 2. 좌측 메뉴에서 [도메인 관리](https://dash.minehub.kr/dns)를 클릭합니다.
 3. `새 도메인 등록하기`를 누릅니다.
@@ -23,7 +23,7 @@ Stella IT에서는 기본적으로 `*.mcsv.kr` 형태의 도메인을 이용 중
 
 ### Minehub (Minehub)
 
-- 준비물: Stella-IT 계정, Stella-IT VPS(SAVE/HIGHEND)
+- 준비물: Stella-IT 계정, Stella-IT VPS(COMPACT/STANDARD)
 1. [Minehub](https://dash.minehub.kr/)에 로그인합니다.
 2. 좌측 메뉴에서 [도메인 관리](https://dash.minehub.kr/dns)를 클릭합니다.
 3. `새 도메인 등록하기`를 누릅니다.
@@ -35,7 +35,7 @@ Stella IT에서는 기본적으로 `*.mcsv.kr` 형태의 도메인을 이용 중
 
 
 ## 자신이 소유한 도메인 등록
-### CLOUDFLARE (SAVE, HIGHEND)
+### CLOUDFLARE (COMPACT, STANDARD)
 - 준비물: cloudflare 계정, DNS가 cloudflare로 등록된 도메인 
 1. [cloudflare](https://dash.cloudflare.com/login/)에서 로그인합니다.
 2. 이용하려는 도메인을 선택합니다.
