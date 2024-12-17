@@ -26,7 +26,7 @@ div
       .flex.flex-col
         h2.font-bold.text-2xl Discord
         h3.text-gray-600 아직 잘 모르겠나요? Stella IT 이용자들이 함께하는 커뮤니티에서 궁금한 것을 물어보세요.
-    a.flex.items-center.text-sm(href="https://stella-it.channel.io" target="_blank")
+    a.flex.items-center.text-sm(href="https://pf.stella-it.com" target="_blank")
       .community-icon.rounded-lg.bg-green-600.flex.items-center.justify-center.mr-3
         i.fas.fa-user-headset.text-white.text-lg
       .flex.flex-col

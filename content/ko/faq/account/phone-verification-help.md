@@ -41,6 +41,6 @@ Stella IT 계정을 만들 때, 본인명의의 휴대폰 본인인증을 거치
 Stella IT는 본인명의의 휴대폰 본인인증을 지원하지 않는 일부 MVNO 통신사 사용자를 위해, 고객센터를 통해 본인인증을 요청할 수 있는 서비스를 제공하고 있습니다.  
 본인인증을 요청하려면, 아래의 방법을 따라주세요. 
 
-1. [Stella IT 고객센터](https://stella-it.channel.io)으로 접속합니다.
+1. [Stella IT 고객센터](https://pf.stella-it.com)으로 접속합니다.
 2. Stella IT 고객센터에 대체 본인인증을 요청합니다.
 4. Stella IT 고객센터에서 본인인증을 완료하면, Stella IT 계정에 본인인증이 완료됩니다.
