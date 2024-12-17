@@ -6,16 +6,15 @@
     "dev": "nuxi dev",
     "build": "nuxi build",
     "start": "nuxi start",
-    "generate": "nuxi generate"
+    "generate": "nuxi generate",
+    "prepare": "nuxi prepare"
   },
   "dependencies": {
     "@nuxt/content": "^2.13.4",
     "@nuxtjs/tailwindcss": "^6.12.2",
     "@tailwindcss/typography": "^0.5.15",
     "nuxt": "^3.14.1592",
-    "postcss-custom-properties": "^14.0.4",
     "pug": "^3.0.3",
-    "sass": "^1.83.0",
     "theme-colors": "^0.1.0"
   }
 }
