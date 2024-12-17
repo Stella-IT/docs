@@ -4,7 +4,7 @@ description: Stella IT Console에 관련해 자주 묻는 질문들을 담았습
 category: FAQ
 ---
 
-* [처음 사용자 메뉴얼](https://docs.stella-it.com/faq/console/first-user-manual)
+* [처음 사용자 메뉴얼](/faq/console/first-user-manual)
 * [원격 접속은 어떻게 하나요?](/faq/console/how-to-remote-access)  
 * [자동 결제는 어떻게 설정하나요?](/faq/console/how-to-set-billing) 
 * [NoVNC 접속하기](/faq/console/how-to-use-novnc) 

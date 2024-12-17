@@ -65,7 +65,7 @@ div
             .flex.flex-col
                 h2.font-bold.text-2xl 고객센터
                 h3.text-gray-600 문서가 이해되지 않았다면, Stella IT 고객센터에서 궁금한 것을 물어보세요.
-        a.flex.items-center.text-sm(href="https://console.stella-it.com" target="_blank")
+        a.flex.items-center.text-sm(href="https://console.stella-it.cloud" target="_blank")
             .community-icon.rounded-lg.bg-black.flex.items-center.justify-center.mr-3
                 i.fas.fa-terminal.text-white.text-lg
             .flex.flex-col
