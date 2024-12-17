@@ -13,8 +13,6 @@ category: ''
 
 Stella IT Docs는 누구나 기여 하고 fork 할 수 있는 GitHub 기반의 공개 문서입니다.  
 누구나 [Stella IT Docs GitHub Repository](https://github.com/stella-it/docs)에 Pull Request를 요청하여 기여 하실 수 있습니다!  
-  
-[Stella IT Docs 기여자 유치 프로그램](https://github.com/Stella-IT/docs/blob/master/event/contributors_wanted.md) 이 진행 중 입니다. 글을 작성하고 기프티콘을 받아가세요!
 </center>
 
 ## 기능

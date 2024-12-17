@@ -4,7 +4,6 @@ import path from "path"
 export default defineNuxtConfig({
   telemetry: false,
 
-
   nitro: {
     output: {
       publicDir: path.join(__dirname, 'dist')
@@ -67,7 +66,7 @@ export default defineNuxtConfig({
   content: {
     
   },
-  
+
   generate: {
     fallback: '404.html',
     routes: ['/']
@@ -121,6 +120,6 @@ export default defineNuxtConfig({
       useWebmanifestExtension: false
     }
   },
+
+  compatibilityDate: '2024-12-17',
 })
-
-

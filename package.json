@@ -9,18 +9,13 @@
     "generate": "nuxi generate"
   },
   "dependencies": {
-    "@nuxt/content": "^2.7.0",
-    "@nuxtjs/dayjs": "^1.4.0",
-    "@nuxtjs/pwa": "^3.3.5",
-    "@nuxtjs/tailwindcss": "^6.8.0",
-    "@tailwindcss/typography": "^0.5.3",
-    "h3": "^1.7.1",
-    "nuxt": "^3.6.1",
-    "postcss-custom-properties": "^13.2.0",
-    "pug": "^3.0.2",
-    "pug-plain-loader": "^1.1.0",
-    "sass": "^1.52.3",
-    "theme-colors": "^0.0.5",
-    "vite-plugin-vue-pug-indent-fix": "^1.0.4"
+    "@nuxt/content": "^2.13.4",
+    "@nuxtjs/tailwindcss": "^6.12.2",
+    "@tailwindcss/typography": "^0.5.15",
+    "nuxt": "^3.14.1592",
+    "postcss-custom-properties": "^14.0.4",
+    "pug": "^3.0.3",
+    "sass": "^1.83.0",
+    "theme-colors": "^0.1.0"
   }
 }

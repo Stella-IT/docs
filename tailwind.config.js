@@ -1,9 +1,8 @@
-const colors = require('tailwindcss/colors')
-const { getColors } = require('theme-colors')
+import colors from "tailwindcss/colors";
+import { getColors } from "theme-colors";
 
-module.exports = {
+export default {
     darkMode: 'class',
-    mode: 'jit',
     plugins: [require("@tailwindcss/typography")],
     theme: {
         extend: {
