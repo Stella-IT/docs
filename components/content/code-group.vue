@@ -73,7 +73,7 @@ button {
   height: 2px;
   transition: left 150ms, width 150ms;
 }
-.code-group ::v-deep {
+.code-group :deep {
   & pre[class*="language-"] {
     @apply rounded-t-none mt-0;
   }

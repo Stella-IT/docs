@@ -27,7 +27,7 @@ category: FAQ/Console
 
 네, 구매하신 가상머신 원격 접속 방법에 대해 설명해둔 문서가 존재합니다. 
 
-[https://docs.stella-it.com/faq/console/how-to-remote-access](https://docs.stella-it.com/faq/console/how-to-remote-access)로 접속하셔서, 접속하는 환경에 따라 접속 방법이 각각 다르므로, 참고하여 원격 접속 부탁드리겠습니다.
+[https://docs.stella-it.com/faq/console/how-to-remote-access](/faq/console/how-to-remote-access)로 접속하셔서, 접속하는 환경에 따라 접속 방법이 각각 다르므로, 참고하여 원격 접속 부탁드리겠습니다.
 
 ### 4. 원격 접속 방법을 알겠지만, 접속 정보를 확인을 어디서 하나요?
 
@@ -50,8 +50,8 @@ category: FAQ/Console
 
 > 설치한 운영체제: 리눅스일 경우, 위 사진과 같습니다.
 
-[참고(Windows)](https://docs.stella-it.com/faq/console/how-to-remote-access#windows)
-[참고(Windows)](https://docs.stella-it.com/faq/console/how-to-remote-access#linux)
+[참고(Windows)](/faq/console/how-to-remote-access#windows)
+[참고(Windows)](/faq/console/how-to-remote-access#linux)
 
 ### 5. 원격 접속해서 Internet Explorer로 인터넷을 하려고 했는데, "보안 강화 구성" 때문에 인터넷이 안돼요!
 
@@ -70,11 +70,11 @@ category: FAQ/Console
 3. 열고자 하는 서버 버전에 맞게 자바 버전을 선택 후 폴더를 클릭합니다. ex) 1.12.2일 경우, Java 8 (OpenJDK 8 Hotspot) 선택합니다. 
 4. 폴더 안에 있는 설치 파일을 통해 자바를 설치합니다.
 
-[참고](https://docs.stella-it.com/tutorials/minecraft/install-guide/java)
+[참고](/tutorials/minecraft/install-guide/java)
 
 ### 7. 서버 파일은 어떻게 이동해야 되나요?
 기존에 운영하셨던 서버 파일은 압축하여 **네이버 메일**로 옮기시는 것을 권장드리고 있습니다.
-하지만, 처음 서버 운영하기 때문에 서버를 여는 방법에 대해 모르신다면, [마인크래프트 서버 시작하기](https://docs.stella-it.com/tutorials/minecraft/getting-started) 문서를 참고 부탁드리겠습니다.
+하지만, 처음 서버 운영하기 때문에 서버를 여는 방법에 대해 모르신다면, [마인크래프트 서버 시작하기](/tutorials/minecraft/getting-started) 문서를 참고 부탁드리겠습니다.
 
 ### 8. Minecraft 서버 접속할 주소가 필요로 합니다.
 
@@ -87,21 +87,21 @@ category: FAQ/Console
 5. **[마인크래프트 서버 포트]**를 클릭합니다.
 
 Minecraft 서버 접속 주소 하단에 있는 주소를 통해 접속하실 수 있습니다.
-*마인크래프트 서버 주소를 새로 만드시고 싶다면 [해당 문서](https://docs.stella-it.com/tutorials/minecraft/how-to-connect-domain)를 참고해주세요.
+*마인크래프트 서버 주소를 새로 만드시고 싶다면 [해당 문서](/tutorials/minecraft/how-to-connect-domain)를 참고해주세요.
 
 ### 9. 마인리스트 서버 등록과 추천 관련 설정에 대해 궁금합니다.
 
-[마인리스트에 서버 등록하는 방법이 궁금해요!](https://docs.stella-it.com/tutorials/minecraft/minelist/how-to-register-my-server)
+[마인리스트에 서버 등록하는 방법이 궁금해요!](/tutorials/minecraft/minelist/how-to-register-my-server)
 
 아니면, 추천 보상(Votifier) 플러그인 설정을 방법에 대해서 궁금하신가요?
 
 설치부터 설정 방법까지 하단 링크를 통해 확인하실 수 있습니다.
 
-1. [Votifier(NuVotifier) 설치는 어떻게 하나요?](https://docs.stella-it.com/tutorials/minecraft/minelist/how-to-install-votifier)
+1. [Votifier(NuVotifier) 설치는 어떻게 하나요?](/tutorials/minecraft/minelist/how-to-install-votifier)
 
-2. [마인리스트 Votifier(NuVotifier) 설정은 어떻게 해야 되나요?](https://docs.stella-it.com/tutorials/minecraft/minelist/how-to-integrate-votifier)
+2. [마인리스트 Votifier(NuVotifier) 설정은 어떻게 해야 되나요?](/tutorials/minecraft/minelist/how-to-integrate-votifier)
 
-[참고](https://docs.stella-it.com/tutorials/minecraft/how-to-connect-domain)
+[참고](/tutorials/minecraft/how-to-connect-domain)
 
 
 ### 10. 호스팅 사용 기간 연장
@@ -133,11 +133,11 @@ Stella IT에서 생성한 가상 머신이 5일 전, **미리 등록해둔 카�
 
 우선, 결제 수단을 미리 등록을 해야 해요! 결제 수단에 대해 자세한 설명이 적혀 있는 아래에 있는 링크로 텔레포트 해보세요!
 
-> [https://docs.stella-it.com/faq/payments/how-to-set-billing-card](https://docs.stella-it.com/faq/payments/how-to-set-billing-card)
+> [https://docs.stella-it.com/faq/payments/how-to-set-billing-card](/faq/payments/how-to-set-billing-card)
 
 **결제 수단을 잘 등록을 하셨나요?** 그렇다면, 계속 이어서 자동 결제 활성화를 해보도록 할게요! 자세한 설명이 적혀 있는 링크로 텔레포트 해주세요!
 
-> [https://docs.stella-it.com/faq/console/how-to-set-billing](https://docs.stella-it.com/faq/console/how-to-set-billing)
+> [https://docs.stella-it.com/faq/console/how-to-set-billing](/faq/console/how-to-set-billing)
 
 
 ### 11. 원격 접속 비밀번호를 바꾸고 싶은데, 어떻게 해야하나요?
