@@ -5,6 +5,11 @@ description: Linux에서 실행되는 가상 머신의 클럭 소스를 TSC로 �
 category: Tutorials/linux
 ---
 
+<alert type="danger">
+이 문서는 구버전의 Stella IT Console에 대한 내용을 다루고 있습니다.  
+현재는 필요하지 않을 수 있습니다.
+</alert>
+
 <alert type="info">
 이 가이드는 Stella IT Save, Highend, HFQ 요금제에 한합니다.
 </alert>

@@ -5,6 +5,10 @@ description: Stella IT HTTP Proxy를 알아봅니다.
 category: FAQ/Console
 ---
 
+<alert type="danger">
+이 문서는 구버전의 Stella IT Console에 대한 내용을 다루고 있습니다.  
+일부 내용이 다를 수 있습니다.
+</alert>
 
 <alert type="warning">
 이 내용은 Stella IT Highend, 그리고 Save 요금제에 한합니다.<br>

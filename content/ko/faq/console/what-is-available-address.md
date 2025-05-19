@@ -23,6 +23,3 @@ SRV 레코드를 통하지 않고 직접 연결하는 경우 서버 주소에 ho
 </alert>
   
 자세한 내용은 [도메인은 어떻게 연결하나요?](/tutorials/minecraft/how-to-connect-domain) 을 확인 해 주세요.
-
-### Terraria 서버
-(작성 중)

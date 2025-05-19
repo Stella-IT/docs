@@ -5,6 +5,11 @@ description: Stella IT의 가상서버에서 웹 서버를 열어봅시다.
 category: Tutorials/web
 ---
 
+<alert type="danger">
+이 문서는 구버전의 Stella IT Console에 대한 내용을 다루고 있습니다.  
+일부 내용은 설명된 내용과 다를 수 있습니다.
+</alert>
+
 <alert type="warning">
 이 내용은 Stella IT Highend, 그리고 Save 요금제에 한합니다.<br>
 공인 IP가 제공되는 Dedicated, HFQ 요금제의 경우, 포트를 개방하는 경우 자동으로 할당된 공인 IP로 개방되게 됩니다.

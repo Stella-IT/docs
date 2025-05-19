@@ -5,6 +5,12 @@ description: ACME Wizard로 Stella IT HTTP Proxy에 Let's Encrypt 인증서를 �
 category: FAQ/Console
 ---
 
+<alert type="danger">
+이 문서는 구버전의 Stella IT Console에 대한 내용을 다루고 있습니다.  
+현재는 Stella IT Console에서 직접 Let's Encrypt 인증서를 발급/갱신할 수 있는 기능이 추가되었습니다.
+따라서, ACME Wizard를 사용하지 않고도 인증서를 관리할 수 있습니다.
+</alert>
+
 ## 준비사항
 * [Stella IT ACME Wizard](https://github.com/Stella-IT/acme-wizard) 최신 버전
 * 연동할 Stella IT HTTP Proxy 대상
