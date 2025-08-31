@@ -6,13 +6,13 @@ This build direction is for creating reproducible build of **AppieDocs**.
 Install dependencies:
 
 ```bash
-yarn install
+pnpm install
 ```
 
 ## Development
 
 ```bash
-yarn dev
+pnpm dev
 ```
 
 ## Static Generation
@@ -20,9 +20,7 @@ yarn dev
 This will create the `dist/` directory for publishing to static hosting:
 
 ```bash
-yarn generate
+pnpm generate
 ```
 
-To preview the static generated app, run `yarn start`
-
-For detailed explanation on how things work, checkout [nuxt/content](https://content.nuxtjs.org) and [@nuxt/content theme docs](https://content.nuxtjs.org/themes-docs).
+To preview the static generated app, run `pnpm start`

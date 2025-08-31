@@ -13,7 +13,7 @@
     "@nuxt/content": "^2.13.4",
     "@nuxtjs/tailwindcss": "^6.12.2",
     "@tailwindcss/typography": "^0.5.15",
-    "nuxt": "^3.14.1592",
+    "nuxt": "^4.0.3",
     "pug": "^3.0.3",
     "sass-embedded": "^1.83.0",
     "theme-colors": "^0.1.0"
