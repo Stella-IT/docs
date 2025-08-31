@@ -20,7 +20,7 @@ div
                 span.tag.bg-gray-200.p-2.text-sm.rounded-lg.text-gray-500 FAQ
                 span.tag.bg-gray-200.p-2.text-sm.rounded-lg.text-gray-500 Console
                 span.tag.bg-gray-200.p-2.text-sm.rounded-lg.text-gray-500 자주 찾는 질문
-        img.w-full.h-auto.overflow-hidden.rounded-md.row-start-1(class="lg:row-start-auto" src="~/assets/img/index/faq_left.jpeg")
+        img.w-full.h-auto.overflow-hidden.rounded-md.row-start-1(class="lg:row-start-auto" src="@/assets/img/index/faq_left.jpeg")
     
     hr
 
@@ -74,7 +74,7 @@ div
 
     //- .secondGrid.my-10.grid.grid-cols-1(class="lg:grid-cols-2")
     //-     .px-5
-    //-         img.w-full.h-auto.overflow-hidden.rounded-md(src="~/assets/img/index/minecraft_top.jpeg")
+    //-         img.w-full.h-auto.overflow-hidden.rounded-md(src="@/assets/img/index/minecraft_top.jpeg")
     //-         div
     //-             h1.text-2xl.font-bold 마인크래프트 서버 운영 가이드
     //-             h2.text-lg.font-gray-800.my-3 Stella IT에서 마인크래프트 서버 운영을 위한 꿀팁을 준비했습니다.
@@ -89,7 +89,7 @@ div
     //-                         | 탐색하기
     //-                         i.fal.fa-arrow-right.ml-2
     //-     .px-5
-    //-         img.w-full.h-auto.overflow-hidden.rounded-md(src="~/assets/img/index/http_top.jpeg")
+    //-         img.w-full.h-auto.overflow-hidden.rounded-md(src="@/assets/img/index/http_top.jpeg")
     //-         div
     //-             h1.text-2xl.font-bold HTTP 서버 구동하기
     //-             h2.text-lg.font-gray-800.my-3 Stella IT의 강력한 네트워크를 통해 웹 서버를 운영하는 방법을 알아보세요.
