@@ -18,37 +18,37 @@ export default {
   props: {
     src: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
-  data () {
+  data() {
     return {
-      isIntersecting: false
-    }
+      isIntersecting: false,
+    };
   },
-  mounted () {
+  mounted() {
     if (!window.IntersectionObserver) {
-      this.isIntersecting = true
-      return
+      this.isIntersecting = true;
+      return;
     }
     this.__observer = new window.IntersectionObserver((entries) => {
       entries.forEach(({ intersectionRatio, target: el }) => {
         if (intersectionRatio > 0) {
-          this.isIntersecting = true
-          this.__observer.disconnect()
-          delete this.__observer
+          this.isIntersecting = true;
+          this.__observer.disconnect();
+          delete this.__observer;
         }
-      })
-    })
-    this.__observer.observe(this.$el)
+      });
+    });
+    this.__observer.observe(this.$el);
   },
-  beforeDestroy () {
+  beforeDestroy() {
     if (this.__observer) {
-      this.__observer.disconnect()
-      delete this.__observer
+      this.__observer.disconnect();
+      delete this.__observer;
     }
-  }
-}
+  },
+};
 </script>
 
 <style lang="postcss" scoped>

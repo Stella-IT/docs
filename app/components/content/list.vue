@@ -14,32 +14,37 @@ export default {
   props: {
     items: {
       type: Array,
-      default: () => []
+      default: () => [],
     },
     icon: {
       type: String,
-      default: null
+      default: null,
     },
     type: {
       type: String,
-      default: 'primary',
-      validator (value) {
-        return ['primary', 'info', 'success', 'warning', 'danger'].includes(value)
-      }
-    }
+      default: "primary",
+      validator(value) {
+        return ["primary", "info", "success", "warning", "danger"].includes(
+          value,
+        );
+      },
+    },
   },
   computed: {
-    iconName () {
-      return this.icon || ({
-        primary: 'IconBadgeCheck',
-        info: 'IconInformationCircle',
-        success: 'IconCheckCircle',
-        warning: 'IconExclamationCircle',
-        danger: 'IconXCircle'
-      })[this.type]
-    }
-  }
-}
+    iconName() {
+      return (
+        this.icon ||
+        {
+          primary: "IconBadgeCheck",
+          info: "IconInformationCircle",
+          success: "IconCheckCircle",
+          warning: "IconExclamationCircle",
+          danger: "IconXCircle",
+        }[this.type]
+      );
+    },
+  },
+};
 </script>
 
 <style lang="postcss" scoped>

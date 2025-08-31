@@ -3,5 +3,5 @@
 </template>
 
 <script setup>
-defineProps(['id'])
+defineProps(["id"]);
 </script>

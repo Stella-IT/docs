@@ -10,7 +10,9 @@
         class="px-4 py-3 text-gray-400 font-bold font-mono"
         :class="[activeTabIndex === i && 'active']"
         @click="updateTabs(i)"
-      >{{ label }}</button>
+      >
+        {{ label }}
+      </button>
       <span ref="highlight-underline" class="highlight-underline" />
     </div>
     <slot />
@@ -19,48 +21,50 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
       tabs: [],
-      activeTabIndex: 0
-    }
+      activeTabIndex: 0,
+    };
   },
   watch: {
-    activeTabIndex (newValue, oldValue) {
-      this.switchTab(newValue)
-    }
+    activeTabIndex(newValue, oldValue) {
+      this.switchTab(newValue);
+    },
   },
-  mounted () {
-    this.tabs = this.$slots.default.filter(slot => Boolean(slot.componentOptions)).map((slot) => {
-      return {
-        label: slot.componentOptions.propsData.label,
-        elm: slot.elm
-      }
-    })
-    this.$nextTick(this.updateHighlighteUnderlinePosition)
+  mounted() {
+    this.tabs = this.$slots.default
+      .filter((slot) => Boolean(slot.componentOptions))
+      .map((slot) => {
+        return {
+          label: slot.componentOptions.propsData.label,
+          elm: slot.elm,
+        };
+      });
+    this.$nextTick(this.updateHighlighteUnderlinePosition);
   },
   methods: {
-    switchTab (i) {
+    switchTab(i) {
       this.tabs.forEach((tab) => {
-        tab.elm.classList.remove('active')
-      })
-      this.tabs[i].elm.classList.add('active')
+        tab.elm.classList.remove("active");
+      });
+      this.tabs[i].elm.classList.add("active");
     },
-    updateTabs (i) {
-      this.activeTabIndex = i
-      this.updateHighlighteUnderlinePosition()
+    updateTabs(i) {
+      this.activeTabIndex = i;
+      this.updateHighlighteUnderlinePosition();
     },
-    updateHighlighteUnderlinePosition () {
-      const activeTab = this.$refs.tabs[this.activeTabIndex]
+    updateHighlighteUnderlinePosition() {
+      const activeTab = this.$refs.tabs[this.activeTabIndex];
       if (!activeTab) {
-        return
+        return;
       }
-      const highlightUnderline = this.$refs['highlight-underline']
-      highlightUnderline.style.left = `${activeTab.offsetLeft}px`
-      highlightUnderline.style.width = `${activeTab.clientWidth}px`
-    }
-  }
-}
+      const highlightUnderline = this.$refs["highlight-underline"];
+      highlightUnderline.style.left = `${activeTab.offsetLeft}px`;
+      highlightUnderline.style.width = `${activeTab.clientWidth}px`;
+    },
+  },
+};
 </script>
 
 <style lang="postcss" scoped>
@@ -71,7 +75,9 @@ button {
   @apply bg-primary-500 absolute;
   bottom: -2px;
   height: 2px;
-  transition: left 150ms, width 150ms;
+  transition:
+    left 150ms,
+    width 150ms;
 }
 .code-group :deep {
   & pre[class*="language-"] {
