@@ -10,10 +10,13 @@
     "prepare": "nuxi prepare"
   },
   "dependencies": {
-    "@nuxt/content": "^2.13.4",
+    "@nuxt/content": "2",
     "@nuxtjs/tailwindcss": "^6.12.2",
+    "@prettier/plugin-pug": "^3",
     "@tailwindcss/typography": "^0.5.15",
-    "nuxt": "^3.14.1592",
+    "better-sqlite3": "^12.2.0",
+    "nuxt": "^4.0.3",
+    "prettier": "^3.6.2",
     "pug": "^3.0.3",
     "sass-embedded": "^1.83.0",
     "theme-colors": "^0.1.0"

@@ -14,25 +14,38 @@ div
 
   hr.mb-5
 
-  content-renderer.prose.max-w-none(v-if="props.pageSlug" class="dark:prose-dark lg:px-8" :value="props.pageSlug")
+  content-renderer.prose.max-w-none(
+    v-if="props.pageSlug",
+    class="dark:prose-dark lg:px-8",
+    :value="props.pageSlug"
+  )
     template(#empty)
       p Content Not Found
 
   hr.my-10
   .my-10.grid.grid-cols-1.gap-4(class="lg:grid-cols-3")
-    a.flex.items-center.text-sm(href="https://stella-it.com/discord" target="_blank")
+    a.flex.items-center.text-sm(
+      href="https://stella-it.com/discord",
+      target="_blank"
+    )
       .community-icon.rounded-lg.bg-gray-800.flex.items-center.justify-center.mr-3
         i.fab.fa-discord.text-white.text-lg
       .flex.flex-col
         h2.font-bold.text-2xl Discord
         h3.text-gray-600 아직 잘 모르겠나요? Stella IT 이용자들이 함께하는 커뮤니티에서 궁금한 것을 물어보세요.
-    a.flex.items-center.text-sm(href="https://pf.stella-it.com" target="_blank")
+    a.flex.items-center.text-sm(
+      href="https://pf.stella-it.com",
+      target="_blank"
+    )
       .community-icon.rounded-lg.bg-green-600.flex.items-center.justify-center.mr-3
         i.fas.fa-user-headset.text-white.text-lg
       .flex.flex-col
         h2.font-bold.text-2xl 고객센터
         h3.text-gray-600 문서가 이해되지 않았다면, Stella IT 고객센터에서 궁금한 것을 물어보세요.
-    a.flex.items-center.text-sm(:href="`https://github.com/Stella-IT/docs/blob/master/content${pageSlug._path}.md`" target="_blank")
+    a.flex.items-center.text-sm(
+      :href="`https://github.com/Stella-IT/docs/blob/master/content${pageSlug._path}.md`",
+      target="_blank"
+    )
       .community-icon.rounded-lg.bg-black.flex.items-center.justify-center.mr-3
         i.fab.fa-github.text-white.text-lg
       .flex.flex-col
@@ -41,11 +54,10 @@ div
 </template>
 
 <script setup>
-const props = defineProps(["pageSlug"])
-const isLoading = ref(true)
-const articles = ref([])
-const commiters = ref([])
-
+const props = defineProps(["pageSlug"]);
+const isLoading = ref(true);
+const articles = ref([]);
+const commiters = ref([]);
 
 // const {data} = await this.$axios.get(`https://api.github.com/repos/Stella-IT/docs/commits?path=content${props.pageSlug._path}.md`)
 // let duplicate = []
@@ -56,14 +68,17 @@ const commiters = ref([])
 //     }
 // }
 
-
 useHead({
   title: props.pageSlug.title,
   description: props.pageSlug.description,
-  meta: [ { hid: "description", name: "description", content: props.pageSlug.description } ]
-})
+  meta: [
+    {
+      hid: "description",
+      name: "description",
+      content: props.pageSlug.description,
+    },
+  ],
+});
 </script>
 
-<style lang="postcss" scoped>
-
-</style>
+<style lang="postcss" scoped></style>

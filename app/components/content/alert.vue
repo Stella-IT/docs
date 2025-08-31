@@ -1,5 +1,5 @@
 <template lang="pug">
-.alert.border-l-4.p-4.mb-4.mt-4(:class='`alert-${type}`')
+.alert.border-l-4.p-4.mb-4.mt-4(:class="`alert-${type}`")
   .flex.items-start
     .flex-shrink-0
       template(v-if="icon == 'IconInformationCircle'")
@@ -21,23 +21,23 @@ export default {
   props: {
     type: {
       type: String,
-      default: 'info',
-      validator (value) {
-        return ['info', 'success', 'warning', 'danger'].includes(value)
-      }
-    }
+      default: "info",
+      validator(value) {
+        return ["info", "success", "warning", "danger"].includes(value);
+      },
+    },
   },
   computed: {
-    icon () {
-      return ({
-        info: 'IconInformationCircle',
-        success: 'IconCheckCircle',
-        warning: 'IconExclamationCircle',
-        danger: 'IconXCircle'
-      })[this.type]
-    }
-  }
-}
+    icon() {
+      return {
+        info: "IconInformationCircle",
+        success: "IconCheckCircle",
+        warning: "IconExclamationCircle",
+        danger: "IconXCircle",
+      }[this.type];
+    },
+  },
+};
 </script>
 
 <style>
