@@ -11,9 +11,9 @@ category: Tutorials/web
 </alert>
 
 <alert type="warning">
-HTTP Proxy에 Cloudflare, Gcore 등의 DDoS 공격 보호를 위한 Reverse Proxy를 적용하지 않는 것이 좋습니다.<br>
-Stella IT HTTP Proxy에는 이미 DDoS가 포함되어 있으며, 별도의 Reverse Proxy를 사용할 경우 IP Forwarding 문제가 발생할 수 있으며,<br>
-L7 공격 발생시 해당 Proxy의 IP가 공격자로 오인 차단되면 대부분의 사용자가 접속하지 못하게 됩니다.
+HTTP Proxy에 Cloudflare, Fastly 등과 같은 DDoS 공격 보호를 위한 타사 서비스를 적용하지 않는 것이 좋습니다.<br>
+Stella IT HTTP Proxy에는 이미 DDoS 보호가 포함되어 있어 L7 공격 발생시 해당 Proxy의 IP가 공격자로 오인 차단되면 대부분의 사용자가 접속하지 못하게 됩니다.<br>
+또한, IP Forwarding 처리에 문제가 발생할 수 있는 점을 참고하세요.
 </alert>
 
 ## HTTP Proxy를 사용하여 Apache, NGINX, IIS 등의 HTTP 프로토콜 서버 열기
@@ -43,7 +43,7 @@ HTTP Proxy가 프록시한 모든 요청에는 `X-Forwarded-For` 헤더에 사�
 `X-Forwarded-For` 헤더의 적용 방법은 사용 중인 웹 서버 엔진에 따라 다릅니다.
 
 #### Nginx
-Nginx에서 아래 구성을 적용합니다.
+Nginx의 Server Block에서 아래 구성을 추가합니다.
 ```
 set_real_ip_from 10.18.0.100/32;
 real_ip_header X-Forwarded-For;
@@ -56,7 +56,17 @@ app.set('trust proxy', '10.18.0.100')
 ```
 
 #### Fastify(Node.js)
-Fastify 모듈 정의에 아래 구성을 추가하세요.
+Fastify 모듈 정의에 trustProxy 옵션을 추가하세요.
 ```
 const fastify = Fastify({ trustProxy: "10.18.0.100" })
 ```
+
+#### Django(Python)
+10.18.0.100를 허용하도록 ALLOWED_HOSTS를 설정하세요.
+```
+ALLOWED_HOSTS = ['10.18.0.100']
+```
+
+#### FastAPI(Python)
+forwarded-allow-ips 옵션을 설정하세요.  
+자세한 내용은 [여기](https://fastapi.tiangolo.com/advanced/behind-a-proxy/)를 참고하세요
