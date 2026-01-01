@@ -23,7 +23,6 @@ category: Tutorials/minecraft
 7. 포트 입력 칸에 포트 번호를 입력하세요.
    <alert type="warning">
    SRV 레코드 설정이 되어있는 경우, 25565를 그대로 유지해 주세요.<br>
-   (Highend, Save요금제에서 <b>도메인만으로 접속이 가능하도록 설정</b>이 되어있는 경우, SRV 레코드가 설정되어 있는 것입니다.)<br><br>
    아직 도메인 설정이 되어있지 않다면, <a href="/tutorials/minecraft/how-to-connect-domain">여기</a> 에서 설정하는 방법을 확인 할 수 있습니다.
    </alert>
 8. 국가는 기본 적으로 `대한민국`으로 유지해 주세요!

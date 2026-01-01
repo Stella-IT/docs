@@ -5,9 +5,8 @@ description: Stella IT 인스턴스에서 HTTP 프로토콜을 사용하는 방�
 category: Tutorials/web
 ---
 
-<alert type="warning">
-이 내용은 Stella IT Compact, 그리고 Standard 요금제에 한합니다.<br>
-공인 IP가 제공되는 Dedicated, HFQ 요금제의 경우, 포트를 개방하는 경우 자동으로 할당된 공인 IP를 그대로 사용할 수 있습니다.
+<alert type="danger">
+이 문서는 더 이상 사용되지 않습니다. 2026년 1월 1일부터 Stella IT HTTP Proxy는 더 이상 지원되지 않습니다.
 </alert>
 
 <alert type="warning">

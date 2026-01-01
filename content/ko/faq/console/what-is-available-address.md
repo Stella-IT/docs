@@ -6,8 +6,7 @@ category: FAQ/Console
 ---
 
 <alert type="warning">
-이 내용은 Stella IT Compact, 그리고 Standard 요금제에 한합니다.<br>
-공인 IP가 제공되는 Dedicated 요금제의 경우, 포트를 개방하는 경우 자동으로 할당된 공인 IP로 개방되게 됩니다.
+이 문서는 더 이상 사용되지 않습니다. 2026년 1월 1일부터 모든 포트를 자유롭게 사용할 수 있습니다.
 </alert>
 
 가용포트는 Stella IT의 Standard/Compact 요금제에서 개인이 사용 할 수 있는 외부로 개방된 포트입니다.  

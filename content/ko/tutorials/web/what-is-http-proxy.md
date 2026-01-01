@@ -6,8 +6,7 @@ category: FAQ/Console
 ---
 
 <alert type="danger">
-이 문서는 구버전의 Stella IT Console에 대한 내용을 다루고 있습니다.  
-일부 내용이 다를 수 있습니다.
+이 문서는 더 이상 사용되지 않습니다. 2026년 1월 1일부터 Stella IT HTTP Proxy는 더 이상 지원되지 않습니다.
 </alert>
 
 <alert type="warning">
@@ -33,7 +32,7 @@ Apache, NGINX, express (node.js), dynmap (Minecraft) 등 웹을 통해 서비스
 ### Let's Encrypt 인증서 사용
 [Stella IT ACME Wizard](https://github.com/Stella-IT/acme-wizard)를 사용해 인증서를 Let's Encrypt 인증서를 발급받아 HTTP Proxy에 적용할 수 있습니다.  
   
-[ACME Wizard로 Let's Encrypt 인증서 설정](/faq/console/setup-letsencrypt-with-acme-wizard)
+[ACME Wizard로 Let's Encrypt 인증서 설정](/tutorials/web/setup-letsencrypt-with-acme-wizard)
 
 ### 자체 인증서 사용 (BYOC, Bring your own certificate)
 Stella IT HTTP Proxy SSL 상세 설정에서 HTTPS 인증서를 수동으로 업로드 하실 수 있습니다.  

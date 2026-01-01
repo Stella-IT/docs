@@ -6,8 +6,7 @@ category: 'Tutorials/KKuTu'
 ---
 
 <alert type="danger">
-이 문서는 구버전의 Stella IT Console에 대한 내용을 다루고 있습니다.  
-일부 내용은 설명된 내용과 다를 수 있습니다.
+이 문서는 더 이상 사용되지 않습니다. 2026년 1월 1일부터 Stella IT HTTP Proxy는 더 이상 지원되지 않습니다.
 </alert>
 
 [KKuTu](https://github.com/JJoriping/KKuTu#linux-%ED%99%98%EA%B2%BD) 는 레거시 기술을 많이 사용하며, Stella IT에서 제공하는 SNI 기반의 Reverse Proxy를 바로 지원하지 않기에, 다음과 같은 추가 설정이 필요합니다.

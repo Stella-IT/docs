@@ -6,8 +6,7 @@ category: FAQ/Console
 ---
 
 <alert type="danger">
-이 문서는 구버전의 Stella IT Console에 대한 내용을 다루고 있습니다.  
-일부는 설명된 내용과 다를 수 있습니다.
+이 문서는 더 이상 사용되지 않습니다. 2026년 1월 1일부터 Stella IT HTTP Proxy는 더 이상 지원되지 않습니다.
 </alert>
 
 Stella IT Access는 HTTP Proxy에 설정 할 수 있는 기능으로, 로그인이 되지 않는 경우 VM의 주인 Stella IT Accounts 로 로그인 하여야 실제 웹 페이지에 있도록 사이트를 잠그는 기능입니다.

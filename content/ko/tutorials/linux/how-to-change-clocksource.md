@@ -6,8 +6,7 @@ category: Tutorials/linux
 ---
 
 <alert type="danger">
-이 문서는 구버전의 Stella IT Console에 대한 내용을 다루고 있습니다.  
-현재는 필요하지 않을 수 있습니다.
+이 문서는 더 이상 사용되지 않습니다. Stella IT는 더 이상 Xen 기반 가상 머신을 제공하지 않습니다.
 </alert>
 
 <alert type="info">
