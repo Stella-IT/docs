@@ -59,9 +59,6 @@ export default {
               'h3 code': {
                 fontWeight: '600'
               },
-              'pre code': {
-                fontFamily: 'DM Mono'
-              },
               'a code': {
                 color: theme('colors.primary.500')
               }
