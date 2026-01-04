@@ -79,11 +79,16 @@ Stella IT는 본래 공인 IP를 할당하지 않고 4개의 포트를 할당하
 
 ### Linux (Ubuntu 기준)
 1. Stella IT Console에서 VNC 접속을 시작합니다.
-2. 터미널을 열고 다음 명령어를 입력하여 네트워크 설정 파일을 엽니다. 이름은 다를 수 있으나, /etc/netplan/ 디렉터리 내에 있는 YAML 파일입니다.
+2. 사용자 이름과 비밀번호를 묻는 화면이 나타납니다. 인스턴스의 계정과 암호를 입력하여 로그인합니다. 별도로 설정하지 않았다면, 사용자 이름은 ubuntu 이며, 암호는 [기본 비밀번호 입력] 버튼을 눌러 자동 완성할 수 있습니다.
+<img width="1136" height="983" alt="CleanShot 2026-01-04 at 14 07 35" src="https://github.com/user-attachments/assets/d0ec9594-13b2-4fa7-b37c-44c2e1b09a2e" />
+
+3. 터미널을 열고 다음 명령어를 입력하여 네트워크 설정 파일을 엽니다. 이름은 다를 수 있으나, /etc/netplan/ 디렉터리 내에 있는 YAML 파일입니다.
     ```bash
     sudo nano /etc/netplan/50-cloud-init.yaml
     ```
-3. 파일 내용을 다음과 같이 수정합니다. IP 주소, 서브넷 마스크, 게이트웨이, DNS 서버는 Stella IT Console의 인스턴스 세부 정보 페이지에서 확인한 값을 사용합니다.
+<img width="1136" height="983" alt="CleanShot 2026-01-04 at 14 09 35" src="https://github.com/user-attachments/assets/81958d62-1909-4ba0-b12e-e2631914df0e" />
+
+4. 파일 내용을 다음과 같이 수정합니다. IP 주소, 서브넷 마스크, 게이트웨이, DNS 서버는 Stella IT Console의 인스턴스 세부 정보 페이지에서 확인한 값을 사용합니다.
     ```yaml
     network:
         version: 2
@@ -102,12 +107,18 @@ Stella IT는 본래 공인 IP를 할당하지 않고 4개의 포트를 할당하
     ```
     공인 IP 주소와 서브넷 접두사 길이는 Stella IT Console의 인스턴스 세부 정보 페이지에서 확인할 수 있습니다.  
     예를 들어, 공인 IP가 `141.11.195.1`이고 서브넷 접두사 길이가 `25`인 경우, `141.11.195.1/25`로 입력합니다.
-4. 파일을 저장하고 닫습니다.
-5. 다음 명령어를 입력하여 네트워크 설정을 적용합니다.
+<img width="1976" height="1364" alt="CleanShot 2026-01-04 at 14 10 20 복사" src="https://github.com/user-attachments/assets/8e4a181c-6d88-4f6f-a429-abbd2eb44453" />
+
+5. Ctrl+X를 눌러 파일을 저장하고 닫습니다.
+6. 다음 명령어를 입력하여 네트워크 설정을 적용합니다.
     ```bash
     sudo netplan apply
     ```
-6. 인터넷 연결이 정상적으로 작동하는지 확인합니다.
+<img width="1136" height="983" alt="CleanShot 2026-01-04 at 14 13 32" src="https://github.com/user-attachments/assets/4583b947-8afd-4c98-8563-c32eefab736f" />
+
+7. 인스턴스에서 icanhazip.com를 접속하여 방금 입력한 공인 IP가 정상적으로 출력되는지 확인합니다.
+<img width="1136" height="983" alt="CleanShot 2026-01-04 at 14 14 04" src="https://github.com/user-attachments/assets/2d0c01a8-bbe0-4d3a-bd4d-5706e1f64524" />
+
 
 ## 3. 마무리
 이제 인스턴스에 공인 IP가 성공적으로 할당되었습니다.  
