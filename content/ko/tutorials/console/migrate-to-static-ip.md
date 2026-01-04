@@ -26,29 +26,56 @@ Stella IT는 본래 공인 IP를 할당하지 않고 4개의 포트를 할당하
 <span class="font-semibold">공인 IP 할당은 시작하면 절대 되돌릴 수 없습니다. 발생할 수 있는 모든 영향을 최소화한 뒤에 진행하시기 바랍니다.  </span>
 </alert>
 
-1. Stella IT Console에 로그인합니다.
-2. 인스턴스 메뉴로 이동합니다.
+1. [Stella IT Console](https://console.stella-it.cloud)에 로그인합니다.
+2. [인스턴스 메뉴](https://console.stella-it.cloud/instances)로 이동합니다.
 3. 공인 IP를 할당하려는 인스턴스의 [상세 정보 보기] 버튼을 클릭합니다.
-4. 인스턴스 세부 정보 페이지에서 [마이그레이션] 탭을 선택하여 [공인 IP 할당] 버튼을 클릭합니다.
+<img width="1317" height="909" alt="CleanShot 2026-01-04 at 13 46 25" src="https://github.com/user-attachments/assets/0ce79ccb-fcce-4b41-974b-a1e125315998" />
+
+4. 인스턴스 세부 정보 페이지에서 [마이그레이션] 탭을 선택하여 [지금 공인 IP 할당 마이그레이션 실행] 버튼을 클릭합니다.
+<img width="1317" height="909" alt="CleanShot 2026-01-04 at 13 51 13" src="https://github.com/user-attachments/assets/841f3237-9eb5-4b5a-a9e5-f5f96eefa8e0" />
+
 5. 확인 창이 나타나면 [확인] 버튼을 클릭하여 공인 IP 할당을 완료합니다.
 6. Stella IT Console의 인스턴스 세부 정보 페이지에서 [포트 정보] 탭 대신 [IP 정보] 탭이 나타나며, 할당된 공인 IP 주소를 확인할 수 있습니다.
+<img width="1317" height="909" alt="CleanShot 2026-01-04 at 13 52 42" src="https://github.com/user-attachments/assets/cc529c3a-90e4-4a7c-ac6e-beb5a71621ba" />
+
 7. VNC를 연결하여 남은 추가 작업을 수행합니다.
+<img width="1317" height="909" alt="CleanShot 2026-01-04 at 13 53 32" src="https://github.com/user-attachments/assets/6f07f331-7a8f-4dac-b6f6-49bcb43be357" />
+
 
 ## 2. 인스턴스 내에서 추가 작업하기
 인스턴스에 공인 IP를 할당한 후에는 인스턴스 내부에서 IP 할당 작업이 필요합니다.
 
 ### Windows
 1. Stella IT Console에서 VNC 접속을 시작합니다.
-2. 작업 표시줄 하단 오른쪽의 네트워크 아이콘을 마우스 오른쪽 버튼으로 클릭하고 [네트워크 및 인터넷 설정 열기]를 선택합니다.
-3. [어댑터 옵션 변경]을 클릭합니다.
-4. 네트워크 연결 창에서 사용 중인 네트워크 어댑터를 마우스 오른쪽 버튼으로 클릭하고 [속성]을 선택합니다.
-5. [인터넷 프로토콜 버전 4(TCP/IPv4)]를 선택하고 [속성] 버튼을 클릭합니다.
-6. [다음 IP 주소 사용]을 선택하고 다음 정보를 입력합니다.
+2. 검은 화면이 나타나면 마우스로 한번 클릭하면 Windows 로그인 화면을 확인할 수 있습니다.
+3. [Ctrl+Alt+Del 입력] 버튼을 클릭하여 암호 입력창에 진입합니다.
+<img width="1136" height="983" alt="CleanShot 2026-01-04 at 13 54 52" src="https://github.com/user-attachments/assets/20420d84-bfaf-4191-b7f8-ad18232935c6" />
+
+4. 암호 입력칸이 나타나면 암호를 입력하세요. 만약, 인스턴스의 암호를 변경하지 않았다면 [기본 비밀번호 입력] 버튼을 눌러 자동 완성하세요.
+<img width="1136" height="983" alt="CleanShot 2026-01-04 at 13 55 49" src="https://github.com/user-attachments/assets/46c4e813-aea9-4e51-8cd3-5fe9a003e20a" />
+
+5. 작업 표시줄 하단 오른쪽의 네트워크 아이콘을 마우스 오른쪽 버튼으로 클릭하고 [네트워크 및 인터넷 설정 열기]를 선택합니다.
+<img width="1136" height="983" alt="CleanShot 2026-01-04 at 13 56 51" src="https://github.com/user-attachments/assets/a4f3baa4-6472-4c99-9e72-9e398184fcb5" />
+
+6. [어댑터 옵션 변경]을 클릭합니다.
+<img width="1136" height="983" alt="CleanShot 2026-01-04 at 13 57 14" src="https://github.com/user-attachments/assets/55477a85-b81b-4b75-a7c7-fe15ccc86d75" />
+
+7. 네트워크 연결 창에서 사용 중인 네트워크 어댑터를 마우스 오른쪽 버튼으로 클릭하고 [속성]을 선택합니다.
+<img width="1136" height="983" alt="CleanShot 2026-01-04 at 13 57 33" src="https://github.com/user-attachments/assets/51fc37db-e48d-4a8b-ad94-ef433d571f5d" />
+
+8. [인터넷 프로토콜 버전 4(TCP/IPv4)]를 선택하고 [속성] 버튼을 클릭합니다.
+<img width="1136" height="983" alt="CleanShot 2026-01-04 at 13 58 01" src="https://github.com/user-attachments/assets/3f5b5c89-147c-46ef-bc6e-7ed21ef6a8f9" />
+
+9. [다음 IP 주소 사용]을 선택하고 다음 정보를 입력합니다.
     - IP 주소 및 서브넷 마스크: Stella IT Console의 인스턴스 세부 정보 페이지에서 확인한 공인 IP 주소와 서브넷 마스크
     - 기본 게이트웨이: Stella IT Console의 인스턴스 세부 정보 페이지에서 확인한 게이트웨이 주소
     - DNS 서버: 8.8.8.8
-7. [확인] 버튼을 클릭하여 설정을 저장합니다.
-8. 인터넷 연결이 정상적으로 작동하는지 확인합니다.
+<img width="1910" height="1298" alt="CleanShot 2026-01-04 at 13 59 34 복사" src="https://github.com/user-attachments/assets/a948e7a5-5328-448e-8ac2-4d256ceae2b5" />
+
+10. [확인] 버튼을 클릭하여 설정을 저장합니다.
+11. 인스턴스에서 icanhazip.com를 접속하여 방금 입력한 공인 IP가 정상적으로 출력되는지 확인합니다.
+<img width="1136" height="983" alt="CleanShot 2026-01-04 at 14 04 24" src="https://github.com/user-attachments/assets/18fac77b-1638-49a7-aebb-30a4ceb7013e" />
+
 
 ### Linux (Ubuntu 기준)
 1. Stella IT Console에서 VNC 접속을 시작합니다.
