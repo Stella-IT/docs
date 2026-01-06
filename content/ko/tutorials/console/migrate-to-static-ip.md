@@ -38,7 +38,8 @@ Stella IT는 본래 공인 IP를 할당하지 않고 4개의 포트를 할당하
 6. Stella IT Console의 인스턴스 세부 정보 페이지에서 [포트 정보] 탭 대신 [IP 정보] 탭이 나타나며, 할당된 공인 IP 주소를 확인할 수 있습니다.
 <img width="1317" height="909" alt="CleanShot 2026-01-04 at 13 52 42" src="https://github.com/user-attachments/assets/cc529c3a-90e4-4a7c-ac6e-beb5a71621ba" />
 
-7. VNC를 연결하여 남은 추가 작업을 수행합니다.
+7. 반면, [원격 접속] 탭에서 원격 접속 정보를 확인할 수 없고, 실제로 접속도 되지 않을 수 있습니다. 이는 의도 동작으로 남은 추가 작업을 모두 수행하면 올바른 원격 접속 정보를 다시 받을 수 있습니다.
+8. 남은 추가 작업을 수행하기 위하여 VNC를 연결하세요.
 <img width="1317" height="909" alt="CleanShot 2026-01-04 at 13 53 32" src="https://github.com/user-attachments/assets/6f07f331-7a8f-4dac-b6f6-49bcb43be357" />
 
 
