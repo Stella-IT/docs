@@ -70,7 +70,7 @@ Stella IT는 본래 공인 IP를 할당하지 않고 4개의 포트를 할당하
 9. [다음 IP 주소 사용]을 선택하고 다음 정보를 입력합니다.
     - IP 주소 및 서브넷 마스크: Stella IT Console의 인스턴스 세부 정보 페이지에서 확인한 공인 IP 주소와 서브넷 마스크
     - 기본 게이트웨이: Stella IT Console의 인스턴스 세부 정보 페이지에서 확인한 게이트웨이 주소
-    - DNS 서버: 8.8.8.8 및 1.1.1.1
+    - DNS 서버: 1.1.1.1
 <img width="1910" height="1298" alt="CleanShot 2026-01-04 at 13 59 34 복사" src="https://github.com/user-attachments/assets/a948e7a5-5328-448e-8ac2-4d256ceae2b5" />
 
 10. [확인] 버튼을 클릭하여 설정을 저장합니다.
@@ -101,7 +101,6 @@ Stella IT는 본래 공인 IP를 할당하지 않고 4개의 포트를 할당하
                 nameservers:
                     addresses:
                     - 1.1.1.1
-                    - 8.8.8.8
                 routes:
                 -   to: default
                     via: <게이트웨이 주소>
