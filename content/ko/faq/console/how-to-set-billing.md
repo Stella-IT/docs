@@ -2,7 +2,7 @@
 title: 자동 결제는 어떻게 설정하나요?
 description: 인스턴스에서 자동 결제를 설정하는 법에 대해 알아봅니다.
 
-category: FAQ/Console
+category: Stella IT Console
 ---
 
 자동 결제 기능은 Stella IT에서 생성한 가상 머신이 만료되기 5일전 미리 등록해둔 카드 또는 간편 결제 수단으로 자동으로 연장할 수 있는 편리한 기능입니다.

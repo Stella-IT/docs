@@ -2,7 +2,7 @@
 title: 결제 수단 등록은 어떻게 하나요?
 description: Stella IT Payments에 결제 수단을 등록하는 방법을 알아 봅니다.
 
-category: FAQ/Payments
+category: Stella IT Console
 ---
 
 Stella IT에서는 간편 결제 수단인 `카카오페이`와 `토스`, 그리고 자주 사용하는 카드 정보를 등록하여, 정기 결제를 설정을 진행할 수 있습니다.

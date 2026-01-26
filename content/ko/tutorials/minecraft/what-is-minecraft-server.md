@@ -2,7 +2,7 @@
 title:  마인크래프트 서버란?
 description: 마인크래프트 서버에 대한 개념을 알아봅시다.
 
-category: 'Tutorials/Minecraft/Foundation'
+category: Stella IT Console/Minecraft
 ---
 
 <alert type="warning">

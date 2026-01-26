@@ -2,7 +2,7 @@
 title: Votifier(NuVotifier) 설치는 어떻게 하나요?
 description: 서버 추천 받을 때마다 유저에게 추천 보상을 지급해봐요!
 
-category: Tutorials/minecraft
+category: Stella IT Console/Minecraft
 ---
 
 해당 문서는 마인크래프트 자바 에디션 플러그인 "Votifier" 또는 "NuVotifier"를 설치하고 설정하는 방법에 대한 내용을 다루고 있습니다.

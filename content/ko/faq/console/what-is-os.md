@@ -2,7 +2,7 @@
 title: 운영체제 선택은 무엇이고 어떻게 선택해야 하나요?
 description: 운영체제에 대해 알아봅니다.
 
-category: FAQ/Console
+category: Stella IT Console
 ---
 
 Stella IT Cloud 제품군은 운영시 용이를 위해 운영체제의 선택권을 제공합니다.  

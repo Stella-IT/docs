@@ -2,7 +2,7 @@
 title: Stella IT Cloud를 사용할 수 있는 환경
 description: Stella IT Cloud를 사용할 수 있는 환경
 
-category: FAQ/Console
+category: Stella IT Console
 ---
 
 Stella IT에서 현재 서비스 하는 제품군은 DDoS 보호 시스템이 기본적으로 포함 되어 있습니다.  

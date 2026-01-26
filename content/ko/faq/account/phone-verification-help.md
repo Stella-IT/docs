@@ -2,7 +2,7 @@
 title: 본인명의의 휴대폰 인증을 완료할 수 없습니다.
 description: Stella IT 계정을 만들 때 본인명의의 휴대폰 인증을 완료할 수 없는 경우 해결 방법을 알아보세요.
 
-category: FAQ/Account
+category: Stella IT Accounts
 ---
 
 ## 휴대폰 인증 문제 해결하기

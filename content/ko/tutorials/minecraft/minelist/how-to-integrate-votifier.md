@@ -2,7 +2,7 @@
 title: 마인리스트 Votifier(NuVotifier) 설정은 어떻게 해야 되나요?
 description: 서버 추천 받을 때마다 유저에게 추천 보상을 지급해봐요!
 
-category: Tutorials/minecraft
+category: Stella IT Console/Minecraft
 ---
 
 해당 작업을 진행하기 전에 앞서, 미리 마인리스트에 서버 등록이 되어있어야합니다.

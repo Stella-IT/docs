@@ -2,7 +2,7 @@
 title: 서버는 어떻게 열어야 하나요?
 description: 마인크래프트 서버를 시작해 볼까요?
 
-category: Tutorials/minecraft
+category: Stella IT Console/Minecraft
 ---
 본 가이드는 Minecraft Java Edition 서버를 여는 것을 기준으로 설명 되어있습니다.  
 본인이 서버를 열고자 하는 Edition을 알 수 없는 경우, 아래 *Minecraft 에서의 Edition 이란?* 을 확인해 주세요.

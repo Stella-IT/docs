@@ -2,7 +2,7 @@
 title: 서비스를 중도해지하고 환불 받기
 description: 가상 머신의 중도 해지에 관해 알아봅시다
 
-category: FAQ/Payments
+category: Stella IT Payments
 ---
 
 Stella IT 서비스는 청약 철회가 불가능한 일부 서비스를 제외하고, 서비스의 중도 해지가 가능합니다.  

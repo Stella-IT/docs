@@ -2,7 +2,7 @@
 title: 야생 서버 최적화 하기
 description: CPU를 많이 사용하는 야생서버를 더욱 가볍게 만들어 봅시다.
 
-category: Tutorials/minecraft
+category: Stella IT Console/Minecraft
 ---
 
 ## 월드보더 설정하기

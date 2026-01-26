@@ -2,7 +2,7 @@
 title: Java 설치 방법
 description: Java를 설치하는 방법에 대해 알아봅니다.
 
-category: 'Tutorials/Minecraft/Install'
+category: Stella IT Console/Minecraft
 ---
 
 `Minecraft: Java Edition` 서버를 구동하기 위해서는, 우선 컴퓨터에 Java가 설치되어있어야 합니다.  

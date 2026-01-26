@@ -2,7 +2,7 @@
 title: 결제를 어떻게 하나요?
 description: Console에서 결제를 하는 방법을 알아봅시다.
 
-category: FAQ/Console
+category: Stella IT Console
 ---
 
 ## 결제 수단

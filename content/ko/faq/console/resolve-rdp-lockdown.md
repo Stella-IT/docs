@@ -2,7 +2,7 @@
 title: 원격 데스크톱 계정이 잠겼을 때 해결 방법
 description: 원격 데스크톱 계정이 잠겼을 때 해결 방법을 알아봅시다.
 
-category: FAQ/Console
+category: Stella IT Console
 ---
 ![image](https://github.com/user-attachments/assets/a99869c5-5a7d-4a3a-a0b8-804c476f322d)
 

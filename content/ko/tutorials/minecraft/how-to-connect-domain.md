@@ -2,7 +2,7 @@
 title: Minecraft Java Edition 서버에 도메인을 어떻게 연결하나요?
 description: 도메인을 연결 하는 방법에 대해 알아봅니다.
 
-category: Tutorials/minecraft
+category: Stella IT Console/Minecraft
 ---
 
 ## Stella IT가 보유하고 있는 도메인으로 등록

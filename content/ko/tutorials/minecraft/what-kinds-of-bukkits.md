@@ -2,7 +2,7 @@
 title: 어떤 버킷이 존재하나요?
 description: 어떤 버킷이 있는지 알아볼까요?
 
-category: Tutorials/minecraft
+category: Stella IT Console/Minecraft
 ---
 ### Vanilla
 Mojang 에서 공식적으로 배포하는 Minecraft 서버 구동용 프로그램입니다.  

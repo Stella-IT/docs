@@ -2,7 +2,7 @@
 title: ACME Wizard로 Let's Encrypt 인증서 설정
 description: ACME Wizard로 Stella IT HTTP Proxy에 Let's Encrypt 인증서를 발급/갱신하는 방법을 알아봅니다.
 
-category: FAQ/Console
+category: Stella IT HTTP Proxy
 ---
 
 <alert type="danger">

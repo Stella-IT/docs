@@ -2,7 +2,7 @@
 title: Minecraft 서버 성능 최적화하기
 description: Minecraft 서버의 성능을 더욱 최적화 하는 방법을 소개합니다.
 
-category: Tutorials/minecraft
+category: Stella IT Console/Minecraft
 ---
 이 문서에서는 Minecraft의 성능을 최적화하기 위한 꿀팁들을 소개합니다.  
 `Is Server Overloaded` 와 같은 메세지가 뜬다면 하나씩 적용해 보는 것을 추천드려요.  

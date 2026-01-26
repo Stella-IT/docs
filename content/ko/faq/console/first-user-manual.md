@@ -2,7 +2,7 @@
 title: 처음 사용자 매뉴얼 
 description: 처음 가상 머신 구매 후, 자주 질문하는 내용들을 모아봤어요!
 
-category: FAQ/Console
+category: Stella IT Console
 ---
 
 ## 처음 사용자 매뉴얼

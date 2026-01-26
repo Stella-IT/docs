@@ -2,7 +2,7 @@
 title: plan_is_sold_out 라는 오류 메세지가 떠요.
 description: plan_is_sold_out 오류에 대해 알아봅니다.
 
-category: FAQ/Console
+category: Stella IT Console
 ---
 
 Stella IT Cloud 제품군은 서비스 품질 관리를 위해, 제공할 수 있는 제고품의 상한선을 두고 관리를 진행합니다.  

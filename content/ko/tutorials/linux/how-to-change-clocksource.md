@@ -2,7 +2,7 @@
 title: 어떻게 Linux에서 실행되는 가상 머신의 클럭 소스를 변경하나요?
 description: Linux에서 실행되는 가상 머신의 클럭 소스를 TSC로 변경하는 방법에 대해 알아봅니다.
 
-category: Tutorials/linux
+category: Stella IT Console
 ---
 
 <alert type="danger">

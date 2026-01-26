@@ -2,7 +2,7 @@
 title: Craftbukkit 서버 설치 방법
 description: Craftbukkit 서버를 설치하는 방법에 대해 알아봅니다.
 
-category: 'Tutorials/Minecraft/Install'
+category: Stella IT Console/Minecraft
 ---
 
 <alert type="warning">

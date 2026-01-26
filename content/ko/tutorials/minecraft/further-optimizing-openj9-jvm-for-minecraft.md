@@ -2,7 +2,7 @@
 title: OpenJ9 JVM에서 Minecraft 서버 성능 더 최적화하기
 description: OpenJ9 만으로도 빨라지지만, 더 빠르게 만들어 봅시다.
 
-category: Tutorials/minecraft
+category: Stella IT Console/Minecraft
 ---
 
 ## 선 할당된 메모리 사이즈 조정하기

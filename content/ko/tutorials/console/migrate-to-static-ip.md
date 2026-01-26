@@ -2,7 +2,7 @@
 title: 공인 IP로 전환하기
 description: Stella IT 인스턴스에 공인 IP를 할당하는 방법을 알아봅니다.
 
-category: 'Tutorials/Console'
+category: Stella IT Console
 ---
 
 Stella IT는 본래 공인 IP를 할당하지 않고 4개의 포트를 할당하여 인스턴스를 제공하였습니다.  

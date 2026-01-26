@@ -2,7 +2,7 @@
 title: 기여는 어떻게 하나요?
 description: Stella IT Docs에 기여하는 방법을 알아봅니다.
 
-category: FAQ/Docs
+category: Stella IT Docs
 ---
 
 ## 준비물

@@ -2,7 +2,7 @@
 title: VNC 원격 접속하기
 description: VNC를 통해 일반적인 원격 접속이 불가능한 상황에서 원격 접속하는 방법을 알아봅니다.
 
-category: FAQ/Console
+category: Stella IT Console
 ---
 
 ## 알림

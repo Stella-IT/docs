@@ -7,14 +7,14 @@
   )
     label.sr-only(for="search") 검색
     .relative
-      i.far.fa-search.absolute.left-3.transform.text-gray-400(
+      i.far.fa-search.absolute.left-3.transform.text-zinc-400(
         class="top-1/2 -translate-y-1/2"
       )
-      input#search.block.w-full.pl-10.pr-3.py-2.truncate.leading-5.placeholder-gray-500.border.border-transparent.text-gray-700.rounded-md.bg-gray-200(
+      input#search.block.w-full.pl-10.pr-3.py-2.truncate.leading-5.placeholder-zinc-500.border.border-transparent.text-zinc-700.rounded-md.bg-zinc-200(
         ref="search",
         :value="q",
         @input="updateQuery",
-        class="dark:text-white dark-focus:text-white focus:border-gray-300 dark-focus:border-gray-700 focus:outline-none focus:bg-white dark-focus:bg-gray-900 dark:bg-gray-800",
+        class="dark:text-white dark-focus:text-white focus:border-zinc-300 dark-focus:border-zinc-700 focus:outline-none focus:bg-white dark-focus:bg-zinc-900 dark:bg-zinc-800",
         :class="{ 'rounded-b-none': focus && (searching || results.length) }",
         placeholder="문서를 검색해보세요.",
         type="search",
@@ -22,9 +22,9 @@
         @focus="onFocus",
         @blur="onBlur"
       )
-  ul.z-10.absolute.w-full.flex-1.top-0.bg-white.rounded-md.border.border-gray-300.overflow-hidden(
+  ul.z-10.absolute.w-full.flex-1.top-0.bg-white.rounded-md.border.border-zinc-300.overflow-hidden(
     v-show="focus && (searching || results.length)",
-    class="dark:bg-gray-900 dark:border-gray-700",
+    class="dark:bg-zinc-900 dark:border-zinc-700",
     :class="{ 'rounded-t-none': focus && (searching || results.length) }",
     style="margin-top: 37px"
   )
@@ -39,7 +39,7 @@
     )
       nuxt-link.flex.px-4.py-2.items-center.leading-5.transition.ease-in-out.duration-150(
         :to="result._path.replace('/ko', '')",
-        :class="{ 'text-primary-500 bg-gray-200 dark:bg-gray-800': focusIndex === index }",
+        :class="{ 'text-primary-500 bg-zinc-200 dark:bg-zinc-800': focusIndex === index }",
         @click="focus = false"
       )
         span.font-bold.hidden(v-if="result.category", class="lg:inline") {{ result.category }}

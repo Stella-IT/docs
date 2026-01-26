@@ -2,7 +2,7 @@
 title: 마인리스트에 서버 등록하는 방법이 궁금해요!
 description: 마인리스트에 등록하는 방법에 대해 알아봐요.
 
-category: Tutorials/minecraft
+category: Stella IT Console/Minecraft
 ---
 
 마인리스트 사이트는 2014년부터 지금까지도 마인크래프트 JE/BE 서버 리스트로 한국에서 운영되고 있는 사이트입니다.  

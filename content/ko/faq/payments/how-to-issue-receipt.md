@@ -2,7 +2,7 @@
 title: 현금영수증/세금계산서 발행은 어떻게 해야되나요?
 description: 현금영수증/세금계산서 발행에 대해서 알아봅니다.
 
-category: FAQ/Payments
+category: Stella IT Payments
 ---
 
 Stella IT에서는 다양한 결제 수단을 지원하고 있으며, 각각 결제 수단에 대한 현금영수증/세금계산서 발행 방법에 대해 알아봅니다.

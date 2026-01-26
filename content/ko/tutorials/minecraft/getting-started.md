@@ -2,7 +2,7 @@
 title: 마인크래프트 서버 시작하기
 description: 마인크래프트 서버를 열기 위해 필요한 정보들을 담았습니다.
 
-category: Tutorials/minecraft
+category: Stella IT Console/Minecraft
 ---
 
 마인크래프트 서버를 열기 위해 필요한 정보들을 소개 합니다.

@@ -2,7 +2,7 @@
 title: OP 플레이어는 무엇을 의미하나요?
 description: 마인크래프트 OP 플레이어의 의미를 알아봅시다.
 
-category: Tutorials/minecraft
+category: Stella IT Console/Minecraft
 ---
 
 ## OP 의 의미
