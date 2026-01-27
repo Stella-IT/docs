@@ -9,21 +9,33 @@ div
     .flex.flex-col.w-full.mb-4(class="lg:min-w-64 lg:max-w-64 lg:mb-0")
       .flex.gap-2.overflow-x-auto(class="lg:flex-col lg:flex-nowrap lg:overflow-x-visible")
         template(v-for="category in categories" :key="category")
-          .py-2.px-3.rounded-lg.text-gray-700.transition-all.duration-200.cursor-pointer.select-none.text-center.whitespace-nowrap.flex.items-center.justify-center.gap-2(class="hover:bg-gray-200 lg:text-left lg:mb-2 lg:justify-start" @click="selectedCategory = category" :class="selectedCategory === category ? 'bg-gray-300 font-bold' : ''")
+          .py-2.px-3.rounded-lg.transition-all.duration-200.cursor-pointer.select-none.text-center.whitespace-nowrap.flex.items-center.justify-center.gap-2(
+            class="hover:bg-gray-200 lg:text-left lg:mb-2 lg:justify-start"
+            @click="selectedCategory = category"
+            :class="[selectedCategory === category ? 'bg-gray-300 font-bold' : '', deprecatedCategories.has(category) ? 'text-gray-400 line-through' : 'text-gray-700']"
+          )
             span {{ category }}
-            span(v-if="deprecatedCategories.has(category)" class="text-xs px-1.5 py-0.5 rounded bg-red-100 text-red-600") 지원 종료
+            span(v-if="deprecatedCategories.has(category)" class="text-xs px-1.5 py-0.5 rounded bg-gray-200 text-gray-500 no-underline inline-block") 지원 종료
     .flex-grow(class="lg:ml-5")
       div(v-if="selectedCategory === ''")
         h2.text-xl.font-semibold.mt-0.mb-5 선택된 카테고리가 없습니다.
         p.text-gray-600 모든 카테고리에서 제공하는 도움말 문서
       div(v-else)
         h2.text-xl.font-semibold.mt-0.mb-5 {{ selectedCategory }} 카테고리의 도움말 문서
-        div(v-for="article in articles" :key="article._path")
-          nuxt-link(:to="article._path.replace('/ko', '')")
-            .rounded.p-2.transition.flex.items-center.gap-2(class="hover:bg-indigo-100")
-              span {{ article.title }}
-              span(v-if="article.deprecated" class="text-xs px-2 py-0.5 rounded-full bg-red-100 text-red-600 font-medium") 지원 종료
-          hr.my-2(v-if="articles.indexOf(article) !== articles.length - 1")
+        //- deprecated 카테고리 경고 배너
+        .rounded-lg.p-4.mb-4.border-l-4.border-amber-500.bg-amber-50(v-if="deprecatedCategories.has(selectedCategory)")
+          .flex.items-start.gap-3
+            .text-amber-500.text-xl ⚠️
+            .flex-1
+              .font-semibold.text-amber-800 이 기능은 더 이상 지원되지 않습니다
+              .text-sm.text-amber-700.mt-1 해당 문서는 참고용으로만 제공되며, 새로운 설정이나 사용은 권장하지 않습니다.
+        div(:class="deprecatedCategories.has(selectedCategory) ? 'opacity-60' : ''")
+          div(v-for="article in articles" :key="article._path")
+            nuxt-link(:to="article._path.replace('/ko', '')")
+              .rounded.p-2.transition.flex.items-center.gap-2(class="hover:bg-indigo-100")
+                span {{ article.title }}
+                span(v-if="article.deprecated && !deprecatedCategories.has(selectedCategory)" class="text-xs px-2 py-0.5 rounded-full bg-red-100 text-red-600 font-medium") 지원 종료
+            hr.my-2(v-if="articles.indexOf(article) !== articles.length - 1")
         .h-24
   hr
 
