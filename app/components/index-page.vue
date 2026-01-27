@@ -9,8 +9,9 @@ div
     .flex.flex-col.w-full.mb-4(class="lg:min-w-64 lg:max-w-64 lg:mb-0")
       .flex.gap-2.overflow-x-auto(class="lg:flex-col lg:flex-nowrap lg:overflow-x-visible")
         template(v-for="category in categories" :key="category")
-          .py-2.px-3.rounded-lg.text-gray-700.transition-all.duration-200.cursor-pointer.select-none.text-center.whitespace-nowrap(class="hover:bg-gray-200 lg:text-left lg:mb-2" @click="selectedCategory = category" :class="selectedCategory === category ? 'bg-gray-300 font-bold' : ''")
-            | {{ category }}
+          .py-2.px-3.rounded-lg.text-gray-700.transition-all.duration-200.cursor-pointer.select-none.text-center.whitespace-nowrap.flex.items-center.justify-center.gap-2(class="hover:bg-gray-200 lg:text-left lg:mb-2 lg:justify-start" @click="selectedCategory = category" :class="selectedCategory === category ? 'bg-gray-300 font-bold' : ''")
+            span {{ category }}
+            span(v-if="deprecatedCategories.has(category)" class="text-xs px-1.5 py-0.5 rounded bg-red-100 text-red-600") 지원 종료
     .flex-grow(class="lg:ml-5")
       div(v-if="selectedCategory === ''")
         h2.text-xl.font-semibold.mt-0.mb-5 선택된 카테고리가 없습니다.
@@ -60,22 +61,37 @@ div
 const selectedCategory = ref("");
 const categories = ref([]);
 const articles = ref([]);
+const deprecatedCategories = ref(new Set());
 
 const getArticles = async () => {
   const posts = await queryContent("ko").find()
   articles.value = posts.filter(
     (v) => v.category && v.category.toLowerCase() == selectedCategory.value.toLowerCase(),
-  ); 
+  );
 }
 
 const getCategories = async () => {
   const cats = new Set();
+  const catArticles = new Map();
   const posts = await queryContent("ko").find()
+
   posts.forEach((article) => {
     if (article.category) {
       cats.add(article.category);
+      if (!catArticles.has(article.category)) {
+        catArticles.set(article.category, []);
+      }
+      catArticles.get(article.category).push(article);
     }
   });
+
+  // 카테고리의 모든 문서가 deprecated인 경우 표시
+  catArticles.forEach((articles, category) => {
+    if (articles.length > 0 && articles.every(a => a.deprecated)) {
+      deprecatedCategories.value.add(category);
+    }
+  });
+
   categories.value = Array.from(cats);
   selectedCategory.value = categories.value[0]
 }
