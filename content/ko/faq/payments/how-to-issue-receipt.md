@@ -1,5 +1,5 @@
 ---
-title: 현금영수증/세금계산서 발행은 어떻게 해야되나요?
+title: 현금영수증/세금계산서 발행은 어떻게 하나요?
 description: 현금영수증/세금계산서 발행에 대해서 알아봅니다.
 
 category: Stella IT Payments

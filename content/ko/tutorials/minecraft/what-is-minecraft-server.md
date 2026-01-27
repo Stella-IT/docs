@@ -16,17 +16,7 @@ category: Stella IT Console/Minecraft
 * 직접적인 서버 구현
 
 
-## ELUA란?
-
-## server.properties 파일
-
-## 커뮤니티 사이트
-
-## 국내 마인크래프트 서버 추천 리스트
-
-## 
-
 ## 참조문서
 * [서버는 어떻게 열어야 하나요?](/tutorials/minecraft/how-to-open-server)
 * [도메인은 어떻게 연결해야 하나요?](/tutorials/minecraft/how-to-connect-domain)
-* [번지코드는 어떻게 연결해야 하나요?]
+* 번지코드는 어떻게 연결해야 하나요? (문서 준비 중)
