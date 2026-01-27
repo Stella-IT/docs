@@ -33,7 +33,7 @@ Stella IT Cloud의 인프라의 경우, <b>Minecraft: Bedrock Edition</b>과 현
 더욱 자세한 설명은 [What is Spigot? CraftBukkit? Bukkit? Vanilla? Forg (영어)](https://www.spigotmc.org/wiki/what-is-spigot-craftbukkit-bukkit-vanilla-forg/) 을 확인하세요.
 
 해당 서버 구동 프로그램을 설치하려면, 해당 종류의 [설치 방법](#) 페이지를 확인하세요.
-서버 구동 프로그램의 종류를 확인하실려면, [버킷 종류](/tutorials/minecraft/what-kinds-of-bukkits) 페이지를 확인하세요.
+서버 구동 프로그램의 종류를 확인하시려면 [버킷 종류](/tutorials/minecraft/what-kinds-of-bukkits) 페이지를 확인하세요.
 
 
 
@@ -65,7 +65,7 @@ Java 16 이상을 필요로 합니다.
 
 ![folder1.18.2](https://user-images.githubusercontent.com/70272129/163589749-78393bdb-b27e-43fb-85a3-b0b4bf6679c8.png)
 3. `Command Prompt`를 열고, `cd 폴더 경로`를 타이핑하여 폴더로 이동합니다.
-4. `java -Xms10G -Xmx10G -jar spigot-1.8.8.jar`을 타이핑하여 서버를 시작합니다.
+4. `java -Xms10G -Xmx10G -jar spigot-1.18.2.jar`을 타이핑하여 서버를 시작합니다.
 위에 표기된 플래그는 10GB 메모리를 기준으로 작성되었습니다. 만약 사용할 수 있는 메모리가 더 적다면, `-Xms10G`와 `-Xmx10`G 부분을 가용 가능한 메모리에 맞춰 수정하시는 것을 권장 드려요!
 
 ![createeula](https://user-images.githubusercontent.com/70272129/163589941-13f610e1-5b85-4ea2-89ef-42c1d00e147f.png)

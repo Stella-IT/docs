@@ -14,13 +14,13 @@ category: Stella IT Console/Minecraft
 ## 서버 구동
 * [서버는 어떻게 열어야 하나요?](/tutorials/minecraft/how-to-open-server)
 * [도메인은 어떻게 연결해야 하나요?](/tutorials/minecraft/how-to-connect-domain)
-* [번지코드는 어떻게 연결해야 하나요?]
+* 번지코드는 어떻게 연결해야 하나요? (문서 준비 중)
 
 ## 서버 기초 설정
 * [OP 플레이어는 무엇을 의미하나요?](/tutorials/minecraft/what-is-op-meaning)
-* [플러그인은 어떻게 넣을 수 있나요?]
+* 플러그인은 어떻게 넣을 수 있나요? (문서 준비 중)
 * [화이트 리스트는 어떻게 설정하나요?](/tutorials/minecraft/how-to-set-whitelist)
 * [서버 인원에 관한 설정은 어떻게 하나요?](/tutorials/minecraft/how-to-limit-a-number-of-users)
-* [서버 아이콘 변경을 하고싶어요!]
-* [MOTD 설정하는 방법을 모르겠어요.]
+* 서버 아이콘 변경을 하고 싶어요! (문서 준비 중)
+* MOTD 설정하는 방법을 모르겠어요. (문서 준비 중)
 

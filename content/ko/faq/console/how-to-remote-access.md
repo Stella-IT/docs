@@ -68,7 +68,7 @@ Stella IT 에서는 기본적으로 Linux VM에 대해 SSH를 통한 원격 접�
 ### 접속 주소로 SSH 접속하기 (Windows 환경)
 1. [putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) 를 설치 후 실행합니다.
 2. `SSH` 를 선택합니다.
-3. 접속 주소의 `:` 앞에 있는 호스트를 `HostName` 입력합니다.
+3. 접속 주소에서 `:` 앞부분(호스트)을 `HostName`에 입력합니다.
 4. 접속 주소의 `:` 뒤에 있는 포트번호를 `Port` 에 입력합니다.
 5. `Open` 을 클릭합니다.
 6. Username을 입력하라는 창이 뜨면, Stella IT Console에서 확인할 수 있는 사용자 이름을 입력합니다.

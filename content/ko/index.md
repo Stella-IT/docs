@@ -11,8 +11,8 @@ category: ''
 <center>
 <h1 align="center">Stella IT Docs에 오신것을 환영합니다.</h1>  
 
-Stella IT Docs는 누구나 기여 하고 fork 할 수 있는 GitHub 기반의 공개 문서입니다.  
-누구나 [Stella IT Docs GitHub Repository](https://github.com/stella-it/docs)에 Pull Request를 요청하여 기여 하실 수 있습니다!  
+Stella IT Docs는 누구나 기여하고 fork할 수 있는 GitHub 기반의 공개 문서입니다.
+누구나 [Stella IT Docs GitHub Repository](https://github.com/stella-it/docs)에 Pull Request를 요청하여 기여하실 수 있습니다!  
 </center>
 
 ## 기능
