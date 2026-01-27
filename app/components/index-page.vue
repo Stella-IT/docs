@@ -19,7 +19,9 @@ div
         h2.text-xl.font-semibold.mt-0.mb-5 {{ selectedCategory }} 카테고리의 도움말 문서
         div(v-for="article in articles" :key="article._path")
           nuxt-link(:to="article._path.replace('/ko', '')")
-            .rounded.p-2.transition(class="hover:bg-indigo-100") {{ article.title }}
+            .rounded.p-2.transition.flex.items-center.gap-2(class="hover:bg-indigo-100")
+              span {{ article.title }}
+              span.text-xs.px-2.py-0.5.rounded-full.bg-red-100.text-red-600.font-medium(v-if="article.deprecated") 지원 종료
           hr.my-2(v-if="articles.indexOf(article) !== articles.length - 1")
         .h-24
   hr

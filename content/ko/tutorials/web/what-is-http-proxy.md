@@ -3,6 +3,7 @@ title: HTTP Proxy는 무엇이고 어떻게 쓰는 건가요?
 description: Stella IT HTTP Proxy를 알아봅니다.
 
 category: Stella IT HTTP Proxy
+deprecated: true
 ---
 
 <alert type="danger">

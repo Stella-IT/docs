@@ -13,7 +13,9 @@ div
   div(v-else)
     div(v-for="article in articles")
       nuxt-link(:to="article._path.replace('/ko', '')")
-        .rounded.p-2.transition(class="hover:bg-indigo-100") {{ article.title }}
+        .rounded.p-2.transition.flex.items-center.gap-2(class="hover:bg-indigo-100")
+          span {{ article.title }}
+          span.text-xs.px-2.py-0.5.rounded-full.bg-red-100.text-red-600.font-medium(v-if="article.deprecated") 지원 종료
       hr.my-2
 </template>
 

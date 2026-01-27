@@ -3,6 +3,7 @@ title: 가용 포트는 무엇인가요?
 description: Stella IT VM에서의 가용 포트에 대해 알아봅니다.
 
 category: Stella IT Console
+deprecated: true
 ---
 
 <alert type="warning">

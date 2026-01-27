@@ -3,6 +3,7 @@ title: HTTP Proxy를 통해 웹 서버 열기
 description: Stella IT 인스턴스에서 HTTP 프로토콜을 사용하는 방법을 설명합니다.
 
 category: Stella IT HTTP Proxy
+deprecated: true
 ---
 
 <alert type="danger">
