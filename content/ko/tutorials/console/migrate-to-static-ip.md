@@ -96,6 +96,8 @@ Stella IT는 본래 공인 IP를 할당하지 않고 4개의 포트를 할당하
         ethernets:
             eth0:
                 mtu: 1400
+                match:
+                    macaddress: <기존 값 유지>
                 addresses:
                 - <공인 IP 주소>/<서브넷 접두사 길이>
                 nameservers:
