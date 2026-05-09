@@ -1,11 +1,11 @@
 <template lang="pug">
-div.grid.grid-cols-1.gap-8(:class="documentGridClass")
+.grid.grid-cols-1.gap-8(:class="documentGridClass")
   article.min-w-0(
     :aria-labelledby="pageTitleId",
     :class="{ 'xl:col-start-2': hasTableOfContents }"
   )
     header.title.my-8.text-center(class="sm:my-10")
-      h1.text-2xl.font-bold(class="sm:text-3xl" :id="pageTitleId") {{ props.pageSlug.title }}
+      h1.text-2xl.font-bold(class="sm:text-3xl", :id="pageTitleId") {{ props.pageSlug.title }}
       p.text-lg.font-medium.text-gray-700.mt-2(class="sm:text-xl") {{ props.pageSlug.description }}
       .mt-4.flex.justify-center
         button.inline-flex.items-center.gap-2.rounded-xs.text-sm.font-medium.text-gray-500.transition(
@@ -15,7 +15,7 @@ div.grid.grid-cols-1.gap-8(:class="documentGridClass")
           :aria-label="copyButtonLabel",
           @click="copyForLlm"
         )
-          i.fas(:class="copyIconClass" aria-hidden="true")
+          i.fas(:class="copyIconClass", aria-hidden="true")
           span {{ copyButtonLabel }}
         p.sr-only(aria-live="polite") {{ copyStatusMessage }}
       //- .flex.items-center.justify-center.my-3.text-sm(v-if="commiters.length != 0")
@@ -38,49 +38,12 @@ div.grid.grid-cols-1.gap-8(:class="documentGridClass")
       template(#empty)
         p Content Not Found
 
-    hr.my-10
-    section.my-10.grid.grid-cols-1.gap-4(
-      class="md:grid-cols-2 lg:grid-cols-3",
-      aria-label="문서 관련 지원 채널"
+    support-channel-section(
+      :channels="documentSupportChannels",
+      title-id="document-support-channel-title"
     )
-      a.flex.items-center.text-sm(
-        href="https://stella-it.com/discord",
-        target="_blank",
-        rel="noopener noreferrer",
-        aria-label="Discord 커뮤니티 새 창에서 열기"
-      )
-        .community-icon.rounded-lg.bg-gray-800.flex.items-center.justify-center.mr-3
-          i.fab.fa-discord.text-white.text-lg(aria-hidden="true")
-        .flex.flex-col
-          h2.font-bold.text-2xl.leading-tight Discord
-          p.text-gray-600 아직 잘 모르겠나요? Stella IT 이용자들이 함께하는 커뮤니티에서 궁금한 것을 물어보세요.
-      a.flex.items-center.text-sm(
-        href="https://pf.stella-it.com",
-        target="_blank",
-        rel="noopener noreferrer",
-        aria-label="고객센터 새 창에서 열기"
-      )
-        .community-icon.rounded-lg.bg-green-600.flex.items-center.justify-center.mr-3
-          i.fas.fa-user-headset.text-white.text-lg(aria-hidden="true")
-        .flex.flex-col
-          h2.font-bold.text-2xl.leading-tight 고객센터
-          p.text-gray-600 문서가 이해되지 않았다면, Stella IT 고객센터에서 궁금한 것을 물어보세요.
-      a.flex.items-center.text-sm(
-        :href="`https://github.com/Stella-IT/docs/blob/master/content${pageSlug.path}.md`",
-        target="_blank",
-        rel="noopener noreferrer",
-        aria-label="GitHub에서 이 문서 수정하기 새 창에서 열기"
-      )
-        .community-icon.rounded-lg.bg-black.flex.items-center.justify-center.mr-3
-          i.fab.fa-github.text-white.text-lg(aria-hidden="true")
-        .flex.flex-col
-          h2.font-bold.text-2xl.leading-tight GitHub
-          p.text-gray-600 잘못된 내용이 기재되어 있나요? GitHub에서 이 문서를 수정하세요.
 
-  on-this-page(
-    :toc="toc",
-    :class="{ 'xl:col-start-3': hasTableOfContents }"
-  )
+  on-this-page(:toc="toc", :class="{ 'xl:col-start-3': hasTableOfContents }")
 </template>
 
 <script setup>
@@ -127,6 +90,31 @@ const copyStatusMessage = computed(() => {
     return "클립보드 복사에 실패했습니다. 다시 시도해 주세요.";
   return "";
 });
+
+const documentSupportChannels = computed(() => [
+  {
+    title: "Discord",
+    description:
+      "Stella IT 이용자 커뮤니티에서 질문하고 답변을 나눌 수 있습니다.",
+    icon: "fab fa-discord",
+    iconBackground: "bg-zinc-900",
+    href: "https://stella-it.com/discord",
+  },
+  {
+    title: "고객센터",
+    description: "문서로 해결되지 않는 문제는 고객센터로 문의하세요.",
+    icon: "fas fa-user-headset",
+    iconBackground: "bg-green-600",
+    href: "https://pf.stella-it.com",
+  },
+  {
+    title: "GitHub",
+    description: "잘못된 내용이 있다면 GitHub에서 이 문서를 수정하세요.",
+    icon: "fab fa-github",
+    iconBackground: "bg-zinc-950",
+    href: `https://github.com/Stella-IT/docs/blob/master/content${props.pageSlug.path}.md`,
+  },
+]);
 
 function hasTocLink(link) {
   if (link?.id && link?.text) return true;
@@ -177,3 +165,5 @@ useHead({
   ],
 });
 </script>
+
+<style lang="postcss" scoped></style>
