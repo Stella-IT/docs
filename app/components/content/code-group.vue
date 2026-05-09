@@ -82,6 +82,10 @@ button {
     width 150ms;
 }
 .code-group :deep {
+  & .prose-pre {
+    @apply mt-0 mb-0;
+  }
+
   & pre[class*="language-"] {
     @apply rounded-t-none mt-0;
   }
