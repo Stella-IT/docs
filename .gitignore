@@ -1,7 +1,9 @@
 node_modules
+.pnpm-store
 *.iml
 .idea
 *.log*
+.data
 .nuxt
 .vscode
 .DS_Store

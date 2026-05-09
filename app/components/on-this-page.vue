@@ -1,12 +1,16 @@
 <template lang="pug">
-aside.hidden(class="xl:block" v-if="flatLinks.length > 0")
+aside.hidden.w-40(
+  class="xl:block",
+  v-if="flatLinks.length > 0",
+  aria-label="이 페이지 목차"
+)
   nav.sticky.top-24.overflow-y-auto.pr-2(
     class="max-h-[calc(100vh-7rem)]",
     aria-labelledby="on-this-page-title"
   )
     h2#on-this-page-title.text-xs.font-semibold.uppercase.text-gray-500(
       class="dark:text-gray-400"
-    ) On this page
+    ) 이 페이지
     ul.mt-3.border-l.border-gray-200(class="dark:border-gray-800")
       li(v-for="link in flatLinks" :key="link.id")
         a(

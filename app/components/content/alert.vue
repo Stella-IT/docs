@@ -1,17 +1,20 @@
 <template lang="pug">
-.alert.border-l-4.p-4.mb-4.mt-4(:class="`alert-${type}`")
+.alert.border-l-4.p-4.mb-4.mt-4(
+  :class="`alert-${type}`",
+  :role="type === 'danger' || type === 'warning' ? 'alert' : 'note'"
+)
   .flex.items-start
-    .flex-shrink-0
+    .shrink-0
       template(v-if="icon == 'IconInformationCircle'")
-        i.fas.fa-info-circle.alert-icon.mt-px.w-6.h-6
+        i.fas.fa-info-circle.alert-icon.mt-px.w-6.h-6(aria-hidden="true")
       template(v-if="icon == 'IconCheckCircle'")
-        i.fas.fa-check-circle.alert-icon.mt-px.w-6.h-6
+        i.fas.fa-check-circle.alert-icon.mt-px.w-6.h-6(aria-hidden="true")
       template(v-if="icon == 'IconExclamationCircle'")
-        i.fas.fa-exclamation-circle.alert-icon.mt-px.w-6.h-6
+        i.fas.fa-exclamation-circle.alert-icon.mt-px.w-6.h-6(aria-hidden="true")
       template(v-if="icon == 'IconXCircle'")
-        i.fas.fa-times-circle.alert-icon.mt-px.w-6.h-6
+        i.fas.fa-times-circle.alert-icon.mt-px.w-6.h-6(aria-hidden="true")
       //- component.alert-icon.mt-px.w-6.h-6(:is='icon')
-    .flex-grow.ml-2.overflow-auto.alert-content
+    .grow.ml-2.overflow-auto.alert-content
       slot
 </template>
 
@@ -41,14 +44,16 @@ export default {
 </script>
 
 <style>
+@reference "../../assets/css/main.css";
+
 .alert p {
-  @apply m-0 !important;
+  margin: 0 !important;
 }
 .alert a {
-  @apply text-gray-700 !important;
+  color: var(--color-gray-700) !important;
 }
-.dark-mode .alert a {
-  @apply text-gray-300 !important;
+.dark .alert a {
+  color: var(--color-gray-300) !important;
 }
 .alert strong {
   @apply text-current;
@@ -69,13 +74,13 @@ export default {
 .alert-info .alert-content {
   @apply text-blue-700;
 }
-.dark-mode .alert-info {
+.dark .alert-info {
   @apply bg-blue-900 border-blue-700;
 }
-.dark-mode .alert-info code {
+.dark .alert-info code {
   @apply bg-blue-800;
 }
-.dark-mode .alert-info .alert-content {
+.dark .alert-info .alert-content {
   @apply text-blue-300;
 }
 /* Success */
@@ -91,13 +96,13 @@ export default {
 .alert-success .alert-content {
   @apply text-green-700;
 }
-.dark-mode .alert-success {
+.dark .alert-success {
   @apply bg-green-900 border-green-700;
 }
-.dark-mode .alert-success code {
+.dark .alert-success code {
   @apply bg-green-800;
 }
-.dark-mode .alert-success .alert-content {
+.dark .alert-success .alert-content {
   @apply text-green-300;
 }
 /* Warning */
@@ -113,13 +118,13 @@ export default {
 .alert-warning .alert-content {
   @apply text-orange-700;
 }
-.dark-mode .alert-warning {
+.dark .alert-warning {
   @apply bg-yellow-900 border-yellow-700;
 }
-.dark-mode .alert-warning code {
+.dark .alert-warning code {
   @apply bg-yellow-800;
 }
-.dark-mode .alert-warning .alert-content {
+.dark .alert-warning .alert-content {
   @apply text-orange-300;
 }
 /* Danger */
@@ -135,13 +140,13 @@ export default {
 .alert-danger .alert-content {
   @apply text-red-700;
 }
-.dark-mode .alert-danger {
+.dark .alert-danger {
   @apply bg-red-900 border-red-700;
 }
-.dark-mode .alert-danger code {
+.dark .alert-danger code {
   @apply bg-red-800;
 }
-.dark-mode .alert-danger .alert-content {
+.dark .alert-danger .alert-content {
   @apply text-red-300;
 }
 </style>

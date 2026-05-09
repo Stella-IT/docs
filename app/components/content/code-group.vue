@@ -68,6 +68,8 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
+@reference "../../assets/css/main.css";
+
 button {
   outline: none;
 }

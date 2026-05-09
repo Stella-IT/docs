@@ -9,7 +9,7 @@ div
 </template>
 
 <script setup>
-var pathSlug = useRoute().params.id;
+let pathSlug = useRoute().params.id;
 if (typeof pathSlug == "object") pathSlug = pathSlug.join("/");
 const page = ref(null);
 const pageSlug = ref(null);
@@ -25,7 +25,7 @@ if (!pathSlug || pathSlug == "") {
   if (pathSlug.endsWith("/"))
     pathSlug = pathSlug.substring(0, pathSlug.length - 1);
   const path = `/ko/${pathSlug}`;
-  const document = await queryContent(path).findOne();
+  const document = await queryCollection("docs").path(path).first();
   if (document) {
     page.value = "document";
     pageSlug.value = document;

@@ -42,7 +42,7 @@ export default {
     });
     this.__observer.observe(this.$el);
   },
-  beforeDestroy() {
+  beforeUnmount() {
     if (this.__observer) {
       this.__observer.disconnect();
       delete this.__observer;
@@ -52,6 +52,8 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
+@reference "../../assets/css/main.css";
+
 .codesandbox,
 .codesandbox iframe {
   @apply w-full rounded-md overflow-hidden h-64;

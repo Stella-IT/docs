@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-for="(item, i) in items" :key="i" class="mt-3 flex">
-      <span :class="`list-${type}`" class="mt-px mr-3 flex-shrink-0">
+      <span :class="`list-${type}`" class="mt-px mr-3 shrink-0">
         <component :is="iconName" class="h-6 w-6" />
       </span>
       {{ item }}
@@ -48,6 +48,8 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
+@reference "../../assets/css/main.css";
+
 /* Primary */
 .list-primary {
   @apply text-primary-500;

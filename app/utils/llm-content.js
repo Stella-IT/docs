@@ -190,7 +190,7 @@ const renderTable = (node) => {
 };
 
 export const buildLlmContent = (page) => {
-  const pagePath = page?._path?.replace(/^\/ko/, "") || "";
+  const pagePath = page?.path?.replace(/^\/ko/, "") || "";
   const sourceUrl =
     typeof window !== "undefined"
       ? `${window.location.origin}${window.location.pathname}`
