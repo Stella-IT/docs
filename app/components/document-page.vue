@@ -4,6 +4,17 @@
     .title.my-10.text-center
       h1.text-3xl.font-bold {{ props.pageSlug.title }}
       h2.text-xl.font-medium.text-gray-700.mt-2 {{ props.pageSlug.description }}
+      .mt-4.flex.justify-center
+        button.inline-flex.items-center.gap-2.rounded-sm.text-sm.font-medium.text-gray-500.transition(
+          type="button",
+          class="hover:text-primary-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60",
+          :disabled="copyState === 'copying'",
+          :aria-label="copyButtonLabel",
+          @click="copyForLlm"
+        )
+          i.fas(:class="copyIconClass")
+          span {{ copyButtonLabel }}
+        p.sr-only(aria-live="polite") {{ copyStatusMessage }}
       //- .flex.items-center.justify-center.my-3.text-sm(v-if="commiters.length != 0")
       //-     .flex.overflow-hidden.mr-2(class="-space-x-1")
       //-         img.inline-block.h-5.w-5.rounded-full.ring-2.ring-white(v-for="item in commiters.slice(0, 3)" :src="item.icon")
@@ -57,11 +68,60 @@
 </template>
 
 <script setup>
+import { buildLlmContent, writeTextToClipboard } from "../utils/llm-content";
+
 const props = defineProps(["pageSlug"]);
 const isLoading = ref(true);
 const articles = ref([]);
 const commiters = ref([]);
 const toc = computed(() => props.pageSlug?.toc || props.pageSlug?.body?.toc);
+const copyState = ref("idle");
+const copyResetTimer = ref(null);
+
+const copyButtonLabel = computed(() => {
+  if (copyState.value === "copying") return "복사 중...";
+  if (copyState.value === "success") return "복사됨";
+  if (copyState.value === "error") return "복사 실패";
+  return "AI에게 복사";
+});
+
+const copyIconClass = computed(() => {
+  if (copyState.value === "success") return "fa-check text-green-600";
+  if (copyState.value === "error")
+    return "fa-triangle-exclamation text-red-500";
+  return "fa-copy";
+});
+
+const copyStatusMessage = computed(() => {
+  if (copyState.value === "success")
+    return "LLM용 문서 내용이 클립보드에 복사되었습니다.";
+  if (copyState.value === "error")
+    return "클립보드 복사에 실패했습니다. 다시 시도해 주세요.";
+  return "";
+});
+
+const copyForLlm = async () => {
+  if (copyState.value === "copying") return;
+  if (copyResetTimer.value) clearTimeout(copyResetTimer.value);
+
+  copyState.value = "copying";
+
+  try {
+    await writeTextToClipboard(buildLlmContent(props.pageSlug));
+    copyState.value = "success";
+  } catch (error) {
+    console.error(error);
+    copyState.value = "error";
+  }
+
+  copyResetTimer.value = setTimeout(() => {
+    copyState.value = "idle";
+  }, 2000);
+};
+
+onBeforeUnmount(() => {
+  if (copyResetTimer.value) clearTimeout(copyResetTimer.value);
+});
 
 // const {data} = await this.$axios.get(`https://api.github.com/repos/Stella-IT/docs/commits?path=content${props.pageSlug._path}.md`)
 // let duplicate = []
