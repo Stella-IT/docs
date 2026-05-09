@@ -3,6 +3,7 @@ title: HTTP Proxy용으로 끄투 서버 시작/설정하기
 description: 끄투 서버를 Stella IT에서 열기 위해 필요한 정보들을 담았습니다.
 
 category: Stella IT HTTP Proxy
+deprecated: true
 ---
 
 <alert type="danger">

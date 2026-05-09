@@ -3,6 +3,7 @@ title: Stella IT Access 란?
 description: Stella IT Access 기능에 대해 간단히 설명합니다.
 
 category: Stella IT HTTP Proxy
+deprecated: true
 ---
 
 <alert type="danger">
