@@ -4,3 +4,13 @@ html {
     -webkit-font-smoothing: antialiased;
     font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
 }
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+.prose :where(h2[id], h3[id], h4[id]) {
+    scroll-margin-top: 5rem;
+}
