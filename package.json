@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@nuxt/content": "^3.13.0",
+    "@nuxtjs/color-mode": "^4.0.1",
     "@prettier/plugin-pug": "^3",
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.3.0",

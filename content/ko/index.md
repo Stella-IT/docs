@@ -16,7 +16,7 @@ Stella IT Docs는 누구나 기여하고 fork할 수 있는 GitHub 기반의 공
 </center>
 
 ## 기능
-<p class="flex items-center">우측 하단의 <app-color-switcher class="inline-flex ml-2"></app-color-switcher>&nbsp; 버튼을 통해 라이트모드와 다크모드 전환이 가능합니다.</p>
+헤더 오른쪽의 테마 버튼을 통해 라이트모드와 다크모드를 전환할 수 있습니다.
 
 ## 라이선스
 Stella IT Docs 는 문서내 추가적으로 명시되어있지 않은 경우, [Creative Commons 4.0 BY SA 라이선스](https://creativecommons.org/licenses/by-sa/4.0/deed.ko)를 따릅니다.

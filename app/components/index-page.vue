@@ -3,29 +3,30 @@ div
   section.py-10.text-center(aria-labelledby="home-title", class="sm:py-14")
     p.text-sm.font-semibold.text-primary-600 Stella IT 고객센터
     h1#home-title.mx-auto.mt-4.max-w-3xl.text-4xl.font-semibold.tracking-tight.text-zinc-950(
-      class="sm:text-5xl"
+      class="sm:text-5xl dark:text-white"
     ) 무엇을 도와드릴까요?
-    p.mx-auto.mt-4.max-w-2xl.text-base.leading-7.text-zinc-600(class="sm:text-lg") Stella IT 제품과 서비스별 문서를 빠르게 찾아보세요.
+    p.mx-auto.mt-4.max-w-2xl.text-base.leading-7.text-zinc-600(class="sm:text-lg dark:text-zinc-300") Stella IT 제품과 서비스별 문서를 빠르게 찾아보세요.
 
   section.mt-2(aria-labelledby="quick-title")
-    h2#quick-title.text-center.text-2xl.font-semibold.text-zinc-950 자주 찾는 도움말
+    h2#quick-title.text-center.text-2xl.font-semibold.text-zinc-950(class="dark:text-white") 자주 찾는 도움말
     .mt-5.grid.gap-3(class="md:grid-cols-3")
       nuxt-link.flex.items-start.gap-4.rounded-lg.border.border-zinc-200.bg-white.p-4.transition(
         v-for="item in quickLinks",
         :key="item.to",
         :to="item.to",
-        class="hover:border-zinc-300 hover:bg-zinc-50 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-primary-500"
+        class="hover:border-zinc-300 hover:bg-zinc-50 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-primary-500 dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-zinc-700 dark:hover:bg-zinc-800"
       )
         span.home-support-icon.inline-flex.items-center.justify-center.rounded-lg.bg-primary-50.text-primary-700(
           aria-hidden="true"
+          class="dark:bg-primary-950/60 dark:text-primary-300"
         )
           i.text-lg(:class="item.icon")
         span.min-w-0
-          span.block.font-semibold.leading-snug.text-zinc-950 {{ item.title }}
-          span.mt-1.block.text-sm.leading-6.text-zinc-600 {{ item.description }}
+          span.block.font-semibold.leading-snug.text-zinc-950(class="dark:text-white") {{ item.title }}
+          span.mt-1.block.text-sm.leading-6.text-zinc-600(class="dark:text-zinc-300") {{ item.description }}
 
   section.mt-12(aria-labelledby="category-title")
-    h2#category-title.text-center.text-2xl.font-semibold.text-zinc-950 제품별 도움말
+    h2#category-title.text-center.text-2xl.font-semibold.text-zinc-950(class="dark:text-white") 제품별 도움말
     .mt-6.grid.grid-cols-2.gap-3(
       role="tablist",
       aria-label="제품 카테고리",
@@ -46,17 +47,18 @@ div
         @keydown.left.prevent="focusAdjacentCategory(category, -1)",
         @keydown.up.prevent="focusAdjacentCategory(category, -1)",
         class="focus:outline-hidden focus-visible:ring-2 focus-visible:ring-primary-500",
-        :class="[selectedCategory === category ? 'border-primary-500 bg-primary-50 text-primary-700 shadow-sm' : 'border-zinc-200 bg-white text-zinc-900 hover:border-zinc-300 hover:bg-zinc-50', deprecatedCategories.has(category) ? 'opacity-60' : '']"
+        :class="[selectedCategory === category ? 'border-primary-500 bg-primary-50 text-primary-700 shadow-sm dark:border-primary-400 dark:bg-primary-950/40 dark:text-primary-300' : 'border-zinc-200 bg-white text-zinc-900 hover:border-zinc-300 hover:bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100 dark:hover:border-zinc-700 dark:hover:bg-zinc-800', deprecatedCategories.has(category) ? 'opacity-60' : '']"
       )
         span.home-support-icon.inline-flex.items-center.justify-center.rounded-lg.bg-zinc-100.text-zinc-700(
           aria-hidden="true"
+          class="dark:bg-zinc-800 dark:text-zinc-200"
         )
           i.text-xl(:class="categoryMeta(category).icon")
         span.mt-3.block.text-base.font-semibold.leading-tight {{ categoryLabel(category) }}
-        span.mt-1.block.text-xs.text-zinc-500 {{ categoryCounts.get(category) || 0 }}개 문서
+        span.mt-1.block.text-xs.text-zinc-500(class="dark:text-zinc-400") {{ categoryCounts.get(category) || 0 }}개 문서
         span.mt-2.inline-flex.rounded-full.bg-zinc-100.px-2.text-xs.font-medium.text-zinc-500(
           v-if="deprecatedCategories.has(category)",
-          class="py-0.5"
+          class="py-0.5 dark:bg-zinc-800 dark:text-zinc-400"
         ) 지원 종료
 
   section.mt-14.border-t.border-zinc-200.pt-10(
@@ -64,7 +66,8 @@ div
     :id="categoryPanelId(selectedCategory)",
     role="tabpanel",
     :aria-labelledby="categoryTabId(selectedCategory)",
-    aria-live="polite"
+    aria-live="polite",
+    class="dark:border-zinc-800"
   )
     .grid.gap-8(class="lg:grid-cols-[minmax(0,0.35fr)_minmax(0,0.65fr)]")
       .min-w-0
@@ -72,24 +75,26 @@ div
         .mt-3.flex.items-center.gap-3
           span.home-support-icon.inline-flex.items-center.justify-center.rounded-lg.bg-zinc-100.text-zinc-700(
             aria-hidden="true"
+            class="dark:bg-zinc-800 dark:text-zinc-200"
           )
             i.text-xl(:class="selectedCategoryMeta.icon")
-          h2.text-3xl.font-semibold.tracking-tight.text-zinc-950 {{ selectedCategoryLabel }}
-        p.mt-4.leading-7.text-zinc-600 {{ selectedCategoryMeta.description }}
+          h2.text-3xl.font-semibold.tracking-tight.text-zinc-950(class="dark:text-white") {{ selectedCategoryLabel }}
+        p.mt-4.leading-7.text-zinc-600(class="dark:text-zinc-300") {{ selectedCategoryMeta.description }}
         .mt-5.flex.flex-wrap.items-center.gap-3
           nuxt-link.inline-flex.items-center.gap-2.rounded-md.bg-zinc-950.px-4.py-2.text-sm.font-semibold.text-white.transition(
             :to="categoryRoute(selectedCategory)",
-            class="hover:bg-zinc-800 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-primary-500"
+            class="hover:bg-zinc-800 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-primary-500 dark:bg-zinc-100 dark:text-zinc-950 dark:hover:bg-white"
           )
             span 전체 문서 보기
             i.far.fa-arrow-right.text-xs(aria-hidden="true")
-          span.text-sm.text-zinc-500 {{ articles.length }}개 문서
+          span.text-sm.text-zinc-500(class="dark:text-zinc-400") {{ articles.length }}개 문서
 
       .min-w-0
         .mb-4.rounded-lg.border.border-amber-200.bg-amber-50.p-4(
           v-if="deprecatedCategories.has(selectedCategory)",
           role="note",
-          aria-label="지원 종료 안내"
+          aria-label="지원 종료 안내",
+          class="dark:border-amber-800 dark:bg-amber-950/40"
         )
           .flex.items-start.gap-3
             i.fas.fa-triangle-exclamation.text-amber-500(
@@ -97,8 +102,8 @@ div
               class="mt-0.5"
             )
             .flex-1
-              .font-semibold.text-amber-900 이 기능은 더 이상 지원되지 않습니다
-              .mt-1.text-sm.leading-6.text-amber-800 해당 문서는 참고용으로만 제공되며, 새로운 설정이나 사용은 권장하지 않습니다.
+              .font-semibold.text-amber-900(class="dark:text-amber-200") 이 기능은 더 이상 지원되지 않습니다
+              .mt-1.text-sm.leading-6.text-amber-800(class="dark:text-amber-300") 해당 문서는 참고용으로만 제공되며, 새로운 설정이나 사용은 권장하지 않습니다.
 
         .grid.gap-3(v-if="featuredArticles.length", class="md:grid-cols-2")
           document-link-card(
@@ -108,7 +113,7 @@ div
             :dimmed="deprecatedCategories.has(selectedCategory)",
             :show-deprecated-badge="!deprecatedCategories.has(selectedCategory)"
           )
-        p.rounded-lg.border.border-zinc-200.p-5.text-sm.text-zinc-600(v-else) 이 카테고리에 표시할 문서가 없습니다.
+        p.rounded-lg.border.border-zinc-200.p-5.text-sm.text-zinc-600(v-else class="dark:border-zinc-800 dark:text-zinc-400") 이 카테고리에 표시할 문서가 없습니다.
 
   support-channel-section(
     :channels="supportChannels",
@@ -156,7 +161,7 @@ const supportChannels = [
     description:
       "Stella IT 이용자 커뮤니티에서 질문하고 답변을 나눌 수 있습니다.",
     icon: "fab fa-discord",
-    iconBackground: "bg-zinc-900",
+    iconBackground: "bg-indigo-600",
     href: "https://stella-it.com/discord",
   },
   {

@@ -5,12 +5,12 @@
     :class="{ 'xl:col-start-2': hasTableOfContents }"
   )
     header.title.my-8.text-center(class="sm:my-10")
-      h1.text-2xl.font-bold(class="sm:text-3xl", :id="pageTitleId") {{ props.pageSlug.title }}
-      p.text-lg.font-medium.text-gray-700.mt-2(class="sm:text-xl") {{ props.pageSlug.description }}
+      h1.text-2xl.font-bold(class="sm:text-3xl dark:text-white", :id="pageTitleId") {{ props.pageSlug.title }}
+      p.text-lg.font-medium.text-gray-700.mt-2(class="sm:text-xl dark:text-gray-300") {{ props.pageSlug.description }}
       .mt-4.flex.justify-center
         button.inline-flex.items-center.gap-2.rounded-xs.text-sm.font-medium.text-gray-500.transition(
           type="button",
-          class="hover:text-primary-600 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60",
+          class="hover:text-primary-600 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60 dark:text-gray-400 dark:hover:text-primary-400 dark:focus-visible:ring-offset-zinc-950",
           :disabled="copyState === 'copying'",
           :aria-label="copyButtonLabel",
           @click="copyForLlm"
@@ -27,7 +27,7 @@
       //-     loading
       //-     span 기여자 불러오는 중
 
-    hr.mb-5
+    hr.mb-5(class="dark:border-zinc-800")
 
     content-renderer.prose.max-w-none(
       v-if="props.pageSlug",
@@ -97,7 +97,7 @@ const documentSupportChannels = computed(() => [
     description:
       "Stella IT 이용자 커뮤니티에서 질문하고 답변을 나눌 수 있습니다.",
     icon: "fab fa-discord",
-    iconBackground: "bg-zinc-900",
+    iconBackground: "bg-indigo-600",
     href: "https://stella-it.com/discord",
   },
   {
@@ -111,7 +111,7 @@ const documentSupportChannels = computed(() => [
     title: "GitHub",
     description: "잘못된 내용이 있다면 GitHub에서 이 문서를 수정하세요.",
     icon: "fab fa-github",
-    iconBackground: "bg-zinc-950",
+    iconBackground: "bg-zinc-950 dark:bg-white dark:text-zinc-950",
     href: `https://github.com/Stella-IT/docs/blob/master/content${props.pageSlug.path}.md`,
   },
 ]);

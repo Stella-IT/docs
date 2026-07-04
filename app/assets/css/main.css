@@ -20,15 +20,25 @@
 
 @layer base {
     html {
+        color-scheme: light;
         font-smooth: always;
         word-break: keep-all;
         -webkit-font-smoothing: antialiased;
         font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
     }
 
+    html.dark {
+        color-scheme: dark;
+    }
+
     body {
         background-color: var(--color-white);
         color: var(--color-gray-900);
+    }
+
+    .dark body {
+        background-color: var(--color-zinc-950);
+        color: var(--color-zinc-100);
     }
 
     :focus-visible {
@@ -59,6 +69,21 @@
             scroll-behavior: smooth;
         }
     }
+}
+
+.light-img,
+.dark-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.dark-img,
+.dark .light-img {
+    display: none;
+}
+
+.dark .dark-img {
+    display: block;
 }
 
 .prose :where(h2[id], h3[id], h4[id]) {
@@ -142,6 +167,15 @@
 
 .dark .prose :where(h2, h3):not(:where(.not-prose, .not-prose *)) {
     border-bottom-color: var(--color-gray-800);
+}
+
+.dark .prose :where(a):not(:where(.not-prose, .not-prose *)),
+.dark .prose :where(a code):not(:where(.not-prose, .not-prose *)) {
+    color: var(--color-primary-400);
+}
+
+.dark .prose :where(blockquote):not(:where(.not-prose, .not-prose *)) {
+    color: var(--color-gray-300);
 }
 
 .dark .prose :where(code):not(:where(.not-prose, .not-prose *)) {

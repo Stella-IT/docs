@@ -22,7 +22,7 @@
         :aria-expanded="isOpen",
         :aria-activedescendant="activeDescendant",
         @input="updateQuery",
-        class="dark:text-white dark:focus:text-white focus:border-zinc-300 dark:focus:border-zinc-700 focus:outline-hidden focus:bg-white dark:focus:bg-zinc-900 dark:bg-zinc-800",
+        class="dark:text-white dark:placeholder-zinc-400 dark:focus:text-white focus:border-zinc-300 dark:focus:border-zinc-700 focus:outline-hidden focus:bg-white dark:focus:bg-zinc-900 dark:bg-zinc-800",
         :class="{ 'rounded-b-none': isOpen }",
         placeholder="문서를 검색해보세요.",
         type="search",
@@ -39,13 +39,14 @@
     :class="{ 'rounded-t-none': isOpen }",
     style="margin-top: 37px"
   )
-    li.px-4.py-2.flex.gap-2(v-if="searching && !results.length" role="option" aria-disabled="true")
+    li.px-4.py-2.flex.gap-2(v-if="searching && !results.length" role="option" aria-disabled="true" class="dark:text-zinc-300")
       loading
       span 검색 중..
     li.px-4.py-2.text-sm.text-zinc-500(
       v-else-if="q && !results.length",
       role="option",
-      aria-disabled="true"
+      aria-disabled="true",
+      class="dark:text-zinc-400"
     ) 검색 결과가 없습니다.
     li(
       v-for="(result, index) of results",
@@ -57,6 +58,7 @@
     )
       nuxt-link.flex.min-w-0.px-4.py-2.items-center.leading-5.transition.ease-in-out.duration-150(
         :to="result.to",
+        class="dark:text-zinc-200 dark:hover:bg-zinc-800",
         :class="{ 'text-primary-500 bg-zinc-200 dark:bg-zinc-800': focusIndex === index }",
         @mousedown.prevent="selectResult(result)",
         @click="closeResults"

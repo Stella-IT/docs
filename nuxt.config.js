@@ -63,8 +63,17 @@ export default defineNuxtConfig({
   ],
 
   modules: [
+    "@nuxtjs/color-mode",
     "@nuxt/content"
   ],
+
+  colorMode: {
+    preference: "system",
+    fallback: "light",
+    classPrefix: "",
+    classSuffix: "",
+    storageKey: "stella-it-docs-theme",
+  },
 
   content: {
     build: {
