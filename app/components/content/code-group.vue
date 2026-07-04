@@ -2,77 +2,103 @@
   <div class="code-group">
     <div
       class="rounded-t-md border-b-2 border-gray-700 px-2 bg-gray-800 text-sm text-white relative"
+      role="tablist"
     >
       <button
-        v-for="({ label }, i) in tabs"
-        ref="tabs"
-        :key="label"
+        v-for="({ key, label }, i) in tabs"
+        ref="tabButtons"
+        :key="key"
         class="px-4 py-3 text-gray-400 font-bold font-mono"
         :class="[activeTabIndex === i && 'active']"
-        @click="updateTabs(i)"
+        type="button"
+        role="tab"
+        :aria-selected="activeTabIndex === i"
+        @click="setActiveTab(i)"
       >
         {{ label }}
       </button>
-      <span ref="highlight-underline" class="highlight-underline" />
+      <span
+        ref="highlightUnderline"
+        class="highlight-underline"
+        aria-hidden="true"
+      />
     </div>
-    <slot />
+    <RenderCodeBlocks :nodes="panels" />
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      tabs: [],
-      activeTabIndex: 0,
-    };
-  },
-  watch: {
-    activeTabIndex(newValue, oldValue) {
-      this.switchTab(newValue);
+<script setup>
+import { Fragment, cloneVNode } from "vue";
+
+const slots = useSlots();
+const activeTabIndex = ref(0);
+const tabButtons = ref([]);
+const highlightUnderline = ref(null);
+
+const RenderCodeBlocks = {
+  props: {
+    nodes: {
+      type: Array,
+      required: true,
     },
   },
-  mounted() {
-    this.tabs = this.$slots.default
-      .filter((slot) => Boolean(slot.componentOptions))
-      .map((slot) => {
-        return {
-          label: slot.componentOptions.propsData.label,
-          elm: slot.elm,
-        };
-      });
-    this.$nextTick(this.updateHighlighteUnderlinePosition);
-  },
-  methods: {
-    switchTab(i) {
-      this.tabs.forEach((tab) => {
-        tab.elm.classList.remove("active");
-      });
-      this.tabs[i].elm.classList.add("active");
-    },
-    updateTabs(i) {
-      this.activeTabIndex = i;
-      this.updateHighlighteUnderlinePosition();
-    },
-    updateHighlighteUnderlinePosition() {
-      const activeTab = this.$refs.tabs[this.activeTabIndex];
-      if (!activeTab) {
-        return;
-      }
-      const highlightUnderline = this.$refs["highlight-underline"];
-      highlightUnderline.style.left = `${activeTab.offsetLeft}px`;
-      highlightUnderline.style.width = `${activeTab.clientWidth}px`;
-    },
+  setup(props) {
+    return () => props.nodes;
   },
 };
+
+const collectCodeBlocks = (nodes) =>
+  nodes.flatMap((node) => {
+    if (node.type === Fragment && Array.isArray(node.children)) {
+      return collectCodeBlocks(node.children);
+    }
+
+    return node.props?.label != null ? [node] : [];
+  });
+
+const codeBlocks = computed(() => collectCodeBlocks(slots.default?.() ?? []));
+
+const tabs = computed(() =>
+  codeBlocks.value.map((node, index) => ({
+    key: node.key ?? `${node.props.label}-${index}`,
+    label: String(node.props.label),
+  })),
+);
+
+const panels = computed(() =>
+  codeBlocks.value.map((node, index) =>
+    cloneVNode(node, {
+      active: activeTabIndex.value === index,
+      role: "tabpanel",
+    }),
+  ),
+);
+
+const updateHighlightUnderlinePosition = async () => {
+  await nextTick();
+
+  const activeTab = tabButtons.value[activeTabIndex.value];
+  if (!activeTab || !highlightUnderline.value) {
+    return;
+  }
+
+  highlightUnderline.value.style.left = `${activeTab.offsetLeft}px`;
+  highlightUnderline.value.style.width = `${activeTab.clientWidth}px`;
+};
+
+const setActiveTab = (index) => {
+  activeTabIndex.value = index;
+  updateHighlightUnderlinePosition();
+};
+
+watch(activeTabIndex, updateHighlightUnderlinePosition);
+onMounted(updateHighlightUnderlinePosition);
+onUpdated(updateHighlightUnderlinePosition);
 </script>
 
 <style lang="postcss" scoped>
 @reference "../../assets/css/main.css";
 
-button {
-  outline: none;
-}
 .highlight-underline {
   @apply bg-primary-500 absolute;
   bottom: -2px;
