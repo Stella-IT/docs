@@ -11,5 +11,5 @@ category: FAQ
 * [호스트 이름에는 무엇을 입력해야 하나요?](/faq/console/what-is-hostname) 
 * [운영체제 선택은 무엇이고, 어떻게 선택해야 하나요?](/faq/console/what-is-os)  
 * [plan_is_sold_out 라는 오류 메세지가 떠요](/faq/console/what-is-plan_soldout)  
-* [Stella IT Access 란?](/faq/console/what-is-stella-it-access)  
+* [Stella IT Access 란?](/tutorials/web/what-is-stella-it-access)  
 * [가상 머신은 어떻게 만드나요?](/faq/console/how-to-deploy-instance)
