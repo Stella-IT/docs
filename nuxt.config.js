@@ -5,14 +5,14 @@ import tailwindcss from "@tailwindcss/vite";
 
 const contentRoot = path.join(__dirname, "content", "ko")
 
-const getContentRoutes = (dir = contentRoot) => {
+const getContentPaths = (dir = contentRoot) => {
   if (!fs.existsSync(dir)) return []
 
   return fs.readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
     const entryPath = path.join(dir, entry.name)
 
     if (entry.isDirectory()) {
-      return getContentRoutes(entryPath)
+      return getContentPaths(entryPath)
     }
 
     if (!entry.isFile() || !entry.name.endsWith(".md")) {
@@ -25,9 +25,22 @@ const getContentRoutes = (dir = contentRoot) => {
       .split(path.sep)
       .join("/")
 
-    return relativePath === "index" ? "/" : `/${relativePath}`
+    return relativePath
   })
 }
+
+const contentPaths = getContentPaths()
+const encodeContentPath = (contentPath) =>
+  contentPath
+    .split("/")
+    .map((segment) => encodeURIComponent(segment).replace(/~/g, "%7E"))
+    .join("~")
+const contentRoutes = contentPaths.map((contentPath) =>
+  contentPath === "index" ? "/" : `/${contentPath}`,
+)
+const contentApiRoutes = contentPaths
+  .filter((contentPath) => contentPath !== "index")
+  .map((contentPath) => `/api/docs-page/${encodeContentPath(contentPath)}`)
 
 export default defineNuxtConfig({
   telemetry: false,
@@ -37,7 +50,12 @@ export default defineNuxtConfig({
       publicDir: path.join(__dirname, 'dist')
     },
     prerender: {
-      routes: getContentRoutes()
+      routes: [
+        ...contentRoutes,
+        ...contentApiRoutes,
+        "/api/docs-list",
+        "/api/search-index",
+      ]
     },
   },
 

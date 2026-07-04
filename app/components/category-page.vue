@@ -69,25 +69,21 @@ import { categoryLabel, categoryMeta } from "../utils/category-meta";
 
 const props = defineProps(["pageSlug"]);
 
-const { data, pending } = await useAsyncData(
-  `posts-list-${props.pageSlug}`,
-  () =>
-    queryCollection("docs")
-      .select("path", "title", "description", "category", "deprecated")
-      .where("category", "=", props.pageSlug)
-      .order("title", "ASC")
-      .all(),
-);
+const { data, pending } = await useFetch("/api/docs-list", {
+  key: "docs-list",
+});
 
 const currentCategoryMeta = computed(() => categoryMeta(props.pageSlug));
 const currentCategoryLabel = computed(() => categoryLabel(props.pageSlug));
 
 const articles = computed(() =>
-  (data.value || []).sort(
-    (a, b) =>
-      Number(Boolean(a.deprecated)) - Number(Boolean(b.deprecated)) ||
-      a.title.localeCompare(b.title, "ko-KR"),
-  ),
+  (data.value || [])
+    .filter((article) => article.category === props.pageSlug)
+    .sort(
+      (a, b) =>
+        Number(Boolean(a.deprecated)) - Number(Boolean(b.deprecated)) ||
+        a.title.localeCompare(b.title, "ko-KR"),
+    ),
 );
 
 const allArticlesDeprecated = computed(

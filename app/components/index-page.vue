@@ -180,12 +180,9 @@ const supportChannels = [
   },
 ];
 
-const { data: posts } = await useAsyncData("docs-index", () =>
-  queryCollection("docs")
-    .select("path", "title", "description", "category", "deprecated")
-    .order("title", "ASC")
-    .all(),
-);
+const { data: posts } = await useFetch("/api/docs-list", {
+  key: "docs-list",
+});
 
 const docs = computed(() => posts.value || []);
 const categories = computed(() => {

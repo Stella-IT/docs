@@ -42,6 +42,12 @@
     li.px-4.py-2.flex.gap-2(v-if="searching && !results.length" role="option" aria-disabled="true" class="dark:text-zinc-300")
       loading
       span 검색 중..
+    li.px-4.py-2.text-sm.text-red-500(
+      v-else-if="searchError && q",
+      role="option",
+      aria-disabled="true",
+      class="dark:text-red-300"
+    ) 검색 데이터를 불러오지 못했습니다.
     li.px-4.py-2.text-sm.text-zinc-500(
       v-else-if="q && !results.length",
       role="option",
@@ -88,57 +94,18 @@ const focusIndex = ref(-1);
 const searchInput = ref(null);
 const searchInputId = "site-search";
 const resultsListId = "site-search-results";
-
-const { data: sections, pending: sectionsPending } = await useAsyncData(
-  "docs-search-sections",
-  () =>
-    queryCollectionSearchSections("docs", {
-      ignoredTags: ["code"],
-      minHeading: "h1",
-      maxHeading: "h3",
-    }),
-);
-
-const { data: documents } = await useAsyncData("docs-search-documents", () =>
-  queryCollection("docs")
-    .select("path", "title", "description", "category")
-    .order("title", "ASC")
-    .all(),
-);
-
-const docsByPath = computed(() => {
-  return new Map((documents.value || []).map((document) => [document.path, document]));
-});
+const searchIndex = ref([]);
+const searchPending = ref(false);
+const searchError = ref(false);
+let searchIndexPromise = null;
 
 const query = computed(() => q.value.trim().toLocaleLowerCase("ko-KR"));
-const searching = computed(() => Boolean(query.value && sectionsPending.value));
-
-const preparedSections = computed(() => {
-  return (sections.value || []).map((section) => {
-    const path = getSectionPath(section.id);
-    const document = docsByPath.value.get(path);
-    const title = document?.title || section.titles?.[0] || section.title || "제목 없음";
-    const sectionTitle = section.title && section.title !== title ? section.title : "";
-
-    return {
-      id: section.id,
-      to: toRoute(section.id),
-      title,
-      sectionTitle,
-      category: document?.category || "",
-      content: section.content || document?.description || "",
-      haystack: [title, sectionTitle, document?.description, section.content]
-        .filter(Boolean)
-        .join(" ")
-        .toLocaleLowerCase("ko-KR"),
-    };
-  });
-});
+const searching = computed(() => Boolean(query.value && searchPending.value));
 
 const results = computed(() => {
   if (!query.value) return [];
 
-  return preparedSections.value
+  return searchIndex.value
     .map((result) => {
       const titleHit = result.title.toLocaleLowerCase("ko-KR").includes(query.value);
       const sectionHit = result.sectionTitle
@@ -174,11 +141,13 @@ watch(q, () => {
 
 function updateQuery(event) {
   q.value = event.target.value;
+  loadSearchIndex();
 }
 
 function onFocus() {
   focus.value = true;
   emit("focus", true);
+  loadSearchIndex();
 }
 
 function onBlur() {
@@ -224,15 +193,6 @@ function optionId(index) {
   return `${resultsListId}-option-${index}`;
 }
 
-function getSectionPath(id) {
-  return String(id || "").split("#")[0];
-}
-
-function toRoute(id) {
-  const route = String(id || "").replace(/^\/ko(?=\/|#|$)/, "") || "/";
-  return route.startsWith("#") ? `/${route}` : route;
-}
-
 function isTypingTarget(target) {
   const tagName = target?.tagName?.toLowerCase();
   return (
@@ -256,6 +216,27 @@ function onGlobalKeydown(event) {
 
   event.preventDefault();
   searchInput.value?.focus();
+}
+
+async function loadSearchIndex() {
+  if (searchIndex.value.length || searchIndexPromise) return searchIndexPromise;
+
+  searchPending.value = true;
+  searchError.value = false;
+  searchIndexPromise = $fetch("/api/search-index")
+    .then((data) => {
+      searchIndex.value = Array.isArray(data) ? data : [];
+    })
+    .catch((error) => {
+      console.error(error);
+      searchError.value = true;
+    })
+    .finally(() => {
+      searchPending.value = false;
+      searchIndexPromise = null;
+    });
+
+  return searchIndexPromise;
 }
 
 onMounted(() => {

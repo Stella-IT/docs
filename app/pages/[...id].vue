@@ -19,6 +19,11 @@ const page = ref(null);
 const pageSlug = ref(null);
 const title = ref("Stella IT Docs");
 const description = ref("Stella IT Docs에서 다양한 정보들을 확인해보세요.");
+const encodeContentPath = (contentPath) =>
+  contentPath
+    .split("/")
+    .map((segment) => encodeURIComponent(segment).replace(/~/g, "%7E"))
+    .join("~");
 
 if (pathSlug === "ko" || pathSlug?.startsWith("ko/")) {
   const redirectPath = pathSlug === "ko" ? "/" : `/${pathSlug.substring(3)}`;
@@ -30,10 +35,14 @@ if (pathSlug === "ko" || pathSlug?.startsWith("ko/")) {
   page.value = "category";
   pageSlug.value = pathSlug.replace("category/", "");
 } else {
-  const path = `/ko/${pathSlug}`;
-  const document = await queryCollection("docs").path(path).first();
+  const { data: document } = await useFetch(
+    `/api/docs-page/${encodeContentPath(pathSlug)}`,
+    {
+      key: `docs-page-${pathSlug}`,
+    },
+  );
 
-  if (!document) {
+  if (!document.value) {
     throw createError({
       statusCode: 404,
       statusMessage: "문서를 찾을 수 없습니다.",
@@ -42,9 +51,9 @@ if (pathSlug === "ko" || pathSlug?.startsWith("ko/")) {
   }
 
   page.value = "document";
-  pageSlug.value = document;
-  title.value = document.title;
-  description.value = document.description;
+  pageSlug.value = document.value;
+  title.value = document.value.title;
+  description.value = document.value.description;
 }
 
 useHead({
