@@ -13,7 +13,7 @@
           class="hover:text-primary-600 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60 dark:text-gray-400 dark:hover:text-primary-400 dark:focus-visible:ring-offset-zinc-950",
           :disabled="copyState === 'copying'",
           :aria-label="copyButtonLabel",
-          @click="copyForLlm"
+          @click="copyForMarkdown"
         )
           i.fas(:class="copyIconClass", aria-hidden="true")
           span {{ copyButtonLabel }}
@@ -47,7 +47,10 @@
 </template>
 
 <script setup>
-import { buildLlmContent, writeTextToClipboard } from "../utils/llm-content";
+import {
+  buildMarkdownContent,
+  writeTextToClipboard,
+} from "../utils/markdown-content";
 
 const props = defineProps(["pageSlug"]);
 const isLoading = ref(true);
@@ -73,7 +76,7 @@ const copyButtonLabel = computed(() => {
   if (copyState.value === "copying") return "복사 중...";
   if (copyState.value === "success") return "복사됨";
   if (copyState.value === "error") return "복사 실패";
-  return "AI에게 복사";
+  return "Markdown으로 복사";
 });
 
 const copyIconClass = computed(() => {
@@ -85,7 +88,7 @@ const copyIconClass = computed(() => {
 
 const copyStatusMessage = computed(() => {
   if (copyState.value === "success")
-    return "LLM용 문서 내용이 클립보드에 복사되었습니다.";
+    return "Markdown 문서 내용이 클립보드에 복사되었습니다.";
   if (copyState.value === "error")
     return "클립보드 복사에 실패했습니다. 다시 시도해 주세요.";
   return "";
@@ -121,14 +124,14 @@ function hasTocLink(link) {
   return (link?.children || []).some(hasTocLink);
 }
 
-const copyForLlm = async () => {
+const copyForMarkdown = async () => {
   if (copyState.value === "copying") return;
   if (copyResetTimer.value) clearTimeout(copyResetTimer.value);
 
   copyState.value = "copying";
 
   try {
-    await writeTextToClipboard(buildLlmContent(props.pageSlug));
+    await writeTextToClipboard(buildMarkdownContent(props.pageSlug));
     copyState.value = "success";
   } catch (error) {
     console.error(error);

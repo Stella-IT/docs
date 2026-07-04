@@ -273,7 +273,7 @@ const renderTable = (node) => {
     .join("\n");
 };
 
-export const buildLlmContent = (page) => {
+export const buildMarkdownContent = (page) => {
   const pagePath = page?.path?.replace(/^\/ko/, "") || "";
   const sourceUrl =
     typeof window !== "undefined"

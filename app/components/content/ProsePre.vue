@@ -17,7 +17,7 @@
 </template>
 
 <script setup>
-import { writeTextToClipboard } from "../../utils/llm-content";
+import { writeTextToClipboard } from "../../utils/markdown-content";
 
 defineOptions({
   inheritAttrs: false,
