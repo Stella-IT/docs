@@ -15,12 +15,31 @@ pnpm install
 pnpm dev
 ```
 
-## Static Generation
+## Static Build
 
 This will create the `dist/` directory for publishing to static hosting:
 
 ```bash
-pnpm generate
+pnpm build
 ```
 
-To preview the static generated app, run `pnpm start`
+`pnpm build:static` and `pnpm generate` run the same static build.
+
+To preview the generated static app locally:
+
+```bash
+pnpm preview
+```
+
+Stop the preview server after checking the build.
+
+## Server Build
+
+Use this only when deploying the Nuxt server output instead of static hosting:
+
+```bash
+pnpm build:server
+pnpm start
+```
+
+This creates and runs `.output/server/index.mjs`.

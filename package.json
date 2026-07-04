@@ -4,9 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "nuxi dev",
-    "build": "nuxi build",
-    "start": "nuxi start",
+    "build": "nuxi generate",
+    "build:static": "nuxi generate",
+    "build:server": "nuxi build",
     "generate": "nuxi generate",
+    "preview": "nuxi preview",
+    "preview:static": "nuxi preview",
+    "preview:server": "node .output/server/index.mjs",
+    "start": "node .output/server/index.mjs",
     "prepare": "nuxi prepare"
   },
   "dependencies": {
