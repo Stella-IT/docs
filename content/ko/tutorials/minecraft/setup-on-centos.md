@@ -1,6 +1,7 @@
 ---
 title: CentOS에서 마인크래프트 서버 구축하기
 description: CentOS 환경에서 마인크래프트 서버를 설치하고 설정하는 방법을 알아봅니다.
+category: Stella IT Console/Minecraft
 ---
 
 # CentOS에서 마인크래프트 서버 구축하기

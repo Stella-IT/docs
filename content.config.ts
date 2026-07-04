@@ -6,7 +6,7 @@ export default defineContentConfig({
       type: "page",
       source: "ko/**/*.md",
       schema: z.object({
-        category: z.string().optional().default(""),
+        category: z.string(),
         deprecated: z.boolean().optional().default(false),
       }),
       indexes: [

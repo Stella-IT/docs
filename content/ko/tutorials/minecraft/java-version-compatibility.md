@@ -1,6 +1,7 @@
 ---
 title: 마인크래프트 버전별 Java 호환성 가이드
 description: 마인크래프트 서버 버전별로 권장되는 Java 버전을 알아봅니다.
+category: Stella IT Console/Minecraft
 ---
 
 # 마인크래프트 버전별 Java 호환성 가이드
