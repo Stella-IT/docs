@@ -223,7 +223,7 @@ async function loadSearchIndex() {
 
   searchPending.value = true;
   searchError.value = false;
-  searchIndexPromise = $fetch("/api/search-index")
+  searchIndexPromise = $fetch("/api/search-index.json", { responseType: "json" })
     .then((data) => {
       searchIndex.value = Array.isArray(data) ? data : [];
     })
