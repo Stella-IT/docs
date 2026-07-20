@@ -10,10 +10,6 @@ category: Stella IT Console/Minecraft
     설치가 되어있지 않다면, <a href="/tutorials/minecraft/install-guide/java">Java 설치 방법</a> 페이지를 확인하여 Java를 설치해 주세요. 
 </alert>
 
-
-## 서버 환경
-OpenJDK 16.0.1 64Bit
-
 ## 사전 준비
 드롭박스나 윈드라이브 위치에 있으면 에러가 나옵니다.  
 로컬디스크 내 별도의 폴더를 생성해서 작업하시는걸 추천드립니다.  

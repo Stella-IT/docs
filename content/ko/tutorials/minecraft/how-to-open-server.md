@@ -42,7 +42,7 @@ Stella IT Cloud의 인프라의 경우, <b>Minecraft: Bedrock Edition</b>과 현
 
 ### Spigot 1.8.8
 <alert type="warning">
-Java 8을 필요로 합니다.
+Java 8이 필요합니다. 다른 서버 버전은 <a href="/tutorials/minecraft/java-version-compatibility">Java 버전 호환성 가이드</a>에서 요구 사항을 확인하세요.
 </alert>
 1. Spigot 1.8.8 버전을 설치합니다.
 2. 버킷을 설치한 폴더에 들어갑니다.
@@ -58,7 +58,7 @@ Java 8을 필요로 합니다.
 
 ### Spigot 1.18.2
 <alert type="warning">
-Java 16 이상을 필요로 합니다.
+Java 17이 필요합니다. 다른 서버 버전은 <a href="/tutorials/minecraft/java-version-compatibility">Java 버전 호환성 가이드</a>에서 요구 사항을 확인하세요.
 </alert>
 1. Spigot 1.18.2 버전을 설치합니다.
 2. 버킷을 설치한 폴더에 들어갑니다.

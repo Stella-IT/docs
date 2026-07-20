@@ -53,18 +53,15 @@ category: Stella IT Console
 
 ### 6. 자바 설치는 어떻게 해야 하나요?
 
-Java를 설치하려면 OpenJDK를 설치하는 것을 권장드립니다.  
-1. [Adoptium(이클립스 템우린) 다운로드 페이지](https://adoptium.net/temurin/releases/)로 이동합니다.  
-2. 자신의 마인크래프트 버전에 맞는 Java 버전을 선택합니다.
-    *   **Java 17:** Minecraft 1.18 ~ 1.20.4
-    *   **Java 8:** Minecraft 1.12.2 등
-3. **Operating System**은 `Windows`, **Architecture**는 `x64`를 선택합니다.  
-4. `.msi` 확장자의 설치 파일을 다운로드하여 실행하고, 설치 마법사의 지시에 따라 설치를 완료합니다. 설치 과정에서 `Set JAVA_HOME variable` 옵션을 선택하는 것이 좋습니다.
-5. 명령 프롬프트(CMD) 또는 PowerShell을 열고 다음 명령어를 입력하여 Java가 올바르게 설치되었는지 확인합니다.
+먼저 [Java 버전 호환성 가이드](/tutorials/minecraft/java-version-compatibility)에서 서버에 필요한 Java 버전을 확인하세요. 그다음 [Java 설치 방법](/tutorials/minecraft/install-guide/java)의 운영체제별 절차에 따라 OpenJDK를 설치합니다.
+
+설치 후 새 명령 프롬프트(CMD), PowerShell 또는 터미널에서 다음 명령어로 실제 사용 중인 버전을 확인하세요.
+
 ```cmd
 java -version
 ```
-6. 설치된 Java 버전이 올바르게 출력되면, Java가 성공적으로 설치된 것입니다.
+
+출력된 주 버전이 서버 요구 사항과 같으면 설치가 완료된 것입니다.
 
 ### 7. 서버 파일은 어떻게 이동하나요?
 서버 내 파일을 이동하실 경우, RDP(원격 데스크톱 연결) 프로그램을 통한 복사 및 붙여넣기 기능을 사용하지 않는 것을 권장드립니다.  

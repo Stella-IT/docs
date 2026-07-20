@@ -1,37 +1,42 @@
 ---
 title: 마인크래프트 버전별 Java 호환성 가이드
-description: 마인크래프트 서버 버전별로 권장되는 Java 버전을 알아봅니다.
+description: 마인크래프트 Paper 서버 버전에 필요한 Java 버전을 확인합니다.
 category: Stella IT Console/Minecraft
 ---
 
 # 마인크래프트 버전별 Java 호환성 가이드
 
-마인크래프트 서버는 Java로 만들어졌기 때문에, 서버를 구동하기 위해서는 Java가 반드시 설치되어 있어야 합니다. 하지만 마인크래프트 버전에 따라 요구되는 Java 버전이 다르기 때문에, 자신의 서버 버전에 맞는 Java를 설치하는 것이 매우 중요합니다.
+서버 버전과 Java 버전이 맞지 않으면 서버가 시작되지 않습니다. 아래 표는 [Paper 공식 요구 사항](https://docs.papermc.io/paper/getting-started/)을 기준으로 합니다. 다른 서버 구동기를 사용한다면 해당 구동기의 요구 사항도 함께 확인하세요.
 
-이 문서에서는 주요 마인크래프트 버전에 맞는 Java 버전을 안내합니다.
+## Paper 서버 버전별 Java 요구 사항
 
-## 주요 마인크래프트 버전과 Java 버전
+| 마인크래프트 버전 | Java 버전 |
+| --- | --- |
+| **26.1 이상** | Java 25 |
+| **1.20 - 1.21.11** | Java 21 |
+| **1.17 - 1.19** | Java 17 |
+| **1.16.5** | Java 16 |
+| **1.12 - 1.16.4** | Java 11 |
+| **1.7.10 - 1.11** | Java 8 |
 
-| 마인크래프트 버전 | 권장 Java 버전 | 비고 |
-| --- | --- | --- |
-| **1.20.5 이상** | Java 21 | 최신 버전의 마인크래프트는 최신 Java 버전을 요구합니다. |
-| **1.18 - 1.20.4** | Java 17 | 1.18 버전부터 Java 17이 필수가 되었습니다. |
-| **1.17** | Java 16 | 1.17 버전은 Java 16을 필요로 하는 특별한 경우입니다. |
-| **1.13 - 1.16.5** | Java 8 또는 11 | 가장 널리 사용되던 버전으로, Java 8과의 호환성이 좋습니다. |
-| **1.12.2 이하** | Java 8 | 오래된 버전의 서버들은 Java 8 또는 그 이전 버전을 사용합니다. |
+<alert type="warning">
+최신 Java를 무조건 설치하지 말고, 운영 중인 서버 버전에 맞는 Java를 선택하세요. 특히 오래된 플러그인이나 모드는 더 높은 Java 버전에서 동작하지 않을 수 있습니다.
+</alert>
 
-## Java 버전이 중요한 이유
+참고로 바닐라 마인크래프트는 [1.20.5부터 Java 21과 64비트 운영체제](https://www.minecraft.net/en-us/article/minecraft-java-edition-1-20-5)를 요구합니다.
 
-잘못된 버전의 Java를 사용하면 서버가 시작되지 않거나, `Unsupported Java version` 오류가 발생할 수 있습니다. 예를 들어, 1.20.4 버전의 마인크래프트 서버를 Java 8로 실행하려고 하면 서버가 구동되지 않습니다.
+## 설치된 버전 확인
 
-따라서 서버를 구축하기 전에 항상 자신의 마인크래프트 버전을 확인하고, 그에 맞는 Java 버전을 설치해야 합니다.
+터미널, 명령 프롬프트 또는 PowerShell에서 다음 명령어를 실행합니다.
 
-## 어떤 Java를 설치해야 하나요?
+```bash
+java -version
+```
 
-특별한 이유가 없다면, **OpenJDK**를 설치하는 것을 권장합니다. OpenJDK는 완전한 오픈소스로 무료로 사용할 수 있으며, 성능과 안정성 면에서 Oracle Java와 차이가 거의 없습니다.
+필요한 Java가 없거나 다른 버전이 실행된다면 [Java 설치 방법](/tutorials/minecraft/install-guide/java)을 따라 설치하세요.
 
-각 운영체제별 Java 설치 방법은 아래의 서버 구축 가이드를 참고해 주세요.
+운영체제별 서버 구축 과정은 다음 문서를 참고할 수 있습니다.
 
-* [Ubuntu에서 마인크래프트 서버 구축하기](./setup-on-ubuntu.md)
-* [CentOS에서 마인크래프트 서버 구축하기](./setup-on-centos.md)
-* [Windows Server에서 마인크래프트 서버 구축하기](./setup-on-windows.md)
+- [Ubuntu에서 마인크래프트 서버 구축하기](/tutorials/minecraft/setup-on-ubuntu)
+- [CentOS 계열에서 마인크래프트 서버 구축하기](/tutorials/minecraft/setup-on-centos)
+- [Windows Server에서 마인크래프트 서버 구축하기](/tutorials/minecraft/setup-on-windows)

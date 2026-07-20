@@ -10,16 +10,16 @@ category: Stella IT Console/Minecraft
 
 ## 1. Java 설치하기
 
-마인크래프트 서버는 Java로 실행됩니다. 서버 버전에 맞는 Java를 설치해야 합니다. [Java 버전 호환성 가이드](/ko/tutorials/minecraft/java-version-compatibility)를 참고하여 필요한 Java 버전을 확인하세요.
+마인크래프트 서버는 Java로 실행됩니다. [Java 버전 호환성 가이드](/tutorials/minecraft/java-version-compatibility)에서 서버에 필요한 버전을 먼저 확인하세요.
 
 Windows 환경에서는 OpenJDK 배포판 중 하나인 **Eclipse Temurin**을 설치하는 것을 권장합니다.
 
 1.  [Eclipse Temurin 다운로드 페이지](https://adoptium.net/temurin/releases/)로 이동합니다.
-2.  자신의 마인크래프트 버전에 맞는 Java 버전을 선택합니다.
-    *   **Java 17:** Minecraft 1.18 ~ 1.20.4
-    *   **Java 8:** Minecraft 1.12.2 등
+2.  호환성 가이드에서 확인한 Java 버전을 선택합니다.
 3.  **Operating System**은 `Windows`, **Architecture**는 `x64`를 선택합니다.
 4.  `.msi` 확장자의 설치 파일을 다운로드하여 실행하고, 설치 마법사의 지시에 따라 설치를 완료합니다. 설치 과정에서 `Set JAVA_HOME variable` 옵션을 선택하는 것이 좋습니다.
+
+자세한 내용과 패키지 관리자 명령어는 [Java 설치 방법](/tutorials/minecraft/install-guide/java#windows)을 참고하세요.
 
 ### 설치 확인
 

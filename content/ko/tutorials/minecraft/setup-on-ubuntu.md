@@ -10,23 +10,9 @@ category: Stella IT Console/Minecraft
 
 ## 1. Java 설치하기
 
-마인크래프트 서버는 Java로 실행됩니다. 서버 버전에 맞는 Java를 설치해야 합니다. [Java 버전 호환성 가이드](/ko/tutorials/minecraft/java-version-compatibility)를 참고하여 필요한 Java 버전을 확인하세요.
+마인크래프트 서버 버전에 맞는 Java를 설치해야 합니다. [Java 버전 호환성 가이드](/tutorials/minecraft/java-version-compatibility)에서 필요한 버전을 확인한 뒤 [Ubuntu 및 Debian 계열 설치 방법](/tutorials/minecraft/install-guide/java#ubuntu-및-debian-계열)을 따라 설치하세요.
 
-여기서는 가장 널리 사용되는 Java 17 (Minecraft 1.18 이상)과 Java 8 (Minecraft 1.16.5 이하) 설치 방법을 안내합니다.
-
-### Java 17 (OpenJDK) 설치 (Minecraft 1.18 ~ 1.20.4)
-
-```bash
-sudo apt update
-sudo apt install openjdk-17-jre-headless
-```
-
-### Java 8 (OpenJDK) 설치 (Minecraft 1.12.2 등)
-
-```bash
-sudo apt update
-sudo apt install openjdk-8-jre-headless
-```
+Paper 서버에서는 그래픽 관련 라이브러리가 필요할 수 있으므로 `headless` Java 패키지는 권장하지 않습니다.
 
 ### 설치된 Java 버전 확인
 
@@ -50,17 +36,7 @@ java -version
     *   **PaperMC (권장):** [PaperMC 다운로드 페이지](https://papermc.io/downloads)에서 원하는 버전의 서버 파일을 다운로드합니다.
     *   **바닐라 (공식):** [마인크래프트 Java 에디션 서버 다운로드](https://www.minecraft.net/ko-kr/download/server)
 
-    `wget`을 사용하여 서버 파일을 직접 다운로드할 수 있습니다. 예를 들어 Paper 1.20.4 버전을 다운로드하는 명령어는 다음과 같습니다. (링크는 변경될 수 있습니다)
-
-    ```bash
-    wget https://api.papermc.io/v2/projects/paper/versions/1.20.4/builds/550/downloads/paper-1.20.4-550.jar
-    ```
-
-    다운로드한 파일의 이름을 `server.jar`로 변경하면 편리합니다.
-
-    ```bash
-    mv paper-1.20.4-550.jar server.jar
-    ```
+    Paper 다운로드 링크와 빌드 번호는 변경될 수 있습니다. 오래된 명령어를 재사용하지 말고 공식 다운로드 페이지에서 운영할 버전의 최신 안정 빌드를 받아 서버 폴더에 업로드하세요. 다운로드한 파일 이름은 `server.jar`로 변경하면 이후 명령어를 그대로 사용할 수 있습니다.
 
 ## 3. 서버 실행 및 설정
 

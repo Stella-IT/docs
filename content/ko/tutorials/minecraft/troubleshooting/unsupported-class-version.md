@@ -1,22 +1,30 @@
 ---
 title: UnsupportedClassVersion 에러가 떠요!
-description: UnsupportedClassVersion 에러를 해결하기 위해 Java 16으로 업그레이드 하는 방법을 알아봅니다.
-
+description: 설치된 Java가 서버 요구 버전보다 낮을 때 발생하는 오류를 해결합니다.
 category: Stella IT Console/Minecraft
 ---
 
-## 오류 상황
-다음과 같은 메세지가 발생합니다.  
+# UnsupportedClassVersion 오류 해결
+
+다음과 비슷한 메시지가 표시되며 서버가 시작되지 않을 수 있습니다.
+
+```text
+java.lang.UnsupportedClassVersionError: ... has been compiled by a more recent version of the Java Runtime
 ```
-09.06 17:14:21 [Server] INFO Exception in thread "main" java.lang.UnsupportedClassVersionError: net/minecraft/server/Main has been compiled by a more recent version of the Java Runtime (class file version 60.0), this version of the Java Runtime only recognizes class file versions up to 52.0
-```
 
-## Minecraft 1.17의 타겟 Java 버전 변경
-Minecraft Java Edition는 1.16까지 Java 8 버전을 기반으로 제공되고 있었으나, [21w19a Snapshot](https://www.minecraft.net/en-us/article/minecraft-snapshot-21w19a) 이후로 Minecraft Java Edition의 기반 코드가 Java 16를 대상으로 작동되도록 변경되었습니다.
+이 오류는 서버 또는 플러그인이 현재 실행 중인 Java보다 높은 버전으로 컴파일되었다는 뜻입니다. 오류에 표시되는 `class file version` 숫자만 보고 임의의 Java를 설치하기보다는 서버 구동기가 요구하는 버전을 확인하는 편이 안전합니다.
 
-### 저는 Java 8보다 높은 버전을 사용해도 작동했었는데요?
-Java는 초기부터 [JVM](https://ko.wikipedia.org/wiki/%EC%9E%90%EB%B0%94_%EA%B0%80%EC%83%81_%EB%A8%B8%EC%8B%A0)의 [Backwards Compatibility (하위 호환성)](https://ko.wikipedia.org/wiki/%ED%95%98%EC%9C%84_%ED%98%B8%ED%99%98%EC%84%B1)이 고려되어 작성되어, 구버전이더라도 신버전의 Java Runtime 에서 작동할 수 있도록 설계되어, 문제가 없었던 것입니다.
+## 해결 방법
 
-## 해결 방안
+1. 현재 실행 중인 Java 버전을 확인합니다.
 
-[Java 설치 방법](/tutorials/minecraft/install-guide/java)에 따라 올바른 Java 버전을 설치해 주세요.
+   ```bash
+   java -version
+   ```
+
+2. [Java 버전 호환성 가이드](/tutorials/minecraft/java-version-compatibility)에서 서버 버전에 필요한 Java를 확인합니다.
+3. [Java 설치 방법](/tutorials/minecraft/install-guide/java)에 따라 알맞은 버전을 설치합니다.
+4. 터미널이나 명령 프롬프트를 완전히 닫았다가 다시 열고 `java -version`을 재확인합니다.
+5. 시작 스크립트가 특정 Java 실행 파일 경로를 직접 사용한다면 그 경로도 새 설치 위치로 변경합니다.
+
+여러 Java가 설치되어 있으면 운영체제의 `PATH`, `JAVA_HOME` 또는 기본 Java 선택 설정 때문에 이전 버전이 계속 실행될 수 있습니다.
