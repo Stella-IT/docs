@@ -1,9 +1,5 @@
 <template lang="pug">
-aside.hidden.w-40(
-  class="xl:block",
-  v-if="flatLinks.length > 0",
-  aria-label="이 페이지 목차"
-)
+aside.hidden.w-40(class="xl:block", v-if="flatLinks.length > 0", aria-label="이 페이지 목차")
   nav.sticky.top-24.overflow-y-auto.pr-2(
     class="max-h-[calc(100vh-7rem)]",
     aria-labelledby="on-this-page-title"
@@ -12,9 +8,9 @@ aside.hidden.w-40(
       class="dark:text-gray-400"
     ) 이 페이지
     ul.mt-3.border-l.border-gray-200(class="dark:border-gray-800")
-      li(v-for="link in flatLinks" :key="link.id")
-        a(
-          class="-ml-px block border-l-2 py-1.5 pr-2 text-sm leading-5 transition-colors",
+      li(v-for="link in flatLinks", :key="link.id")
+        a.-ml-px.block.border-l-2.pr-2.text-sm.leading-5.transition-colors(
+          class="py-1.5",
           :href="`#${link.id}`",
           :aria-current="activeId === link.id ? 'location' : undefined",
           :class="[linkClasses(link), depthClasses(link.depth)]",

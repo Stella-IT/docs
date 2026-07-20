@@ -1,89 +1,119 @@
-import { defineNuxtConfig } from 'nuxt/config'
-import fs from "fs"
-import path from "path"
+import { defineNuxtConfig } from "nuxt/config";
+import fs from "fs";
+import path from "path";
 import tailwindcss from "@tailwindcss/vite";
 
-const contentRoot = path.join(__dirname, "content", "ko")
+const contentRoot = path.join(__dirname, "content", "ko");
+const siteUrl = "https://docs.stella-it.com";
 
-const getContentPaths = (dir = contentRoot) => {
-  if (!fs.existsSync(dir)) return []
+const getContentEntries = (dir = contentRoot) => {
+  if (!fs.existsSync(dir)) return [];
 
   return fs.readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
-    const entryPath = path.join(dir, entry.name)
+    const entryPath = path.join(dir, entry.name);
 
     if (entry.isDirectory()) {
-      return getContentPaths(entryPath)
+      return getContentEntries(entryPath);
     }
 
     if (!entry.isFile() || !entry.name.endsWith(".md")) {
-      return []
+      return [];
     }
 
     const relativePath = path
       .relative(contentRoot, entryPath)
       .replace(/\.md$/, "")
       .split(path.sep)
-      .join("/")
+      .join("/");
+    const category =
+      fs
+        .readFileSync(entryPath, "utf8")
+        .match(/^category:\s*(.*)$/m)?.[1]
+        ?.trim()
+        .replace(/^(['"])(.*)\1$/, "$2") || "";
 
-    return relativePath
-  })
-}
+    return [{ path: relativePath, category }];
+  });
+};
 
-const contentPaths = getContentPaths()
+const contentEntries = getContentEntries();
+const contentPaths = contentEntries.map((entry) => entry.path);
 const encodeContentPath = (contentPath) =>
   contentPath
     .split("/")
     .map((segment) => encodeURIComponent(segment).replace(/~/g, "%7E"))
-    .join("~")
+    .join("~");
 const contentRoutes = contentPaths.map((contentPath) =>
   contentPath === "index" ? "/" : `/${contentPath}`,
-)
+);
 const contentApiRoutes = contentPaths
   .filter((contentPath) => contentPath !== "index")
-  .map((contentPath) => `/api/docs-page/${encodeContentPath(contentPath)}`)
+  .map((contentPath) => `/api/docs-page/${encodeContentPath(contentPath)}`);
+const categoryRoutes = [
+  ...new Set(contentEntries.map((entry) => entry.category)),
+]
+  .filter(Boolean)
+  .map(
+    (category) =>
+      `/category/${category.split("/").map(encodeURIComponent).join("/")}`,
+  );
 
 export default defineNuxtConfig({
   telemetry: false,
 
   nitro: {
     output: {
-      publicDir: path.join(__dirname, 'dist')
+      publicDir: path.join(__dirname, "dist"),
     },
     prerender: {
       routes: [
         ...contentRoutes,
         ...contentApiRoutes,
+        ...categoryRoutes,
         "/api/docs-list",
         "/api/search-index",
-      ]
+      ],
+    },
+  },
+
+  runtimeConfig: {
+    public: {
+      siteUrl,
     },
   },
 
   app: {
     head: {
-      titleTemplate: '%s - Stella IT 고객센터',
+      htmlAttrs: {
+        lang: "ko",
+      },
+      titleTemplate: "%s - Stella IT 고객센터",
       meta: [
-        { charset: 'utf-8' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
-        { hid: 'description', name: 'description', content: 'Stella IT 고객센터에서 도움말과 가이드를 제공합니다.' }
+        { charset: "utf-8" },
+        { name: "viewport", content: "width=device-width, initial-scale=1.0" },
+        {
+          hid: "description",
+          name: "description",
+          content: "Stella IT 고객센터에서 도움말과 가이드를 제공합니다.",
+        },
+        { property: "og:site_name", content: "Stella IT 고객센터" },
+        { property: "og:type", content: "website" },
+        { name: "twitter:card", content: "summary_large_image" },
       ],
       link: [
-        { rel: 'stylesheet', href: 'https://static.stella-it-usercontent.com/fontawesome6/css/all.min.css' },
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+        {
+          rel: "stylesheet",
+          href: "https://static.stella-it-usercontent.com/fontawesome6/css/all.min.css",
+        },
+        { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
       ],
-      script: [
-      ]
+      script: [],
     },
   },
 
-  css: [
-    "@/assets/css/main.css" 
-  ],
+  css: ["@/assets/css/main.css"],
 
-  modules: [
-    "@nuxtjs/color-mode",
-    "@nuxt/content"
-  ],
+  modules: ["@nuxtjs/color-mode", "@nuxt/content"],
 
   colorMode: {
     preference: "system",
@@ -97,25 +127,23 @@ export default defineNuxtConfig({
     build: {
       markdown: {
         highlight: {
-          theme: "github-dark"
-        }
-      }
-    }
+          theme: "github-dark",
+        },
+      },
+    },
   },
 
   components: [
     {
       path: "~/components",
       pathPrefix: false,
-      global: true
-    }
+      global: true,
+    },
   ],
 
   vite: {
-    plugins: [
-      tailwindcss()
-    ]
+    plugins: [tailwindcss()],
   },
 
-  compatibilityDate: '2026-05-09',
-})
+  compatibilityDate: "2026-05-09",
+});

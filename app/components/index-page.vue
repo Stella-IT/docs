@@ -5,10 +5,14 @@ div
     h1#home-title.mx-auto.mt-4.max-w-3xl.text-4xl.font-semibold.tracking-tight.text-zinc-950(
       class="sm:text-5xl dark:text-white"
     ) 무엇을 도와드릴까요?
-    p.mx-auto.mt-4.max-w-2xl.text-base.leading-7.text-zinc-600(class="sm:text-lg dark:text-zinc-300") Stella IT 제품과 서비스별 문서를 빠르게 찾아보세요.
+    p.mx-auto.mt-4.max-w-2xl.text-base.leading-7.text-zinc-600(
+      class="sm:text-lg dark:text-zinc-300"
+    ) Stella IT 제품과 서비스별 문서를 빠르게 찾아보세요.
 
   section.mt-2(aria-labelledby="quick-title")
-    h2#quick-title.text-center.text-2xl.font-semibold.text-zinc-950(class="dark:text-white") 자주 찾는 도움말
+    h2#quick-title.text-center.text-2xl.font-semibold.text-zinc-950(
+      class="dark:text-white"
+    ) 자주 찾는 도움말
     .mt-5.grid.gap-3(class="md:grid-cols-3")
       nuxt-link.flex.items-start.gap-4.rounded-lg.border.border-zinc-200.bg-white.p-4.transition(
         v-for="item in quickLinks",
@@ -17,7 +21,7 @@ div
         class="hover:border-zinc-300 hover:bg-zinc-50 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-primary-500 dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-zinc-700 dark:hover:bg-zinc-800"
       )
         span.home-support-icon.inline-flex.items-center.justify-center.rounded-lg.bg-primary-50.text-primary-700(
-          aria-hidden="true"
+          aria-hidden="true",
           class="dark:bg-primary-950/60 dark:text-primary-300"
         )
           i.text-lg(:class="item.icon")
@@ -26,7 +30,9 @@ div
           span.mt-1.block.text-sm.leading-6.text-zinc-600(class="dark:text-zinc-300") {{ item.description }}
 
   section.mt-12(aria-labelledby="category-title")
-    h2#category-title.text-center.text-2xl.font-semibold.text-zinc-950(class="dark:text-white") 제품별 도움말
+    h2#category-title.text-center.text-2xl.font-semibold.text-zinc-950(
+      class="dark:text-white"
+    ) 제품별 도움말
     .mt-6.grid.grid-cols-2.gap-3(
       role="tablist",
       aria-label="제품 카테고리",
@@ -50,7 +56,7 @@ div
         :class="[selectedCategory === category ? 'border-primary-500 bg-primary-50 text-primary-700 shadow-sm dark:border-primary-400 dark:bg-primary-950/40 dark:text-primary-300' : 'border-zinc-200 bg-white text-zinc-900 hover:border-zinc-300 hover:bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100 dark:hover:border-zinc-700 dark:hover:bg-zinc-800', deprecatedCategories.has(category) ? 'opacity-60' : '']"
       )
         span.home-support-icon.inline-flex.items-center.justify-center.rounded-lg.bg-zinc-100.text-zinc-700(
-          aria-hidden="true"
+          aria-hidden="true",
           class="dark:bg-zinc-800 dark:text-zinc-200"
         )
           i.text-xl(:class="categoryMeta(category).icon")
@@ -74,11 +80,13 @@ div
         p.text-sm.font-semibold.text-primary-600 선택한 카테고리
         .mt-3.flex.items-center.gap-3
           span.home-support-icon.inline-flex.items-center.justify-center.rounded-lg.bg-zinc-100.text-zinc-700(
-            aria-hidden="true"
+            aria-hidden="true",
             class="dark:bg-zinc-800 dark:text-zinc-200"
           )
             i.text-xl(:class="selectedCategoryMeta.icon")
-          h2.text-3xl.font-semibold.tracking-tight.text-zinc-950(class="dark:text-white") {{ selectedCategoryLabel }}
+          h2.text-3xl.font-semibold.tracking-tight.text-zinc-950(
+            class="dark:text-white"
+          ) {{ selectedCategoryLabel }}
         p.mt-4.leading-7.text-zinc-600(class="dark:text-zinc-300") {{ selectedCategoryMeta.description }}
         .mt-5.flex.flex-wrap.items-center.gap-3
           nuxt-link.inline-flex.items-center.gap-2.rounded-md.bg-zinc-950.px-4.py-2.text-sm.font-semibold.text-white.transition(
@@ -113,7 +121,10 @@ div
             :dimmed="deprecatedCategories.has(selectedCategory)",
             :show-deprecated-badge="!deprecatedCategories.has(selectedCategory)"
           )
-        p.rounded-lg.border.border-zinc-200.p-5.text-sm.text-zinc-600(v-else class="dark:border-zinc-800 dark:text-zinc-400") 이 카테고리에 표시할 문서가 없습니다.
+        p.rounded-lg.border.border-zinc-200.p-5.text-sm.text-zinc-600(
+          v-else,
+          class="dark:border-zinc-800 dark:text-zinc-400"
+        ) 이 카테고리에 표시할 문서가 없습니다.
 
   support-channel-section(
     :channels="supportChannels",

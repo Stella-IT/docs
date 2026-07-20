@@ -1,9 +1,15 @@
 <template lang="pug">
-section.my-16.border-t.border-zinc-200.pt-10(:aria-labelledby="sectionTitleId" class="dark:border-zinc-800")
+section.my-16.border-t.border-zinc-200.pt-10(
+  :aria-labelledby="sectionTitleId",
+  class="dark:border-zinc-800"
+)
   .grid.gap-6(class="lg:grid-cols-[minmax(0,0.28fr)_minmax(0,0.72fr)]")
     .text-center(class="lg:text-left")
       p.text-sm.font-semibold.text-primary-600 지원 채널
-      h2.mt-1.text-2xl.font-semibold.text-zinc-950(:id="sectionTitleId" class="dark:text-white") {{ title }}
+      h2.mt-1.text-2xl.font-semibold.text-zinc-950(
+        :id="sectionTitleId",
+        class="dark:text-white"
+      ) {{ title }}
 
     .grid.gap-2(class="md:grid-cols-3")
       a.group.flex.items-start.gap-3.rounded-lg.border.border-transparent.p-3.transition(

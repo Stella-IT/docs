@@ -5,12 +5,18 @@ const toRoute = (id) => {
   return route.startsWith("#") ? `/${route}` : route;
 };
 
+const normalizeSearchText = (value) =>
+  String(value || "")
+    .replace(/html\s+\.(?:default\s+)?\.shiki\s+span\s*\{[^}]*\}/gi, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+
 export default defineEventHandler(async (event) => {
   setHeader(event, "Cache-Control", "public, max-age=300, s-maxage=3600");
 
   const [sections, documents] = await Promise.all([
     queryCollectionSearchSections(event, "docs", {
-      ignoredTags: ["code"],
+      ignoredTags: ["style"],
       minHeading: "h1",
       maxHeading: "h3",
     }),
@@ -31,12 +37,12 @@ export default defineEventHandler(async (event) => {
     const sectionTitle =
       section.title && section.title !== title ? section.title : "";
     const haystack = [
-      title,
-      sectionTitle,
-      document?.description,
-      section.content,
+      ...new Set(
+        [title, sectionTitle, document?.description, section.content]
+          .map(normalizeSearchText)
+          .filter(Boolean),
+      ),
     ]
-      .filter(Boolean)
       .join(" ")
       .toLocaleLowerCase("ko-KR");
 

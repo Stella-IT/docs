@@ -10,7 +10,9 @@
       template(v-if="icon == 'IconCheckCircle'")
         i.fas.fa-check-circle.alert-icon.mt-px.w-6.h-6(aria-hidden="true")
       template(v-if="icon == 'IconExclamationCircle'")
-        i.fas.fa-exclamation-circle.alert-icon.mt-px.w-6.h-6(aria-hidden="true")
+        i.fas.fa-exclamation-circle.alert-icon.mt-px.w-6.h-6(
+          aria-hidden="true"
+        )
       template(v-if="icon == 'IconXCircle'")
         i.fas.fa-times-circle.alert-icon.mt-px.w-6.h-6(aria-hidden="true")
       //- component.alert-icon.mt-px.w-6.h-6(:is='icon')

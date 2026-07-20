@@ -3,188 +3,214 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-    --color-primary-50: #f2fbff;
-    --color-primary-100: #e6f6ff;
-    --color-primary-200: #bfe9ff;
-    --color-primary-300: #99dcff;
-    --color-primary-400: #4dc2ff;
-    --color-primary-500: #00a8ff;
-    --color-primary-600: #0097e6;
-    --color-primary-700: #006599;
-    --color-primary-800: #004c73;
-    --color-primary-900: #00324d;
-    --color-primary-950: #002233;
-    --default-ring-width: 3px;
-    --default-ring-color: var(--color-blue-500);
+  --color-primary-50: #f2fbff;
+  --color-primary-100: #e6f6ff;
+  --color-primary-200: #bfe9ff;
+  --color-primary-300: #99dcff;
+  --color-primary-400: #4dc2ff;
+  --color-primary-500: #00a8ff;
+  --color-primary-600: #0097e6;
+  --color-primary-700: #006599;
+  --color-primary-800: #004c73;
+  --color-primary-900: #00324d;
+  --color-primary-950: #002233;
+  --default-ring-width: 3px;
+  --default-ring-color: var(--color-blue-500);
 }
 
 @layer base {
+  html {
+    color-scheme: light;
+    font-smooth: always;
+    word-break: keep-all;
+    -webkit-font-smoothing: antialiased;
+    font-family:
+      Pretendard,
+      -apple-system,
+      BlinkMacSystemFont,
+      system-ui,
+      Roboto,
+      "Helvetica Neue",
+      "Segoe UI",
+      "Apple SD Gothic Neo",
+      "Noto Sans KR",
+      "Malgun Gothic",
+      sans-serif;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: var(--color-white);
+    color: var(--color-gray-900);
+  }
+
+  .dark body {
+    background-color: var(--color-zinc-950);
+    color: var(--color-zinc-100);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-primary-500);
+    outline-offset: 2px;
+  }
+
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: var(--color-gray-400);
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
     html {
-        color-scheme: light;
-        font-smooth: always;
-        word-break: keep-all;
-        -webkit-font-smoothing: antialiased;
-        font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+      scroll-behavior: smooth;
     }
-
-    html.dark {
-        color-scheme: dark;
-    }
-
-    body {
-        background-color: var(--color-white);
-        color: var(--color-gray-900);
-    }
-
-    .dark body {
-        background-color: var(--color-zinc-950);
-        color: var(--color-zinc-100);
-    }
-
-    :focus-visible {
-        outline: 2px solid var(--color-primary-500);
-        outline-offset: 2px;
-    }
-
-    *,
-    ::after,
-    ::before,
-    ::backdrop,
-    ::file-selector-button {
-        border-color: var(--color-gray-200, currentColor);
-    }
-
-    input::placeholder,
-    textarea::placeholder {
-        color: var(--color-gray-400);
-    }
-
-    button:not(:disabled),
-    [role="button"]:not(:disabled) {
-        cursor: pointer;
-    }
-
-    @media (prefers-reduced-motion: no-preference) {
-        html {
-            scroll-behavior: smooth;
-        }
-    }
+  }
 }
 
 .light-img,
 .dark-img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 .dark-img,
 .dark .light-img {
-    display: none;
+  display: none;
 }
 
 .dark .dark-img {
-    display: block;
+  display: block;
 }
 
 .prose :where(h2[id], h3[id], h4[id]) {
-    scroll-margin-top: 5rem;
+  scroll-margin-top: 5rem;
 }
 
 .prose :where(a):not(:where(.not-prose, .not-prose *)) {
-    color: var(--color-primary-600);
+  color: var(--color-primary-600);
 }
 
 .prose :where(h2, h3):not(:where(.not-prose, .not-prose *)) {
-    padding-bottom: --spacing(2);
-    border-bottom: 1px solid var(--color-gray-200);
+  padding-bottom: --spacing(2);
+  border-bottom: 1px solid var(--color-gray-200);
 }
 
 .prose :where(h5):not(:where(.not-prose, .not-prose *)) {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .prose :where(blockquote):not(:where(.not-prose, .not-prose *)) {
-    font-weight: 400;
-    color: var(--color-gray-600);
-    font-style: normal;
-    quotes: none;
+  font-weight: 400;
+  color: var(--color-gray-600);
+  font-style: normal;
+  quotes: none;
 }
 
-.prose :where(blockquote p:first-of-type):not(:where(.not-prose, .not-prose *))::before,
-.prose :where(blockquote p:last-of-type):not(:where(.not-prose, .not-prose *))::after {
-    content: none;
+.prose
+  :where(blockquote p:first-of-type):not(
+    :where(.not-prose, .not-prose *)
+  )::before,
+.prose
+  :where(blockquote p:last-of-type):not(
+    :where(.not-prose, .not-prose *)
+  )::after {
+  content: none;
 }
 
 .prose :where(code):not(:where(.not-prose, .not-prose *)) {
-    font-weight: 400;
-    background-color: var(--color-gray-100);
-    padding: --spacing(1);
-    border: 1px solid var(--color-gray-200);
-    border-radius: var(--radius-sm);
+  font-weight: 400;
+  background-color: var(--color-gray-100);
+  padding: --spacing(1);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-sm);
 }
 
 .prose :where(code):not(:where(.not-prose, .not-prose *))::before,
 .prose :where(code):not(:where(.not-prose, .not-prose *))::after {
-    content: none;
+  content: none;
 }
 
 .prose :where(pre):not(:where(.not-prose, .not-prose *)) {
-    overflow-x: auto;
-    color: #e6edf3;
-    background-color: #0d1117;
-    border-width: 0;
-    border-radius: var(--radius-md);
-    padding: --spacing(4);
+  overflow-x: auto;
+  color: #e6edf3;
+  background-color: #0d1117;
+  border-width: 0;
+  border-radius: var(--radius-md);
+  padding: --spacing(4);
 }
 
 .prose :where(pre code):not(:where(.not-prose, .not-prose *)) {
-    display: block;
-    color: inherit;
-    background-color: transparent;
-    border-width: 0;
-    border-radius: 0;
-    padding: 0;
-    font-size: inherit;
-    line-height: inherit;
+  display: block;
+  color: inherit;
+  background-color: transparent;
+  border-width: 0;
+  border-radius: 0;
+  padding: 0;
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .prose pre.shiki code span,
 .prose code.shiki span {
-    color: var(--shiki-dark, var(--shiki-default, #e6edf3));
-    background-color: transparent;
-    font-style: var(--shiki-dark-font-style, var(--shiki-default-font-style, inherit));
-    font-weight: var(--shiki-dark-font-weight, var(--shiki-default-font-weight, inherit));
-    text-decoration: var(--shiki-dark-text-decoration, var(--shiki-default-text-decoration, inherit));
+  color: var(--shiki-dark, var(--shiki-default, #e6edf3));
+  background-color: transparent;
+  font-style: var(
+    --shiki-dark-font-style,
+    var(--shiki-default-font-style, inherit)
+  );
+  font-weight: var(
+    --shiki-dark-font-weight,
+    var(--shiki-default-font-weight, inherit)
+  );
+  text-decoration: var(
+    --shiki-dark-text-decoration,
+    var(--shiki-default-text-decoration, inherit)
+  );
 }
 
 .prose :where(h3 code):not(:where(.not-prose, .not-prose *)) {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .prose :where(a code):not(:where(.not-prose, .not-prose *)) {
-    color: var(--color-primary-600);
+  color: var(--color-primary-600);
 }
 
 .dark .prose :where(h2, h3):not(:where(.not-prose, .not-prose *)) {
-    border-bottom-color: var(--color-gray-800);
+  border-bottom-color: var(--color-gray-800);
 }
 
 .dark .prose :where(a):not(:where(.not-prose, .not-prose *)),
 .dark .prose :where(a code):not(:where(.not-prose, .not-prose *)) {
-    color: var(--color-primary-400);
+  color: var(--color-primary-400);
 }
 
 .dark .prose :where(blockquote):not(:where(.not-prose, .not-prose *)) {
-    color: var(--color-gray-300);
+  color: var(--color-gray-300);
 }
 
 .dark .prose :where(code):not(:where(.not-prose, .not-prose *)) {
-    color: var(--color-gray-100);
-    background-color: var(--color-gray-800);
-    border-width: 0;
+  color: var(--color-gray-100);
+  background-color: var(--color-gray-800);
+  border-width: 0;
 }
 
 .dark .prose :where(pre code):not(:where(.not-prose, .not-prose *)) {
-    color: inherit;
-    background-color: transparent;
+  color: inherit;
+  background-color: transparent;
 }

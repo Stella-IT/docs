@@ -12,7 +12,12 @@
     "preview:static": "nuxi preview",
     "preview:server": "node .output/server/index.mjs",
     "start": "node .output/server/index.mjs",
-    "prepare": "nuxi prepare"
+    "prepare": "nuxi prepare",
+    "lint": "eslint .",
+    "typecheck": "nuxi prepare && tsc --noEmit -p .nuxt/tsconfig.json",
+    "content:check": "node scripts/check-content.mjs",
+    "format:check": "prettier --check app server scripts nuxt.config.js content.config.ts eslint.config.mjs package.json .github",
+    "check": "pnpm run lint && pnpm run typecheck && pnpm run content:check && pnpm run format:check && pnpm run build"
   },
   "dependencies": {
     "@nuxt/content": "^3.13.0",
@@ -26,5 +31,13 @@
     "pug": "^3.0.3",
     "sass-embedded": "^1.83.0",
     "tailwindcss": "^4.3.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.7.0",
+    "eslint-plugin-vue": "^10.9.2",
+    "globals": "^17.7.0",
+    "typescript": "^7.0.2",
+    "vue-eslint-parser": "^10.4.1"
   }
 }

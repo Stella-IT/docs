@@ -5,9 +5,16 @@ nuxt-link.flex.min-h-32.flex-col.justify-between.rounded-lg.border.border-zinc-2
   :class="dimmed ? 'opacity-60' : ''"
 )
   span
-    span.block.text-base.font-semibold.leading-snug.text-zinc-950(class="dark:text-white") {{ article.title }}
-    span.mt-2.block.text-sm.leading-6.text-zinc-600(v-if="article.description" class="dark:text-zinc-300") {{ article.description }}
-  span.mt-4.inline-flex.items-center.gap-2.text-sm.font-semibold.text-primary-700(class="dark:text-primary-400")
+    span.block.text-base.font-semibold.leading-snug.text-zinc-950(
+      class="dark:text-white"
+    ) {{ article.title }}
+    span.mt-2.block.text-sm.leading-6.text-zinc-600(
+      v-if="article.description",
+      class="dark:text-zinc-300"
+    ) {{ article.description }}
+  span.mt-4.inline-flex.items-center.gap-2.text-sm.font-semibold.text-primary-700(
+    class="dark:text-primary-400"
+  )
     span {{ actionLabel }}
     i.far.fa-arrow-right.text-xs(aria-hidden="true")
     span.ml-2.rounded-full.bg-red-50.px-2.text-xs.font-medium.text-red-600(

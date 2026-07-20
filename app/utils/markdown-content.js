@@ -306,7 +306,7 @@ export const writeTextToClipboard = async (value) => {
     try {
       await navigator.clipboard.writeText(value);
       return;
-    } catch (_) {
+    } catch {
       // Fall back to execCommand for non-secure contexts or denied permissions.
     }
   }

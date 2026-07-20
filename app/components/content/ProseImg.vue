@@ -80,7 +80,9 @@ const status = ref(props.src ? "loading" : "error");
 
 const refinedSrc = computed(() => {
   if (props.src?.startsWith("/") && !props.src.startsWith("//")) {
-    const base = withLeadingSlash(withTrailingSlash(useRuntimeConfig().app.baseURL));
+    const base = withLeadingSlash(
+      withTrailingSlash(useRuntimeConfig().app.baseURL),
+    );
 
     if (base !== "/" && !props.src.startsWith(base)) {
       return joinURL(base, props.src);

@@ -39,7 +39,12 @@
     :class="{ 'rounded-t-none': isOpen }",
     style="margin-top: 37px"
   )
-    li.px-4.py-2.flex.gap-2(v-if="searching && !results.length" role="option" aria-disabled="true" class="dark:text-zinc-300")
+    li.px-4.py-2.flex.gap-2(
+      v-if="searching && !results.length",
+      role="option",
+      aria-disabled="true",
+      class="dark:text-zinc-300"
+    )
       loading
       span 검색 중..
     li.px-4.py-2.text-sm.text-red-500(
@@ -80,7 +85,7 @@
         )
         span.block.min-w-0.flex-1.truncate
           span {{ result.title }}
-          span(v-if="result.sectionTitle")  - {{ result.sectionTitle }}
+          span(v-if="result.sectionTitle") - {{ result.sectionTitle }}
   p.sr-only(aria-live="polite") {{ statusMessage }}
 </template>
 
@@ -107,7 +112,9 @@ const results = computed(() => {
 
   return searchIndex.value
     .map((result) => {
-      const titleHit = result.title.toLocaleLowerCase("ko-KR").includes(query.value);
+      const titleHit = result.title
+        .toLocaleLowerCase("ko-KR")
+        .includes(query.value);
       const sectionHit = result.sectionTitle
         .toLocaleLowerCase("ko-KR")
         .includes(query.value);
@@ -119,11 +126,15 @@ const results = computed(() => {
       };
     })
     .filter((result) => result.score < 3)
-    .sort((a, b) => a.score - b.score || a.title.localeCompare(b.title, "ko-KR"))
+    .sort(
+      (a, b) => a.score - b.score || a.title.localeCompare(b.title, "ko-KR"),
+    )
     .slice(0, 12);
 });
 
-const isOpen = computed(() => focus.value && Boolean(searching.value || q.value));
+const isOpen = computed(
+  () => focus.value && Boolean(searching.value || q.value),
+);
 const activeDescendant = computed(() =>
   focusIndex.value >= 0 && results.value[focusIndex.value]
     ? optionId(focusIndex.value)
@@ -176,7 +187,9 @@ function go() {
   if (!results.value.length) return;
 
   const result =
-    focusIndex.value === -1 ? results.value[0] : results.value[focusIndex.value];
+    focusIndex.value === -1
+      ? results.value[0]
+      : results.value[focusIndex.value];
   selectResult(result);
 }
 

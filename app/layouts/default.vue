@@ -1,8 +1,8 @@
 <template lang="pug">
 div
-  a(
+  a.sr-only(
     href="#main-content",
-    class="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-50 focus:rounded-sm focus:bg-white focus:px-3 focus:py-2 focus:text-sm focus:font-semibold focus:text-primary-700 focus:shadow-sm dark:focus:bg-zinc-900 dark:focus:text-primary-300"
+    class="focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-50 focus:rounded-sm focus:bg-white focus:px-3 focus:py-2 focus:text-sm focus:font-semibold focus:text-primary-700 focus:shadow-sm dark:focus:bg-zinc-900 dark:focus:text-primary-300"
   ) 본문으로 건너뛰기
   header.fixed.w-full.top-0.border-b.bg-zinc-50.border-zinc-100(
     style="z-index: 9999",
@@ -11,10 +11,13 @@ div
     nav.w-full.max-w-7xl.mx-auto.grid.items-center.gap-2.min-h-14.px-3(
       aria-label="주요 메뉴",
       class="grid-cols-[auto_minmax(0,1fr)_auto] md:px-6 lg:px-10 xl:px-16"
+    )
+      nuxt-link.logoArea.inline-flex.items-center(
+        to="/",
+        aria-label="Stella IT 고객센터 홈"
       )
-      nuxt-link.logoArea.inline-flex.items-center(to="/" aria-label="Stella IT 고객센터 홈")
-        img.h-7(class="sm:h-8 dark:hidden" src="/logo-light.svg" alt="Stella IT")
-        img.hidden.h-7(class="sm:h-8 dark:block" src="/logo-dark.svg" alt="Stella IT")
+        img.h-7(class="sm:h-8 dark:hidden", src="/logo-light.svg", alt="Stella IT")
+        img.hidden.h-7(class="sm:h-8 dark:block", src="/logo-dark.svg", alt="Stella IT")
       .searchArea.w-full.max-w-lg.min-w-0.justify-self-center(class="xl:max-w-xl")
         search
       .iconArea.flex.justify-end.gap-1

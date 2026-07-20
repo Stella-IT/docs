@@ -4,14 +4,16 @@ div
     p.text-sm.font-semibold.text-primary-600 제품별 도움말
     .mt-4.flex.items-center.justify-center.gap-3
       span.category-support-icon.inline-flex.items-center.justify-center.rounded-lg.bg-zinc-100.text-zinc-700(
-        aria-hidden="true"
+        aria-hidden="true",
         class="dark:bg-zinc-800 dark:text-zinc-200"
       )
         i.text-xl(:class="currentCategoryMeta.icon")
       h1#category-page-title.text-3xl.font-semibold.tracking-tight.text-zinc-950(
         class="sm:text-4xl dark:text-white"
       ) {{ currentCategoryLabel }} 전체 문서
-    p.mx-auto.mt-4.max-w-2xl.text-base.leading-7.text-zinc-600(class="sm:text-lg dark:text-zinc-300") {{ currentCategoryMeta.description }}
+    p.mx-auto.mt-4.max-w-2xl.text-base.leading-7.text-zinc-600(
+      class="sm:text-lg dark:text-zinc-300"
+    ) {{ currentCategoryMeta.description }}
     .mt-5.flex.flex-wrap.items-center.justify-center.gap-3
       nuxt-link.inline-flex.items-center.gap-2.rounded-md.border.border-zinc-200.bg-white.px-4.py-2.text-sm.font-semibold.text-zinc-900.transition(
         to="/",
@@ -34,7 +36,9 @@ div
       .mb-5.flex.items-end.justify-between.gap-4
         div
           p.text-sm.font-semibold.text-primary-600 전체 보기
-          h2#category-document-list-title.mt-1.text-2xl.font-semibold.text-zinc-950(class="dark:text-white") 문서 목록
+          h2#category-document-list-title.mt-1.text-2xl.font-semibold.text-zinc-950(
+            class="dark:text-white"
+          ) 문서 목록
         span.hidden.text-sm.text-zinc-500(class="sm:block dark:text-zinc-400") {{ articles.length }}개 항목
 
       .mb-5.rounded-lg.border.border-amber-200.bg-amber-50.p-4(
@@ -61,7 +65,10 @@ div
           :show-deprecated-badge="!allArticlesDeprecated"
         )
 
-      p.rounded-lg.border.border-zinc-200.p-5.text-sm.text-zinc-600(v-else class="dark:border-zinc-800 dark:text-zinc-400") 이 카테고리에 표시할 문서가 없습니다.
+      p.rounded-lg.border.border-zinc-200.p-5.text-sm.text-zinc-600(
+        v-else,
+        class="dark:border-zinc-800 dark:text-zinc-400"
+      ) 이 카테고리에 표시할 문서가 없습니다.
 </template>
 
 <script setup>

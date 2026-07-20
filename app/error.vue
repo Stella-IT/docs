@@ -1,61 +1,89 @@
 <template lang="pug">
-.min-h-screen.overflow-hidden.bg-white.text-zinc-950(class="dark:bg-zinc-950 dark:text-zinc-100")
+.min-h-screen.overflow-hidden.bg-white.text-zinc-950(
+  class="dark:bg-zinc-950 dark:text-zinc-100"
+)
   .pointer-events-none.fixed.inset-0.-z-10
-    .absolute.top-0.h-72.w-72.rounded-full.bg-primary-100.blur-3xl(class="left-1/2 -translate-x-1/2 dark:bg-primary-950")
-    .absolute.bottom-0.right-0.h-80.w-80.rounded-full.bg-sky-100.blur-3xl(class="dark:bg-sky-950")
+    .absolute.top-0.h-72.w-72.rounded-full.bg-primary-100.blur-3xl(
+      class="left-1/2 -translate-x-1/2 dark:bg-primary-950"
+    )
+    .absolute.bottom-0.right-0.h-80.w-80.rounded-full.bg-sky-100.blur-3xl(
+      class="dark:bg-sky-950"
+    )
 
-  header.border-b.border-zinc-100.backdrop-blur(class="bg-white/85 dark:border-zinc-800 dark:bg-zinc-950/85")
-    nav.mx-auto.flex.h-16.w-full.max-w-7xl.items-center.justify-between.px-4(class="md:px-6 lg:px-10 xl:px-16" aria-label="오류 페이지 메뉴")
-      nuxt-link.inline-flex.items-center(to="/" aria-label="Stella IT 고객센터 홈")
-        img.h-8(class="dark:hidden" src="/logo-light.svg" alt="Stella IT")
-        img.hidden.h-8(class="dark:block" src="/logo-dark.svg" alt="Stella IT")
+  header.border-b.border-zinc-100.backdrop-blur(
+    class="bg-white/85 dark:border-zinc-800 dark:bg-zinc-950/85"
+  )
+    nav.mx-auto.flex.h-16.w-full.max-w-7xl.items-center.justify-between.px-4(
+      class="md:px-6 lg:px-10 xl:px-16",
+      aria-label="오류 페이지 메뉴"
+    )
+      nuxt-link.inline-flex.items-center(to="/", aria-label="Stella IT 고객센터 홈")
+        img.h-8(class="dark:hidden", src="/logo-light.svg", alt="Stella IT")
+        img.hidden.h-8(class="dark:block", src="/logo-dark.svg", alt="Stella IT")
       a.inline-flex.items-center.gap-2.rounded-full.border.border-zinc-200.px-4.py-2.text-sm.font-semibold.text-zinc-700.transition(
-        href="https://github.com/Stella-IT/docs/issues"
-        target="_blank"
-        rel="noopener noreferrer"
+        href="https://github.com/Stella-IT/docs/issues",
+        target="_blank",
+        rel="noopener noreferrer",
         class="hover:border-primary-200 hover:bg-primary-50 hover:text-primary-700 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-primary-500 dark:border-zinc-800 dark:text-zinc-300 dark:hover:border-primary-800 dark:hover:bg-primary-950/40 dark:hover:text-primary-300"
       )
         i.fa-regular.fa-circle-question(aria-hidden="true")
         span 문의하기
 
-  main.mx-auto.flex.w-full.max-w-5xl.items-center.px-4.py-16(class="min-h-[calc(100vh-4rem)] md:px-6 lg:px-10")
-    section.w-full.rounded-4xl.border.border-zinc-100.bg-white.p-6(class="shadow-[0_24px_80px_rgba(15,23,42,0.08)] sm:p-10 lg:p-14 dark:border-zinc-800 dark:bg-zinc-900 dark:shadow-none" aria-labelledby="error-title")
+  main.mx-auto.flex.w-full.max-w-5xl.items-center.px-4.py-16(
+    class="min-h-[calc(100vh-4rem)] md:px-6 lg:px-10"
+  )
+    section.w-full.rounded-4xl.border.border-zinc-100.bg-white.p-6(
+      class="shadow-[0_24px_80px_rgba(15,23,42,0.08)] sm:p-10 lg:p-14 dark:border-zinc-800 dark:bg-zinc-900 dark:shadow-none",
+      aria-labelledby="error-title"
+    )
       .grid.items-center.gap-10(class="lg:grid-cols-[1fr_0.8fr]")
         .space-y-8
-          .inline-flex.items-center.gap-2.rounded-full.bg-primary-50.px-4.py-2.text-sm.font-semibold.text-primary-700(class="dark:bg-primary-950/60 dark:text-primary-300")
+          .inline-flex.items-center.gap-2.rounded-full.bg-primary-50.px-4.py-2.text-sm.font-semibold.text-primary-700(
+            class="dark:bg-primary-950/60 dark:text-primary-300"
+          )
             span.flex.h-2.w-2.rounded-full.bg-primary-500
             span {{ statusCode }} 오류
 
           .space-y-4
-            h1#error-title.text-4xl.font-bold.tracking-tight.text-zinc-950(class="sm:text-5xl dark:text-white") {{ title }}
+            h1#error-title.text-4xl.font-bold.tracking-tight.text-zinc-950(
+              class="sm:text-5xl dark:text-white"
+            ) {{ title }}
             p.max-w-2xl.text-lg.leading-8.text-zinc-600(class="dark:text-zinc-300") {{ description }}
 
           .flex.flex-col.gap-3(class="sm:flex-row")
             button.inline-flex.items-center.justify-center.gap-2.rounded-full.bg-primary-600.px-6.py-3.text-sm.font-semibold.text-white.shadow-sm.transition(
-              type="button"
-              class="hover:bg-primary-700 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-zinc-900"
+              type="button",
+              class="hover:bg-primary-700 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-zinc-900",
               @click="goHome"
             )
               i.fa-solid.fa-house(aria-hidden="true")
               span 홈으로 이동
             button.inline-flex.items-center.justify-center.gap-2.rounded-full.border.border-zinc-200.bg-white.px-6.py-3.text-sm.font-semibold.text-zinc-700.transition(
-              type="button"
-              class="hover:border-primary-200 hover:bg-primary-50 hover:text-primary-700 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-200 dark:hover:border-primary-800 dark:hover:bg-primary-950/40 dark:hover:text-primary-300 dark:focus-visible:ring-offset-zinc-900"
+              type="button",
+              class="hover:border-primary-200 hover:bg-primary-50 hover:text-primary-700 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-200 dark:hover:border-primary-800 dark:hover:bg-primary-950/40 dark:hover:text-primary-300 dark:focus-visible:ring-offset-zinc-900",
               @click="goBack"
             )
               i.fa-solid.fa-arrow-left(aria-hidden="true")
               span 이전 페이지
 
-          .rounded-2xl.border.border-zinc-100.bg-zinc-50.p-5.text-sm.leading-6.text-zinc-600(class="dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-300")
+          .rounded-2xl.border.border-zinc-100.bg-zinc-50.p-5.text-sm.leading-6.text-zinc-600(
+            class="dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-300"
+          )
             strong.block.text-zinc-900(class="dark:text-white") 문서 주소가 바뀌었을 수 있어요.
             span 검색 또는 홈 화면에서 필요한 문서를 다시 찾아보세요. 기존 #[code /ko/...] 주소는 새 주소로 자동 이동됩니다.
 
-        .relative.hidden(class="lg:block" aria-hidden="true")
-          .absolute.inset-0.rounded-full.bg-primary-100.blur-3xl(class="dark:bg-primary-950")
-          .relative.mx-auto.flex.aspect-square.max-w-xs.items-center.justify-center.rounded-4xl.border.border-primary-100.bg-linear-to-br.from-white.to-primary-50.shadow-inner(class="dark:border-primary-900 dark:from-zinc-900 dark:to-primary-950")
+        .relative.hidden(class="lg:block", aria-hidden="true")
+          .absolute.inset-0.rounded-full.bg-primary-100.blur-3xl(
+            class="dark:bg-primary-950"
+          )
+          .relative.mx-auto.flex.aspect-square.max-w-xs.items-center.justify-center.rounded-4xl.border.border-primary-100.bg-linear-to-br.from-white.to-primary-50.shadow-inner(
+            class="dark:border-primary-900 dark:from-zinc-900 dark:to-primary-950"
+          )
             .text-center
               .text-8xl.font-black.text-primary-600 {{ statusCode }}
-              .mt-3.text-sm.font-semibold.uppercase.text-primary-700(class="tracking-[0.3em] dark:text-primary-300") Not Found
+              .mt-3.text-sm.font-semibold.uppercase.text-primary-700(
+                class="tracking-[0.3em] dark:text-primary-300"
+              ) Not Found
 </template>
 
 <script setup>

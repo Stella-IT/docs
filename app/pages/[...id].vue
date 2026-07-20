@@ -9,7 +9,11 @@ div
 </template>
 
 <script setup>
-let pathSlug = useRoute().params.id;
+import { categoryLabel, categoryMeta } from "../utils/category-meta";
+
+const route = useRoute();
+const runtimeConfig = useRuntimeConfig();
+let pathSlug = route.params.id;
 if (Array.isArray(pathSlug)) pathSlug = pathSlug.join("/");
 if (typeof pathSlug === "string" && pathSlug.endsWith("/")) {
   pathSlug = pathSlug.substring(0, pathSlug.length - 1);
@@ -34,6 +38,8 @@ if (pathSlug === "ko" || pathSlug?.startsWith("ko/")) {
 } else if (pathSlug.startsWith("category/")) {
   page.value = "category";
   pageSlug.value = pathSlug.replace("category/", "");
+  title.value = `${categoryLabel(pageSlug.value)} 전체 문서`;
+  description.value = categoryMeta(pageSlug.value).description;
 } else {
   const { data: document } = await useFetch(
     `/api/docs-page/${encodeContentPath(pathSlug)}`,
@@ -56,13 +62,24 @@ if (pathSlug === "ko" || pathSlug?.startsWith("ko/")) {
   description.value = document.value.description;
 }
 
+const canonicalUrl = computed(
+  () => new URL(route.path, runtimeConfig.public.siteUrl).href,
+);
+const previewImageUrl = new URL(
+  "/preview-light.png",
+  runtimeConfig.public.siteUrl,
+).href;
+
 useHead({
   title: title,
+  link: [{ rel: "canonical", href: canonicalUrl }],
   meta: [
     { hid: "description", name: "description", content: description },
     // Open Graph
     { hid: "og:title", property: "og:title", content: title },
     { hid: "og:description", property: "og:description", content: description },
+    { hid: "og:url", property: "og:url", content: canonicalUrl },
+    { hid: "og:image", property: "og:image", content: previewImageUrl },
     // Twitter Card
     { hid: "twitter:title", name: "twitter:title", content: title },
     {
@@ -70,8 +87,11 @@ useHead({
       name: "twitter:description",
       content: description,
     },
+    {
+      hid: "twitter:image",
+      name: "twitter:image",
+      content: previewImageUrl,
+    },
   ],
 });
 </script>
-
-<style lang="postcss" scoped></style>
