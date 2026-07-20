@@ -38,6 +38,3 @@ Apache, NGINX, express (node.js), dynmap (Minecraft) 등 웹을 통해 서비스
 ### 자체 인증서 사용 (BYOC, Bring your own certificate)
 Stella IT HTTP Proxy SSL 상세 설정에서 HTTPS 인증서를 수동으로 업로드 하실 수 있습니다.  
 
-(설명 추가 예정)
-
-

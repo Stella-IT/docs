@@ -1,12 +1,12 @@
 ---
-title: CentOS에서 마인크래프트 서버 구축하기
-description: CentOS 환경에서 마인크래프트 서버를 설치하고 설정하는 방법을 알아봅니다.
+title: Rocky Linux와 RHEL 계열에서 마인크래프트 서버 구축하기
+description: Rocky Linux와 RHEL 계열 환경에서 마인크래프트 서버를 설치하고 설정하는 방법을 알아봅니다.
 category: Stella IT Console/Minecraft
 ---
 
-# CentOS에서 마인크래프트 서버 구축하기
+# Rocky Linux와 RHEL 계열에서 마인크래프트 서버 구축하기
 
-이 가이드에서는 CentOS 운영체제에서 마인크래프트 Java 에디션 서버를 구축하는 방법을 단계별로 안내합니다.
+이 가이드에서는 Rocky Linux, RHEL과 호환 배포판에서 마인크래프트 Java 에디션 서버를 구축하는 방법을 단계별로 안내합니다. 배포판 버전에 따라 패키지 이름이나 기본 보안 정책이 다를 수 있습니다.
 
 ## 1. Java 설치하기
 
@@ -69,7 +69,7 @@ java -version
 
 ## 4. 방화벽 설정
 
-CentOS는 기본적으로 방화벽(firewalld)이 활성화되어 있습니다. 마인크래프트 서버의 기본 포트인 `25565`를 열어주어야 외부에서 접속할 수 있습니다.
+RHEL 계열 배포판에서는 일반적으로 firewalld를 사용합니다. 마인크래프트 서버의 기본 포트인 `25565`를 열어주어야 외부에서 접속할 수 있습니다.
 
 ```bash
 sudo firewall-cmd --zone=public --add-port=25565/tcp --permanent
@@ -92,7 +92,7 @@ sudo firewall-cmd --reload
 
     ```sh
     #!/bin/sh
-    cd /home/user/minecraft-server  # 마인크래프트 서버 디렉터리 경로
+    cd /home/user/minecraft-server
     exec java -Xms1G -Xmx2G -jar server.jar nogui
     ```
 
@@ -118,9 +118,9 @@ sudo firewall-cmd --reload
     After=network.target
 
     [Service]
-    User=user  # 서버를 실행할 사용자 계정
-    WorkingDirectory=/home/user/minecraft-server # 서버 디렉터리
-    ExecStart=/home/user/minecraft-server/start.sh # 위에서 만든 실행 스크립트
+    User=user
+    WorkingDirectory=/home/user/minecraft-server
+    ExecStart=/home/user/minecraft-server/start.sh
     Restart=on-failure
     RestartSec=10
 
@@ -142,4 +142,4 @@ sudo firewall-cmd --reload
     sudo systemctl status minecraft.service
     ```
 
-이제 마인크래프트 서버가 CentOS 시스템에서 안정적으로 운영될 것입니다.
+이제 마인크래프트 서버가 RHEL 계열 시스템에서 실행됩니다. 시작 로그와 외부 접속을 확인한 뒤 [백업 방법](/tutorials/minecraft/backup-and-restore)도 설정하세요.

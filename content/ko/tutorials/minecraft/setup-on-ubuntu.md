@@ -83,7 +83,7 @@ java -version
 
     ```sh
     #!/bin/sh
-    cd /home/ubuntu/minecraft-server  # 마인크래프트 서버 디렉터리 경로
+    cd /home/ubuntu/minecraft-server
     exec java -Xms1G -Xmx2G -jar server.jar nogui
     ```
 
@@ -109,10 +109,10 @@ java -version
     After=network.target
 
     [Service]
-    User=ubuntu  # 서버를 실행할 사용자 계정
-    Group=ubuntu # 사용자의 그룹
-    WorkingDirectory=/home/ubuntu/minecraft-server # 서버 디렉터리
-    ExecStart=/home/ubuntu/minecraft-server/start.sh # 위에서 만든 실행 스크립트
+    User=ubuntu
+    Group=ubuntu
+    WorkingDirectory=/home/ubuntu/minecraft-server
+    ExecStart=/home/ubuntu/minecraft-server/start.sh
     Restart=on-failure
     RestartSec=10
 

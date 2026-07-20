@@ -17,7 +17,7 @@ Stella IT 제품군에서 호환되는 프로그램이더라도, <a href="https:
 
 ## 호환 테스트된 프로그램
 아래 프로그램은 Stella IT의 인프라에 테스트가 진행 된 프로그램입니다.
-* HTTP, HTTPS (with Stella IT HTTP Proxy)
+* HTTP, HTTPS
 * Minecraft Java Edition
 * Terraria
 * Cloudflare Argo Tunnel

@@ -1,29 +1,51 @@
 ---
-title: 화이트 리스트는 어떻게 설정하나요
-description: 화이트 리스트를 설정하는 방법을 알아봐요
+title: 화이트리스트는 어떻게 설정하나요?
+description: 허용한 사용자만 Minecraft 서버에 접속하도록 화이트리스트를 관리합니다.
 
 category: Stella IT Console/Minecraft
 ---
 
-화이트 리스트는 마인크래프트 서버 내에서 특정 사용자만을 접속할 수 있도록 하는 명령어입니다.
-Minecraft: Java Edition 에서는 OP와 허가된 사용자는 해당 기능이 활성화 여부에 무관하고 접속할 수 있습니다.
+화이트리스트를 활성화하면 목록에 등록된 사용자만 서버에 접속할 수 있습니다. 명령어는 서버 콘솔에서 실행하거나 필요한 권한이 있는 게임 계정으로 실행하세요. 서버 콘솔에서는 명령어 앞의 `/`를 생략할 수 있습니다.
 
-## 화이트 리스트 기능 활성화하기
-1. 서버에서 [OP](/tutorials/minecraft/what-is-op-meaning)를 지급 받습니다.
-2. 서버에서 화이트 리스트를 활성화 시키기 위해 `/whitelist on` 을 칩니다.
+## 화이트리스트 활성화
 
-## 화이트 리스트 기능 비활성화하기
-1. 서버에서 [OP](/tutorials/minecraft/what-is-op-meaning)를 지급 받습니다.
-2. 서버에서 화이트 리스트를 비활성화 시키기 위해 `/whitelist off` 를 칩니다. 
+```text
+/whitelist on
+```
 
-## 화이트 리스트에 허가된 특정 사용자를 추가하기
-1. 서버에서 [OP](/tutorials/minecraft/what-is-op-meaning)를 지급 받습니다.
-2. 서버에서 화이트 리스트에 특정 사용자를 포함시키기 위해 `/whitelist add <target>` 을 칩니다.
+`server.properties`에서는 다음 값과 같습니다.
 
-## 화이트 리스트에 허가된 특정 사용자를 제거하기
-1. 서버에서 [OP](/tutorials/minecraft/what-is-op-meaning)를 지급 받습니다.
-2. 서버에서 화이트 리스트에서 특정 사용자를 제거하기 위해 `/whitelist remove <target>` 을 칩니다.
+```properties
+white-list=true
+enforce-whitelist=true
+```
 
-## 화이트 리스트에 포함된 사용자를 확인하기
-1. 서버에서 [OP](/tutorials/minecraft/what-is-op-meaning)를 지급 받습니다.
-2. 서버에서 `/whitelist` 를 칩니다.
+`enforce-whitelist=true`이면 목록에서 제거된 사용자가 서버에서 퇴장됩니다.
+
+## 사용자 추가와 제거
+
+사용자를 추가합니다.
+
+```text
+/whitelist add <사용자 이름>
+```
+
+사용자를 제거합니다.
+
+```text
+/whitelist remove <사용자 이름>
+```
+
+현재 목록을 확인합니다.
+
+```text
+/whitelist list
+```
+
+화이트리스트를 비활성화하려면 다음 명령어를 실행합니다.
+
+```text
+/whitelist off
+```
+
+명령어를 실행할 게임 계정에 권한이 없다면 먼저 [OP 권한 안내](/tutorials/minecraft/what-is-op-meaning)를 확인하세요. 파일을 직접 수정하기보다 위 명령어나 [`server.properties` 설정](/tutorials/minecraft/server-properties)을 사용하는 편이 안전합니다.

@@ -1,67 +1,62 @@
 ---
 title: Minecraft 서버 성능 최적화하기
-description: Minecraft 서버의 성능을 더욱 최적화 하는 방법을 소개합니다.
-
+description: Paper 서버의 성능 문제를 측정하고 안전하게 원인을 줄이는 순서를 알아봅니다.
 category: Stella IT Console/Minecraft
 ---
-이 문서에서는 Minecraft의 성능을 최적화하기 위한 꿀팁들을 소개합니다.  
-`Is Server Overloaded` 와 같은 메세지가 뜬다면 하나씩 적용해 보는 것을 추천드려요.  
 
+렉이 발생하면 여러 설정을 한꺼번에 바꾸기보다 먼저 측정하고 한 번에 하나씩 변경해야 원인을 찾을 수 있습니다. 변경 전에는 [서버를 백업](/tutorials/minecraft/backup-and-restore)하세요.
 
-## Paper 사용
-플러그인이 Paper와 호환 된다면, Paper로 바꾸는 것을 추천드려요.  
-Spigot을 사용하고 계신다면, 버킷 교체만으로 성능을 끌어올릴 수 있는 최고의 방법이니, 바꿀수 있다면, Paper로 변경하는 것을 적극 추천합니다.
+## 1. 서버와 플러그인 업데이트
 
-## `timings` 를 통한 tick별 함수 호출 내역 조회
-(Spigot 계열 (ex. Paper 등)) 에서 지원하는 기능입니다.  
-`/timings` 명령어를 통해 tick 마다 돌아가는 함수등을 통해, 어느 플러그인이나 작업이 렉을 유발하고 있는지 찾아내 최적화를 진행 할 수도 있습니다.  
+1. 운영 중인 Minecraft 버전을 지원하는 최신 안정 Paper 빌드를 확인합니다.
+2. 모든 플러그인이 해당 서버 버전을 지원하는지 확인합니다.
+3. [Java 호환성 가이드](/tutorials/minecraft/java-version-compatibility)에 맞는 Java를 사용합니다.
+4. 백업한 뒤 Paper와 플러그인을 업데이트하고 시작 로그를 확인합니다.
 
-만약 어렵다면, 주변의 Java 개발자에게 분석을 요청해 보는 것도 방법이예요!  
+Paper는 예기치 않은 플러그인 충돌을 놓칠 수 있으므로 무인 자동 업데이트를 권장하지 않습니다. 운영자가 로그를 확인할 수 있을 때 업데이트하세요.
 
-## 서버 내부 최적화
-서버 내부에서 사용하는 자원을 더욱 최적화 할 수 있습니다.  
-[야생 서버 최적화하기](/tutorials/minecraft/further-optimizing-smp-servers) 문서를 확인해 보세요.
+## 2. spark로 병목 측정
 
-## Java 업그레이드 및 JVM 변경
-Java의 경우 버전이 변경되면서 최적화가 개선이 되거나, 로직이 개선이 되는 경우가 있습니다.  
-플러그인이나 버킷의 호환성 문제가 없는 경우 나에게 맞는 최적의 런타임으로 변경하는 것을 권장합니다.  
+Paper 1.21 이상에는 spark 프로파일러가 포함되어 있습니다. 문제가 실제로 발생하는 동안 콘솔이나 권한이 있는 게임 계정에서 다음 명령어를 실행합니다.
 
-Java 설치 및 런타임 변경 방법은 [여기](/tutorials/minecraft/install-guide/java) 에서 확인이 가능합니다.
-
-혹시 Hotspot 기반의 JVM을 사용 중이라면, OpenJ9으로 JVM을 변경해 보는 것도 좋은 방법이예요. (플러그인 호환성 문제가 발생할 수 있으니, 바꾸기 전에 백업 하는 것을 추천드려요)
-
-## JVM Flag 설정
-
-우리 모두가 손쉽게 접할 수 있는 JVM 종류는 [**Hotspot** (Oracle Hotspot)](https://openjdk.java.net/groups/hotspot/): Oracle Java를 사용하고 있습니다.
-이러한 경우에는 Aikar's Flag를 사용할 수 있겠지만, JVM 종류가 만약 [**Eclipse OpenJ9** (IBM J9)](https://www.eclipse.org/openj9/)를 사용하고 있다면, 또 다른 방법으로 접근을 해야됩니다.
-
-### 왜 JVM Flag를 설정해줘야 되나요?
-
-마인크래프트 특성상 메모리를 많이 사용하기에, Garbage Collector 에 대한 설정을 진행하면, GC가 훨씬 원활하게 작동하여, 서버가 더욱 잘 작동하게 하기 위하여 JVM Flag를 설정합니다.  
-
-이 설정은 JVM의 종류 (예. Hotspot, OpenJ9) 별로 차이가 나므로, 아래 내용을 확인해 주세요
-### JVM Flag: Hotspot JVM
-
-Paper를 사용하는 경우 `/timings` 에서 표기되는 `Aikar's Flag` 가 가장 유명합니다.  
-(필수 선행 조건: Java의 버전이 8 이상 이어야 합니다.)  
-
-아래에 있는 JVM Flag는 Aikar's Flag입니다.  
+```text
+/spark profiler start --timeout 600
 ```
-java -Xms10G -Xmx10G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Dusing.aikars.flags=https://mcflags.emc.gs -Daikars.new.flags=true -jar paperclip.jar nogui
-```
-  
-위에 표기된 플래그는 10GB 메모리를 기준으로 작성되었습니다. 만약 사용할 수 있는 메모리가 더 적다면, `-Xms10G`와 `-Xmx10G` 부분을 가용 가능한 메모리에 맞춰 수정하시는 것을 권장 드려요!  
 
-출처: [https://aikar.co/2018/07/02/tuning-the-jvm-g1gc-garbage-collector-flags-for-minecraft/](https://aikar.co/2018/07/02/tuning-the-jvm-g1gc-garbage-collector-flags-for-minecraft/)
+10분 동안 측정한 뒤 생성된 보고서 URL에서 다음 항목을 확인합니다.
 
-### JVM Flag: OpenJ9
+* 특정 플러그인이 서버 스레드를 오래 점유하는지
+* 청크 생성이나 엔티티 처리가 집중되는지
+* 가비지 컬렉션이나 메모리 사용이 비정상적인지
 
-OpenJ9을 사용하는 경우, Minecraft에 적합하도록 Garbage Collector를 수정 하는 것 외에, 환경에 따라 사용할 수 있는 JVM 설정 플래그가 추가로 제공됩니다.  
+`/timings`는 더 이상 권장되는 분석 방법이 아닙니다. 최신 Paper에서는 spark 보고서를 기준으로 문제를 분석하세요.
 
-OpenJ9에서 할 수 있는 최적화의 경우, 이 [문서](/tutorials/minecraft/further-optimizing-openj9-jvm-for-minecraft)를 참고하세요.
+## 3. 청크와 시야 거리 조정
 
-## Windows VM을 사용 중인 경우, Linux으로 운영체제 교체
-서버용 `Linux`의 경우 기본적으로 CLI 환경만 제공을 하고 있기에, 기본적으로 운영체제를 구동하기 위한 오버헤드가 Windows 보다 낮습니다.  
+새 청크 생성은 순간적으로 많은 CPU와 저장 장치 작업을 사용합니다. 공개 서버를 열기 전에 월드 경계를 정하고 필요한 영역을 미리 생성하면 플레이 중 부하를 줄일 수 있습니다.
 
-더욱 빠른 성능을 원한다면, Linux로 변경하여, 운영체제에서 사용 하고 있는 자원을 최소화 하는 방법이 있습니다.  
-**Stella IT의 VM의 경우 Linux로 사용시 Full Virtualization (전 가상화) 이 아닌 ParaVirtualization (반 가상화) 모드로 구동 되므로 성능 향상을 기대할 수 있습니다**  
+* [`view-distance`와 월드 사전 생성 조정](/tutorials/minecraft/further-optimizing-smp-servers)
+* [`server.properties`의 시야·시뮬레이션 거리 설정](/tutorials/minecraft/server-properties)
+
+값을 크게 낮추면 부하는 줄지만 플레이 경험도 달라집니다. 변경 전후의 spark 보고서와 실제 플레이를 함께 비교하세요.
+
+## 4. 플러그인 점검
+
+시작 로그의 경고를 먼저 해결하고 사용하지 않는 플러그인은 제거합니다. 특정 플러그인이 의심되면 다음 순서로 확인하세요.
+
+1. 서버를 중지하고 백업합니다.
+2. `plugins` 폴더의 이름을 임시로 바꾸어 플러그인 없이 서버를 시작합니다.
+3. 문제가 사라지면 플러그인을 절반씩 복원하며 원인을 좁힙니다.
+4. 원인 플러그인의 업데이트와 공식 문제 해결 안내를 확인합니다.
+
+운영 서버에서 `/reload`로 플러그인을 다시 불러오지 말고 서버를 완전히 재시작하세요.
+
+## 5. 메모리 설정 검토
+
+시작 명령의 `-Xmx`는 Java가 사용할 수 있는 최대 힙입니다. 인스턴스의 전체 메모리를 모두 할당하면 운영체제와 파일 캐시가 사용할 공간이 없어 서버가 종료되거나 느려질 수 있습니다.
+
+* 실제 인스턴스 메모리보다 작은 값을 사용합니다.
+* 플러그인 수와 동시 접속자에 맞게 조금씩 조정합니다.
+* 메모리를 늘리기 전에 spark의 메모리와 GC 지표를 확인합니다.
+
+출처를 알 수 없는 JVM 플래그를 한꺼번에 적용하지 마세요. Java 버전이 바뀌면 지원 여부와 효과도 달라질 수 있습니다. Paper의 [Java 설치 안내](https://docs.papermc.io/misc/java-install/)와 [프로파일링 문서](https://docs.papermc.io/paper/profiling/)를 기준으로 운영하세요.

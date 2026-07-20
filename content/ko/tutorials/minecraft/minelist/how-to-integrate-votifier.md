@@ -1,23 +1,37 @@
 ---
-title: 마인리스트 Votifier(NuVotifier) 설정은 어떻게 해야 되나요?
-description: 서버 추천 받을 때마다 유저에게 추천 보상을 지급해봐요!
-
+title: 마인리스트와 NuVotifier는 어떻게 연동하나요?
+description: 마인리스트에 NuVotifier의 공인 IP, 수신 포트와 공개 키를 등록하는 방법을 알아봅니다.
 category: Stella IT Console/Minecraft
 ---
 
-해당 작업을 진행하기 전에 앞서, 미리 마인리스트에 서버 등록이 되어있어야합니다.
-만약 안하셨다면 [마인리스트에 서버 등록하는 방법이 궁금해요!](/tutorials/minecraft/minelist/how-to-register-my-server) 를 참고 후 등록해 주세요!
+이 작업을 진행하기 전에 다음 준비를 완료하세요.
 
-<alert type="danger">
-      미리, <a href="/tutorials/minecraft/minelist/how-to-install-votifier">Votifier(NuVotifier) 플러그인 설정</a>를 진행해야됩니다.
+* [마인리스트에 서버 등록하기](/tutorials/minecraft/minelist/how-to-register-my-server)
+* [NuVotifier 설치와 포트 설정](/tutorials/minecraft/minelist/how-to-install-votifier)
+* NuVotifier 포트에 대한 운영체제 방화벽 허용
+
+## NuVotifier 정보 등록
+
+1. 마인리스트에서 등록한 서버의 관리 화면을 엽니다.
+2. **Votifier 수정** 메뉴를 선택합니다.
+3. IP 주소에 Stella IT Console의 인스턴스 상세 화면에서 확인한 공인 IP를 입력합니다.
+4. 포트에 `plugins/NuVotifier/config.yml`의 `port` 값을 입력합니다.
+5. Public Key에 `plugins/NuVotifier/rsa/public.key`의 전체 내용을 붙여 넣습니다.
+6. Votifier 사용을 활성화하고 저장합니다.
+7. 마인리스트에서 테스트 기능을 제공한다면 테스트 추천을 보냅니다.
+
+<alert type="warning">
+공개 키인 `public.key`만 등록하세요. `private.key` 또는 설정 파일의 토큰은 절대 붙여 넣거나 다른 사람에게 공유하지 마세요.
 </alert>
 
-## Votifier 설정하기
+## 연동되지 않을 때
 
-1. `관리` 하단에 있는 `Votifier 수정` 버튼을 클릭합니다.
-2. IP 주소 란은 Stella IT Console에 명시된 `마인리스트 연동을 위한 추가 포트` 에 표기된 `:` 앞을 입력해 주세요. `ex) yeouido-save-01.stella-it.com:261XX -> yeouido-save-01.stella-it.com` 으로 입력합니다.
-3. 포트 란은 Stella IT Console에 명시된 `마인리스트 연동을 위한 추가 포트` 에 표기된 `:` 뒤를 입력해 주세요. `ex) yeouido-save-01.stella-it.com:261XX -> 261XX`
-4. Public Key 란은 `plugins/Votifier/rsa/public.key` 파일을 메모장이나 워드패드와 같은 파일 수정 프로그램을 통해 열어 파일 내용을 복사 후 붙여넣습니다.
-5. [Votifier 사용] 체크합니다.
-6. [수정] 버튼을 클릭해 적용합니다.
-7. 완료가 될 경우 `알림! Votifier 수정 성공` 라는 메시지가 나오며, Minelist와의 연동 절차가 완료됩니다.
+다음 순서로 확인합니다.
+
+1. Minecraft 서버와 NuVotifier가 실행 중인지 확인합니다.
+2. 마인리스트에 입력한 포트가 `config.yml`과 같은지 확인합니다.
+3. 해당 TCP 포트가 운영체제 방화벽에서 허용되어 있는지 확인합니다.
+4. `logs/latest.log`에서 NuVotifier의 포트 바인딩 또는 인증 오류를 찾습니다.
+5. Minecraft 포트와 NuVotifier 포트를 같은 값으로 설정하지 않았는지 확인합니다.
+
+설정을 변경했다면 서버를 다시 시작한 뒤 테스트하세요.

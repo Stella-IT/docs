@@ -38,5 +38,5 @@ java -version
 운영체제별 서버 구축 과정은 다음 문서를 참고할 수 있습니다.
 
 - [Ubuntu에서 마인크래프트 서버 구축하기](/tutorials/minecraft/setup-on-ubuntu)
-- [CentOS 계열에서 마인크래프트 서버 구축하기](/tutorials/minecraft/setup-on-centos)
+- [Rocky Linux와 RHEL 계열에서 마인크래프트 서버 구축하기](/tutorials/minecraft/setup-on-centos)
 - [Windows Server에서 마인크래프트 서버 구축하기](/tutorials/minecraft/setup-on-windows)
